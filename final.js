@@ -49,31 +49,48 @@ function finRenumber() {
   });
 }
 
-/* lightbox: the section shown in a card, enlarged; nothing of the rest of the page can be seen. Click, Esc or × closes; ← → move between cards. */
-function finLightbox(card) {
-  const cards = [...document.querySelectorAll('.gal-final .gcard')];
-  let idx = cards.indexOf(card);
-  const lb = document.createElement('div');
-  lb.className = 'lb';
-  lb.innerHTML = '<div class="lb-win"></div><button class="lb-x" aria-label="Close">×</button><span class="lb-n"></span>';
-  document.body.appendChild(lb);
-  const win = lb.querySelector('.lb-win');
-  const show = i => {
-    idx = (i + cards.length) % cards.length;
-    const src = cards[idx].querySelector('iframe'), cs = getComputedStyle(src);
-    const w = parseFloat(cs.width) || 1280, h = parseFloat(cs.height) || 800;
-    const k = Math.min(window.innerWidth * 0.94 / w, window.innerHeight * 0.88 / h);
-    win.style.width = w * k + 'px'; win.style.height = h * k + 'px';
-    win.innerHTML = `<iframe src="${src.getAttribute('src') || src.dataset.src}" title="" style="width:${w}px;height:${h}px;transform:scale(${k})"></iframe>`;
-    lb.querySelector('.lb-n').textContent = String(idx + 1).padStart(2, '0') + ' / ' + String(cards.length).padStart(2, '0');
+/* a click on a card opens a page with that section (a bit of room above and below); ← → move between cards, Esc goes back */
+function finSrcList() {
+  const out = [];
+  FINAL_SEL.forEach(([pid, list]) => list.forEach(n => {
+    if (n === '16w') return out.push({ pid, src: 'index.html?embed=1&bg=white#/78/mission' });
+    if (pid === 'covers') { const [t, id] = COVER_ORDER[n - 1]; return out.push({ pid, src: t === 'h' ? `index.html?embed=1#/h/${id}/mission` : `index.html?embed=1#/${id}/mission` }); }
+    out.push({ pid, src: `index.html?embed=1#/p/${pid}/${n}` });
+  }));
+  return out;
+}
+function sectionPage(n) {
+  const L = finSrcList(), total = L.length;
+  n = Math.min(total, Math.max(1, parseInt(n, 10) || 1));
+  const it = L[n - 1], pad = x => String(x).padStart(2, '0');
+  document.title = 'Design Proposals · ' + pad(n);
+  $('#tb').innerHTML = ''; $('#tb').style.display = 'none';
+  $('#app').innerHTML = `<div class="sec-page"><div class="sec-bar"><a class="sec-back" href="#/gallery/final">← All proposals</a><span class="sec-nav"><a href="#/section/${n > 1 ? n - 1 : total}" aria-label="Previous">‹</a><b>${pad(n)} / ${pad(total)}</b><a href="#/section/${n < total ? n + 1 : 1}" aria-label="Next">›</a></span></div><div class="sec-frame"><iframe src="${it.src}" title="Design ${pad(n)}" scrolling="no"></iframe></div></div>`;
+  const fr = document.querySelector('.sec-frame iframe');
+  const fit = () => {
+    try {
+      const h = fr.contentDocument.documentElement.scrollHeight;
+      /* a cover (a whole site) shows its first screen plus a little more; a section shows its full height */
+      fr.style.height = (it.pid === 'covers' ? Math.min(h, Math.max(720, window.innerHeight - 130)) : Math.max(h, 320)) + 'px';
+    } catch (e) { fr.style.height = '900px'; }
   };
-  const close = () => { lb.remove(); document.removeEventListener('keydown', key); };
-  const key = e => { if (e.key === 'Escape') close(); else if (e.key === 'ArrowRight') show(idx + 1); else if (e.key === 'ArrowLeft') show(idx - 1); };
-  lb.addEventListener('click', close);
-  document.addEventListener('keydown', key);
-  show(idx);
+  fr.style.height = '720px';
+  fr.addEventListener('load', () => { fit(); setTimeout(fit, 500); setTimeout(fit, 1500); });
+  if (window._secKey) document.removeEventListener('keydown', window._secKey);
+  window._secKey = e => {
+    if (!/^#\/section\//.test(location.hash)) return;
+    if (e.key === 'ArrowRight') location.hash = '#/section/' + (n < total ? n + 1 : 1);
+    else if (e.key === 'ArrowLeft') location.hash = '#/section/' + (n > 1 ? n - 1 : total);
+    else if (e.key === 'Escape') location.hash = '#/gallery/final';
+  };
+  document.addEventListener('keydown', window._secKey);
+  window.scrollTo(0, 0);
 }
 document.addEventListener('click', e => {
   const card = e.target.closest('.gal-final .gcard');
-  if (card) { e.preventDefault(); finLightbox(card); }
+  if (!card) return;
+  e.preventDefault();
+  const idx = [...document.querySelectorAll('.gal-final .gcard')].indexOf(card);
+  try { sessionStorage.setItem('finY', String(window.scrollY)); } catch (err) {}
+  location.hash = '#/section/' + (idx + 1);
 });

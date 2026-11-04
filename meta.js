@@ -5,7 +5,7 @@ const META = [
   { id: 'cv', t: 'My CV', href: '#/cv', on: h => /^#\/cv\b/.test(h) || h === '' || h === '#' || h === '#/' },
   { id: 'sites', t: 'My Sites', href: '#/sites', on: h => /^#\/sites\b/.test(h) },
   { id: 'curriculum', t: 'Curriculum', href: '#/curriculum', on: h => /^#\/curriculum\b/.test(h) },
-  { id: 'design', t: 'Design Proposals', href: '#/gallery/covers', on: h => /^#\/(gallery|\d+|h|p)\b/.test(h) }
+  { id: 'design', t: 'Design Proposals', href: '#/gallery/covers', on: h => /^#\/(gallery|section|\d+|h|p)\b/.test(h) }
 ];
 function metaBar() {
   const bar = document.getElementById('metabar');

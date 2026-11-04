@@ -388,7 +388,7 @@ function gallery(pid) {
   if (gp.id === 'final') {
     document.title = 'Design Proposals';
     $('#app').innerHTML = `<div class="gal gal-final">${finalPage()}</div>`;
-    window.scrollTo(0, 0); $('#tb').innerHTML = ''; $('#tb').style.display = 'none'; finRenumber(); fitShots(); lazyFrames(); finNavInit();
+    { let y = 0; try { y = +sessionStorage.getItem('finY') || 0; sessionStorage.removeItem('finY'); } catch (e) {} window.scrollTo(0, y); } $('#tb').innerHTML = ''; $('#tb').style.display = 'none'; finRenumber(); fitShots(); lazyFrames(); finNavInit();
     return;
   }
   const sw = ([n, h, u, g]) => `<li class="sw ${g}"><span class="chipc" style="background:${h}"></span><b>${n}</b><code>${h}</code><small>${u}</small></li>`;
@@ -447,6 +447,7 @@ function route() {
   if (h[0] === 'curriculum') { if (typeof curriculumPage === 'function') curriculumPage(); return; }
   if (h[0] === 'sites') { if (typeof sitesPage === 'function') sitesPage(); return; }
   if (h[0] === 'gallery') return gallery(h[1] || lastPart);
+  if (h[0] === 'section') { if (typeof sectionPage === 'function') sectionPage(h[1]); return; }
   if (h[0] === 'h') { const [n, p] = hcurr(); return heroView(n, p); }
   if (h[0] === 'p') { if (typeof pgView === 'function') pgView(...pcurr()); return; }
   const [n, p, f] = curr();

@@ -68,11 +68,7 @@ body{background:var(--hz-bg)}
 /* Propositions de design: each card opens its own section, enlarged, in a lightbox (nothing else of the page is shown) */
 .gal-final .gcard{cursor:pointer}.gal-final .gcard *{cursor:pointer!important}.gal-final .gcard iframe{pointer-events:none}
 .gal-final .gcard,.gal-final .gcard *{transition:none!important}.gal-final .gcard:hover{transform:none!important}
-.lb{position:fixed;inset:0;z-index:10000;background:rgba(23,23,22,.82);display:grid;place-items:center;cursor:zoom-out}
-.lb .lb-win{position:relative;overflow:hidden;border-radius:14px;background:#fff;box-shadow:0 40px 90px -30px rgba(0,0,0,.7)}
-.lb .lb-win iframe{position:absolute;left:0;top:0;border:0;transform-origin:0 0;pointer-events:none}
-.lb .lb-x{position:fixed;top:18px;right:22px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#291e2b;font:700 22px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;box-shadow:0 10px 24px -10px rgba(0,0,0,.6)}
-.lb .lb-n{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);padding:8px 16px;border-radius:99px;background:rgba(255,255,255,.14);color:#fff;font:700 13px 'Plus Jakarta Sans',sans-serif;letter-spacing:.06em}
+
 
 /* numbered round badges in the left menus: dark with a white number, inverted on the selected item */
 .fin-nav button{display:flex;align-items:center;gap:12px}
@@ -82,3 +78,14 @@ body{background:var(--hz-bg)}
 
 /* the round terracotta dot is replaced by the (small) Voices Unveiled logo */
 #metabar .mb-logo{width:36px;height:36px;object-fit:contain;flex:none;display:block}
+
+/* section page: one design, opened from a card */
+.sec-page{max-width:1400px;margin:0 auto;padding:26px 28px 80px;font-family:'Plus Jakarta Sans',sans-serif}
+.sec-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.sec-back{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:99px;background:#fff;border:1px solid var(--hz-line);font:700 14px 'Plus Jakarta Sans',sans-serif;color:var(--hz-ink);text-decoration:none;box-shadow:var(--hz-card)}
+.sec-nav{display:inline-flex;align-items:center;gap:10px;font:700 14px 'Plus Jakarta Sans',sans-serif;color:var(--hz-ink)}
+.sec-nav a{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid var(--hz-line);color:var(--hz-ink);text-decoration:none;font-size:22px;line-height:1;box-shadow:var(--hz-card)}
+.sec-nav b{min-width:78px;text-align:center;letter-spacing:.04em}
+.sec-frame{border-radius:26px;overflow:hidden;background:#fff;border:1px solid var(--hz-line);box-shadow:0 40px 80px -50px rgba(41,30,43,.6)}
+.sec-frame iframe{display:block;width:100%;border:0}
+@media(max-width:700px){.sec-page{padding:16px 12px 60px}}
