@@ -123,7 +123,7 @@
 .hl-terra h1 .hl{color:#982d06!important}
 
 /* cover variant: the association name in the header in a warm, orange tint */
-.brand-warm .hdr .brand span{color:#982d06!important}.brand-warm .hdr .brand em{color:#e0662b!important}
+.brand-warm .hdr .brand span{color:#171716!important}.brand-warm .hdr .brand em{color:#982d06!important}
 
 /* cover variant: smaller figures in the four stat tiles, so that each one stays on a single line */
 .stat-small .st b{font-size:clamp(18px,1.9vw,24px)!important;white-space:nowrap}
