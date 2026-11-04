@@ -29,7 +29,8 @@ function finNavInit() {
   nav.addEventListener('click', e => { const b = e.target.closest('button'); if (b) document.getElementById(b.dataset.sec).scrollIntoView({ behavior: 'smooth', block: 'start' }); });
   const upd = () => {
     let k = 0; secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top < 140) k = i; });
-    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) k = secs.length - 1; /* a short last section can never reach the top */
+    /* only once the visitor has really scrolled down to the end of a page that scrolls (not while pictures are still loading) */
+    if (window.scrollY > 200 && window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) k = secs.length - 1; /* a short last section can never reach the top */
     btns.forEach((b, i) => b.classList.toggle('on', i === k));
     const on = btns[k]; if (on && window.innerWidth <= 900) nav.scrollTo({ left: on.offsetLeft - 20, behavior: 'smooth' });
   };
