@@ -15,7 +15,7 @@ function finalPage() {
     const cards = list.map(n => {
       if (n === '19b') return `<article class="gcard"><a class="shot" href="?brand=warm&stat=small#/67/mission">${frame('index.html?embed=1&brand=warm&stat=small#/67/mission', 'Cover, warm orange name')}</a><div class="gb"><h2><span>19</span> Cover</h2></div></article>`;
       if (n === '6t') return `<article class="gcard"><a class="shot" href="?hl=terra#/h/80/mission">${frame('index.html?embed=1&hl=terra#/h/80/mission', 'Cover, terracotta word')}</a><div class="gb"><h2><span>06</span> Cover</h2></div></article>`;
-      if (n === '8t') return `<article class="gcard"><a class="shot" href="?hl=terra#/h/74/mission">${frame('index.html?embed=1&hl=terra#/h/74/mission', 'Cover, terracotta word')}</a><div class="gb"><h2><span>08</span> Cover</h2></div></article>`;
+      if (n === '8t') return `<article class="gcard"><a class="shot" href="?hl=terra&photo=wa#/h/74/mission">${frame('index.html?embed=1&hl=terra&photo=wa#/h/74/mission', 'Cover, terracotta word')}</a><div class="gb"><h2><span>08</span> Cover</h2></div></article>`;
       if (n === '23f') return `<article class="gcard"><a class="shot" href="?edge=flat#/31/mission">${frame('index.html?embed=1&edge=flat#/31/mission', 'Cover, flat bottom edge')}</a><div class="gb"><h2><span>23</span> Cover</h2></div></article>`;
       if (n === '16w') return `<article class="gcard"><a class="shot" href="?bg=white&hl=terra#/78/mission">${frame('index.html?embed=1&bg=white&hl=terra#/78/mission', 'Perspective, white background')}</a><div class="gb"><h2><span>16</span> Perspective</h2></div></article>`;
       if (pid === 'covers') { const [t, id] = COVER_ORDER[n - 1]; return t === 'h' ? hcard(hById(id), id, n) : card(SITES[id - 1], id, null, n); }
@@ -60,7 +60,7 @@ function finSrcList() {
     if (n === '16w') return out.push({ pid, src: 'index.html?embed=1&bg=white&hl=terra#/78/mission' });
     if (n === '19b') return out.push({ pid, src: 'index.html?embed=1&brand=warm&stat=small#/67/mission' });
     if (n === '6t') return out.push({ pid, src: 'index.html?embed=1&hl=terra#/h/80/mission' });
-    if (n === '8t') return out.push({ pid, src: 'index.html?embed=1&hl=terra#/h/74/mission' });
+    if (n === '8t') return out.push({ pid, src: 'index.html?embed=1&hl=terra&photo=wa#/h/74/mission' });
     if (n === '23f') return out.push({ pid, src: 'index.html?embed=1&edge=flat#/31/mission' });
     if (pid === 'covers') { const [t, id] = COVER_ORDER[n - 1]; return out.push({ pid, src: t === 'h' ? `index.html?embed=1#/h/${id}/mission` : `index.html?embed=1#/${id}/mission` }); }
     out.push({ pid, src: `index.html?embed=1#/p/${pid}/${n}` });

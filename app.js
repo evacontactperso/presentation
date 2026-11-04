@@ -391,19 +391,6 @@ function gallery(pid) {
     { let y = 0; try { y = +sessionStorage.getItem('finY') || 0; sessionStorage.removeItem('finY'); } catch (e) {} window.scrollTo(0, y); } $('#tb').innerHTML = ''; $('#tb').style.display = 'none'; finRenumber(); fitShots(); lazyFrames(); finNavInit();
     return;
   }
-  const sw = ([n, h, u, g]) => `<li class="sw ${g}"><span class="chipc" style="background:${h}"></span><b>${n}</b><code>${h}</code><small>${u}</small></li>`;
-  const nav = `<nav class="gnav"><b>Parts</b>${GPARTS.map((x, k) => GP_GONE.has(x.id) ? '' : `<a href="#/gallery/${x.id}" class="${x.id === gp.id ? 'on' : ''}">${gpNum(x.id)} · ${x.t}</a>`).join('')}</nav>`;
-  const vis = GPARTS.map((x, k) => k).filter(k => !GP_GONE.has(GPARTS[k].id)), vi = vis.indexOf(gi), pv = vis[vi - 1], nx = vis[vi + 1];
-  const pager = `<div class="gpager">${pv !== undefined ? `<a href="#/gallery/${GPARTS[pv].id}">← ${GPARTS[pv].t}</a>` : '<span></span>'}${nx !== undefined ? `<a href="#/gallery/${GPARTS[nx].id}">${GPARTS[nx].t} →</a>` : ''}</div>`;
-  const content = gp.id === 'final' ? finalPage() : gp.id.startsWith('pg-') ? pgGallery(gp.id.slice(3), gpNum(gp.id))
-    : gp.id === 'covers'
-    ? `<section class="pal"><h2>Color palette <small>measured on the live site: the colors it actually displays, not the theme defaults</small></h2><ul>${PALETTE.map(sw).join('')}</ul></section>
-    <div class="gpart"><h2 class="gp">1 · Cover pages <small>${COVER_NUMS.size} cover pages (numbers kept from the 1-24 list). Similar layouts sit next to each other (colors may differ). The small tag gives the original reference (H number or site number).</small></h2>
-    <div class="grid">${COVER_ORDER.map(([t, id], k) => COVER_NUMS.has(k + 1) ? (t === 'h' ? hcard(hById(id), id, k + 1) : card(SITES[id - 1], id, null, k + 1)) : '').join('')}</div></div>`
-    : (() => { const L = partSites(gp.id); return `<div class="gpart"><h2 class="gp">${gpNum(gp.id)} · ${gp.t} <small>${L.length} designs, one per distinct structure (identical shapes are merged), scrolled to this section of the ${NAV[gp.p]} page. Colors are not the point here: compare the shapes and structures. Click a card to open the whole site.</small></h2>
-      <div class="grid">${L.map(x => card(x, x.id, gp)).join('')}</div></div>`; })();
-  $('#app').innerHTML = `<div class="gal"><header><img src="${LOGO}" alt="" width="64" height="64"><div><h1>Voices Unveiled — design proposals</h1>
-    <p>Three pages each: Our mission, Guest speakers, Our blog. Each part of the gallery is on its own page so it loads fast.</p></div></header>${nav}${content}${pager}</div>`;
   window.scrollTo(0, 0);
   $('#tb').innerHTML = '';
   $('#tb').style.display = 'none';
@@ -451,6 +438,7 @@ function applyVariants() {
   if (q.get('hl') === 'terra') s.classList.add('hl-terra');
   if (q.get('brand') === 'warm') s.classList.add('brand-warm');
   if (q.get('stat') === 'small') s.classList.add('stat-small');
+  if (q.get('photo') === 'wa' && typeof PH !== 'undefined' && PH.wa) { const im = s.querySelector('.v-banner .cover img'); if (im) { im.src = PH.wa.u; im.style.objectPosition = '50% 30%'; im.style.visibility = 'visible'; } }
 }
 function route() {
   const h = location.hash.replace(/^#\/?/, '').split('/');
@@ -489,7 +477,7 @@ document.addEventListener('keydown', e => {
 });
 window.addEventListener('hashchange', route);
 window.addEventListener('resize', () => document.querySelector('.gal') && fitShots());
-route();
+/* first render is done by meta.js once every script is loaded */
 
 /* auto-refresh: if the files were edited since this tab loaded, reload so clicks never show an old version */
 if (!EMBED) {
