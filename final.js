@@ -8,7 +8,9 @@ const FINAL_SEL = [
 ];
 GPARTS.push({ id: 'final', t: 'Final selection' });
 function finalPage() {
-  const sec = ([pid, list]) => {
+  const sec = ([pid, list0]) => {
+    /* Cover pages: her selection first, then every other cover proposal of the original page 1 */
+    const list = pid === 'covers' ? list0.concat([...COVER_NUMS].sort((x, y) => x - y).filter(n => !list0.includes(n))) : list0;
     const gid = pid === 'covers' ? 'covers' : 'pg-' + pid, g = GPARTS.find(x => x.id === gid);
     const cards = list.map(n => {
       if (n === '16t') return `<article class="gcard"><a class="shot" href="?bg=terra#/78/mission">${frame('index.html?embed=1&bg=terra#/78/mission', 'Perspective, terracotta')}</a><div class="gb"><h2><span>16</span> Perspective<em>site 78 · terracotta background</em></h2><p class="cwn">Deep terracotta</p></div></article>`;
