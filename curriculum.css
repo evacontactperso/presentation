@@ -1,0 +1,108 @@
+/* ===== Curriculum au format A4 : quatre couleurs seulement =====
+   bordeaux #4b2142 (titres), terracotta #982d06 (accents), beige #f4ece6 (fonds), noir #291e2b (texte).
+   Les filets et teintes sont des mélanges de ces couleurs avec le blanc du papier. */
+.cur-doc{--bd:#4b2142;--tc:#982d06;--yw:#e0971a;--or:#c1631a;--yd:#a8700f;--yl:#e9a56f;--bg:#f4ece6;--nr:#291e2b;
+  --ln:color-mix(in srgb,#4b2142 16%,#fff);--ft:color-mix(in srgb,#291e2b 72%,#fff);
+  font-family:'Plus Jakarta Sans','Inter',sans-serif;color:var(--nr);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+#cum.cur-doc{width:176mm}
+.cur-doc .cv-sheet{padding:15mm 17mm 18mm;background:#fff}
+.cur-doc .flow{margin:0}
+.cur-doc em{font-style:normal}
+
+/* couverture */
+.cu-cover .eb{margin:0 0 6mm;font:800 8pt/1 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--tc)}
+.cu-cover h1{margin:0 0 3mm;font:800 40pt/1 'Plus Jakarta Sans',sans-serif;letter-spacing:-.045em;color:var(--bd)}
+.cu-cover .sub{margin:0 0 8mm;font:700 15pt/1.2 'Plus Jakarta Sans',sans-serif;letter-spacing:-.02em;color:var(--tc)}
+.cu-cover .lead{margin:0 0 8mm;font-size:10pt;line-height:1.65;color:var(--nr)}
+.cu-t{width:100%;border-collapse:collapse;font-size:8.4pt;line-height:1.45;color:var(--nr)}
+.cu-t th,.cu-t td{padding:2.4mm 3mm;text-align:left;vertical-align:top;border-bottom:.25mm solid var(--ln)}
+.cu-t thead th{background:var(--nr);color:#fff;font:800 7pt/1.3 'Inter',sans-serif;letter-spacing:.08em;text-transform:uppercase;border-bottom:0}
+.cu-t tbody th{font:800 8.4pt/1.4 'Plus Jakarta Sans',sans-serif;color:var(--bd)}
+.cu-how{margin-top:6mm;padding:4.5mm 5mm;border-radius:2mm;background:var(--bg)}
+.cu-how p{margin:0 0 3mm;font-size:8.6pt;line-height:1.6;color:var(--nr)}.cu-how p b{color:var(--bd)}
+.cu-how 
+/* sommaire */
+.cu-sec h2{margin:0 0 5mm;font:800 22pt/1.1 'Plus Jakarta Sans',sans-serif;letter-spacing:-.035em;color:var(--bd)}
+.cu-tocf{display:flex;align-items:baseline;gap:2.5mm;margin:3.6mm 0 1mm;padding-bottom:1.6mm;border-bottom:.4mm solid var(--bd);font:800 9pt/1.2 'Plus Jakarta Sans',sans-serif;color:var(--bd)}
+.cu-tocf span{margin-left:auto;font:700 7.6pt/1 'Inter',sans-serif;color:var(--tc)}
+.cu-tocw{display:flex;align-items:baseline;gap:3mm;padding:.55mm 0;font-size:8pt;line-height:1.35;color:var(--nr);border-bottom:.2mm dotted var(--ln)}
+.cu-tocw .n{flex:none;width:6.5mm;font:800 8.4pt/1 'Plus Jakarta Sans',sans-serif;color:var(--tc)}
+.cu-tocw .t{flex:1}
+.cu-tocw .p{flex:none;font:700 8pt/1 'Inter',sans-serif;color:var(--ft)}
+
+/* en-tête de semaine : sobre, sans aplat */
+.cu-wk{display:flex;align-items:center;gap:6mm;padding:0 0 1mm}
+.cu-wk .num{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;width:25mm;height:25mm;border-radius:50%;background:var(--tc);color:#fff}
+.cu-wk .num small{font:800 6.4pt/1 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.cu-wk .num b{margin-top:.8mm;font:800 27pt/1 'Plus Jakarta Sans',sans-serif;letter-spacing:-.03em}
+.cu-wk .ht{min-width:0}
+.cu-wk .lab{margin:0 0 2.2mm;font:800 7.8pt/1.3 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--tc)}
+.cu-wk h2{margin:0;font:800 18.5pt/1.2 'Plus Jakarta Sans',sans-serif;letter-spacing:-.03em;color:var(--bd)}
+
+/* objectif : un libellé et un texte, sans cadre */
+
+.cu-goal{margin:5mm 0 8mm;padding:3.6mm 4.6mm 3.8mm;border-radius:1.8mm;background:color-mix(in srgb,#982d06 11%,#fff)}
+.cu-goal small{display:block;margin:0 0 1.6mm;font:800 6.6pt/1 'Inter',sans-serif;letter-spacing:.15em;text-transform:uppercase;color:var(--tc)}
+.cu-goal p{margin:0;font-size:9pt;line-height:1.55;color:var(--nr)}
+
+.cu-h{margin:0 0 3.2mm;font:800 10.2pt/1.2 'Plus Jakarta Sans',sans-serif;letter-spacing:.01em;color:var(--bd)}
+.cu-sb .cu-h{color:var(--sbc)}
+
+.cu-ul,.cu-ck{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2.6mm}
+.cu-ul li,.cu-ck li{position:relative;padding:0 0 0 6.6mm;font-size:9pt;line-height:1.55;color:var(--nr)}
+.cu-ul li::before,.cu-ck li::before{content:"";position:absolute;left:0;top:.55mm;width:3.9mm;height:3.9mm;border-radius:50%;background:var(--sbc,var(--bd))}
+.cu-ul li::after,.cu-ck li::after{content:"";position:absolute;left:0;top:.55mm;width:3.9mm;height:3.9mm;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M6.2 12.6l4 4 7.6-9.2' fill='none' stroke='white' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'/></svg>") center/64% no-repeat}
+
+.cu-s{margin:0 0 7mm}
+.cu-prep p{margin:0 0 2mm;font-size:9pt;line-height:1.55;color:var(--nr)}
+.cu-prep p:last-child{margin-bottom:0}
+
+/* déroulé : une ligne continue qui descend de point en point ; le type est une pastille arrondie, texte blanc */
+.cu-step{position:relative;display:grid;grid-template-columns:15mm 5mm 34mm minmax(0,1fr);align-items:start;padding:0 0 9mm 0}
+.cu-step::after{content:"";position:absolute;left:calc(15mm + 2.5mm - .15mm);top:0;bottom:0;width:.3mm;background:color-mix(in srgb,#291e2b 28%,#fff)}
+.cu-step.first::after{top:2mm}.cu-step.last::after{bottom:auto;height:2mm}
+.cu-step .t{display:flex;align-items:center;justify-content:flex-end;height:4.8mm;text-align:right;font:600 7.6pt/1 'Inter',sans-serif;color:var(--ft);white-space:nowrap}
+.cu-step .t b{font:800 9.6pt/1 'Plus Jakarta Sans',sans-serif;color:var(--nr)}
+.cu-step .dot{position:relative;z-index:1;justify-self:center;margin-top:.75mm;width:3.3mm;height:3.3mm;border-radius:50%;background:var(--bd);box-shadow:0 0 0 1.1mm #fff}
+.cu-step.k .dot{background:var(--yw)}.cu-step.e .dot{background:var(--tc)}
+.cu-step .ty{display:flex;align-items:center;height:4.8mm;padding:0 0 0 2.6mm}
+.cu-step .bh{display:flex;align-items:flex-start;gap:0 2.4mm;margin:0 0 1.5mm}
+.cu-step .ty em{display:inline-block;padding:1.1mm 3mm;border-radius:99px;background:var(--bd);color:#fff;font:800 6.5pt/1 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.cu-step.k .ty em{background:var(--yw)}.cu-step.e .ty em{background:var(--tc)}
+.cu-step .bh b{flex:1;min-width:30mm;font:800 10pt/4.8mm 'Plus Jakarta Sans',sans-serif;color:var(--nr)}
+.cu-step .bh .d{font:700 7.8pt/4.8mm 'Inter',sans-serif;color:var(--ft)}
+.cu-step .bx p{margin:0;font-size:8.8pt;line-height:1.55;color:var(--nr)}
+
+/* entraînements : cartes beiges */
+.cu-drs{display:grid;grid-template-columns:1fr 1fr;gap:2.4mm}
+.cu-dr{padding:2.6mm 3.4mm;border-radius:2mm;background:var(--bg)}
+.cu-dr b{display:block;margin:0 0 1.2mm;font:800 8pt/1.3 'Plus Jakarta Sans',sans-serif;color:var(--bd)}
+.cu-dr .tg{display:flex;flex-wrap:wrap;gap:.8mm 2.4mm;margin:0 0 1.4mm}
+.cu-dr .tg em{font:700 5.9pt/1 'Inter',sans-serif;letter-spacing:.07em;text-transform:uppercase;color:var(--tc)}
+.cu-dr p{margin:0;font-size:7.3pt;line-height:1.5;color:var(--nr)}
+/* fonds d'encadrés : violet très clair = théorie, terracotta très clair = pratique, gris très clair = supports */
+/* barre latérale : un élément à part, sur toute la hauteur de la section */
+.cu-sb{position:relative;padding-left:4.6mm}
+.cu-sb::before{content:"";position:absolute;left:0;top:0;bottom:0;width:1.1mm;background:var(--sbc)}
+.cu-sb.n{--sbc:var(--nr)}.cu-sb.o{--sbc:var(--or)}.cu-sb.b{--sbc:var(--bd)}.cu-sb.t{--sbc:var(--tc)}.cu-sb.y{--sbc:var(--yw)}
+.cu-s.cu-sb{margin-bottom:7mm}
+.cu-s.cu-flush{margin-bottom:0}
+
+/* plan à gauche (comme le menu des autres pages du site) */
+.cu-layout{display:grid;grid-template-columns:290px minmax(0,1fr);gap:26px;max-width:1280px;margin:0 auto;align-items:start}
+.cu-main{min-width:0}
+.cu-main .cv-bar{max-width:210mm}
+.cu-nav{position:sticky;top:78px;max-height:calc(100vh - 100px);overflow:auto;padding:16px;border-radius:24px;background:#fff;border:1px solid #e6e2dc;box-shadow:0 22px 44px -32px rgba(41,30,43,.5);scrollbar-width:thin;font-family:'Plus Jakarta Sans',sans-serif}
+.cu-nav .cn-t{margin:0 0 10px;font:800 12px/1 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#982d06}
+.cu-nav .cn-g{margin:14px 0 0}
+.cu-nav .cn-g p{margin:0 0 6px;padding:0 4px;font:800 13px/1.25 'Plus Jakarta Sans',sans-serif;color:#4b2142}
+.cu-nav .cn-g p small{display:block;margin-top:2px;font:600 11.5px/1.2 'Plus Jakarta Sans',sans-serif;color:#8a7f79}
+.cu-nav button{appearance:none;border:0;background:none;width:100%;display:flex;align-items:center;gap:10px;text-align:left;cursor:pointer;padding:7px 8px;border-radius:12px;font:700 12.5px/1.3 'Plus Jakarta Sans',sans-serif;color:#5d5560;transition:background .15s,color .15s}
+.cu-nav button:hover{background:#f4ece6;color:#291e2b}
+.cu-nav button.on{background:linear-gradient(135deg,#171716,#291e2b 60%,#982d06 260%);color:#fff}
+.cu-nav .n{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#291e2b;color:#fff;font:800 11.5px/1 'Plus Jakarta Sans',sans-serif;font-style:normal}
+.cu-nav button.on .n{background:#fff;color:#291e2b}
+.cu-nav .cn-top{font-weight:800;color:#291e2b}
+#cus .cv-sheet{scroll-margin-top:76px}
+@media(max-width:1000px){.cu-layout{grid-template-columns:1fr}.cu-nav{position:static;max-height:260px}}
+@media print{.cu-nav{display:none!important}.cu-layout{display:block}}

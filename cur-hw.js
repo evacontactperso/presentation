@@ -1,0 +1,50 @@
+/* Curriculum : devoir pour la prochaine séance, par semaine (clé = numéro de semaine). */
+const CUR_HW = {
+  1: ['Refaire l’exercice 1 sans le corrigé : les champs lexicaux de l’extrait d’Harpagon.', 'Apprendre la liste des 15 procédés grâce aux initiales.', 'Lire la fiche « Figures de style ».'],
+  2: ['Refaire de mémoire le classement des 16 figures de style par famille.', 'Relever huit figures dans un poème au choix, avec leur effet.', 'Lire les fiches « Modes et temps », « Négation » et « Phrases courtes et longues ».'],
+  3: ['Refaire l’exercice 4 (valeur des temps) et corriger le mini-test.', 'Relever cinq négations dans un texte de son choix et dire ce qui est absent ou refusé.', 'Lire les fiches « Connecteurs logiques », « Compléments circonstanciels » et « COD et sujets ».'],
+  4: ['Refaire un des trois textes de la séance (connecteurs, circonstanciels ou sujets et COD).', 'Écrire le plan du raisonnement d’un texte argumentatif à partir de ses connecteurs.', 'Lire les fiches « Péjoratifs et mélioratifs », « Pronoms personnels », « Niveaux de langage » et « Singulier et pluriel ».'],
+  5: ['Écrire de mémoire la liste des 15 procédés, avec un exemple pour chacun.', 'Refaire un tableau de synthèse sur un autre extrait de nouvelle.', 'Lire la fiche « Les genres littéraires ».'],
+  6: ['Apprendre les neuf sous-genres de la poésie avec leur définition.', 'Écrire la définition des quatre genres avec une œuvre en exemple pour chacun.', 'Lire la fiche « Les registres littéraires ».'],
+  7: ['Apprendre les onze registres, regroupés en trois familles, avec trois indices pour chacun.', 'Réécrire le fait divers dans un troisième registre.', 'Lire les fiches de l’humanisme, de la Pléiade, du baroque, du classicisme et des Lumières.'],
+  8: ['Apprendre la frise des cinq mouvements avec un auteur et un thème pour chacun.', 'Rédiger deux accroches d’introduction avec le texte à trous.', 'Lire les fiches du romantisme au Nouveau Roman.'],
+  9: ['Refaire de mémoire le tableau des 15 procédés.', 'Relire la correction du test et reprendre ses trois erreurs principales.', 'Lire les pages « Présentation de l’épreuve » et « La méthode » de la Formation 2.'],
+  10: ['Préparer un tableau de dix lignes sur le texte distribué, en commençant par les champs lexicaux.', 'Apprendre les huit étapes du commentaire et leur durée.'],
+  11: ['Terminer le tableau du « Père Goriot » jusqu’à trente lignes.', 'Rédiger le développement de la première partie du commentaire.', 'Lire les étapes 6 à 8 de la Formation 2.'],
+  12: ['Terminer le tableau du « Vase brisé » jusqu’à trente lignes.', 'Rédiger les deux autres sous-parties du développement.', 'Rédiger la conclusion avec une ouverture.'],
+  13: ['Terminer le développement du commentaire de l’extrait d’Harpagon.', 'Relire sa conclusion et préparer l’ouverture.'],
+  14: ['Terminer le commentaire de la lettre XXX : développement (1 h 30), conclusion et relecture.', 'Fixer son agenda : un commentaire, au moins en brouillon de deux heures, toutes les deux semaines.'],
+  15: ['Rédiger l’introduction et la conclusion complètes de « Manon Lescaut ».', 'Apprendre les six arguments de la fiche.', 'Commencer la lecture de « La Peau de chagrin ».'],
+  16: ['Rédiger l’introduction et la conclusion complètes de « La Peau de chagrin ».', 'Apprendre les trois axes : vie intense, vie contemplative, ambiguïté.', 'Lire la fiche de « Sido et Les Vrilles de la vigne ».'],
+  17: ['Rédiger l’introduction et la conclusion complètes de « Sido et Les Vrilles de la vigne ».', 'Apprendre les trois grandes parties et deux citations pour chacune.', 'Lire « Pour un oui ou pour un non » en entier.'],
+  18: ['Rédiger l’introduction et la conclusion complètes de « Pour un oui ou pour un non ».', 'Apprendre les quatre thèmes de la fiche, avec une réplique pour chacun.', 'Lire « On ne badine pas avec l’amour » en entier.'],
+  19: ['Rédiger l’introduction et la conclusion complètes de « On ne badine pas avec l’amour ».', 'Apprendre les trois formes de parole (mensongère, révélatrice, coupable), avec une réplique pour chacune.', 'Lire « Le Menteur » en entier.'],
+  20: ['Rédiger l’introduction et la conclusion complètes du « Menteur ».', 'Apprendre trois mensonges de Dorante et leur utilité.', 'Lire une sélection de poèmes des « Cahiers de Douai ».'],
+  21: ['Rédiger l’introduction et la conclusion complètes des « Cahiers de Douai ».', 'Apprendre un poème pour chacune des trois émancipations.', 'Lire les premières lettres des « Lettres d’une Péruvienne ».'],
+  22: ['Rédiger l’introduction et la conclusion complètes des « Lettres d’une Péruvienne ».', 'Apprendre les trois univers de Zilia, avec une lettre pour chacun.', 'Lire la première soirée des « Entretiens sur la pluralité des mondes ».'],
+  23: ['Rédiger l’introduction et la conclusion complètes des « Entretiens sur la pluralité des mondes ».', 'Apprendre les deux objectifs de Fontenelle : plaire et instruire.', 'Lire le « Discours de la servitude volontaire ».'],
+  24: ['Rédiger l’introduction et la conclusion complètes du « Discours de la servitude volontaire ».', 'Apprendre le paradoxe, deux causes et deux procédés de persuasion.', 'Lire la page « L’épreuve orale » de la Formation 4.'],
+  25: ['Remplir son tableau d’organisation avec ses 16 textes et les mois choisis.', 'Imprimer chaque texte en quatre exemplaires et ranger les pochettes.', 'Lire la méthode de l’analyse linéaire.'],
+  26: ['Retravailler la lecture à voix haute du texte et s’enregistrer.', 'Refaire l’analyse du cri d’Harpagon en dix minutes chronométrées.', 'Lire la méthode « Faire une fiche d’analyse linéaire ».'],
+  27: ['Terminer la fiche du texte du mois à partir de quatre sources.', 'Redire l’analyse à voix haute, sans la fiche.', 'Relire ses cours de grammaire du collège.'],
+  28: ['Refaire cinq analyses logiques de phrases tirées des œuvres.', 'Faire dix minutes de grammaire par semaine, jusqu’à l’épreuve.', 'Lire la méthode « L’œuvre choisie ».'],
+  29: ['Lire l’œuvre choisie selon son agenda de lecture.', 'Compléter la fiche de lecture : carte d’identité, biographie, contexte.', 'Écrire cinq choses aimées dans le livre.'],
+  30: ['Finaliser la fiche de lecture, avec la liste des questions d’entretien et leurs réponses.', 'Réécrire la présentation de trois minutes et la dire trois fois, chronométrée.'],
+  31: ['Relire son brouillon et noter ce qui a manqué : procédés, plan, temps.', 'Apporter sa copie pour la correction.'],
+  32: ['Réécrire l’introduction du commentaire avec les remarques reçues.', 'Refaire le tableau sur le texte de remédiation.', 'Relire les fiches de dissertation de ses œuvres.'],
+  33: ['Faire l’inventaire de ses erreurs de dissertation.', 'Relire les fiches « La dissertation à connaître » et apporter son plan.'],
+  34: ['Réécrire l’introduction de sa dissertation, avec problématique.', 'Ajouter deux exemples précis par sous-partie à son plan.', 'Relire les fiches de ses 16 textes.'],
+  35: ['Apprendre les textes qui ne sont pas encore appris.', 'Corriger les deux points faibles de la grille du premier oral blanc.'],
+  36: ['Appliquer son plan de révision jusqu’à l’épreuve.', 'Relire les 16 fiches et la fiche de lecture.', 'Dix minutes de grammaire chaque semaine.']
+};
+
+/* titres courts pour le plan à gauche (clé = numéro de semaine) */
+const CUR_SHORT = {
+  1: 'Champs lexicaux, ponctuation', 2: 'Figures de style', 3: 'Verbe et phrase', 4: 'Logique du texte', 5: 'Point de vue et ton',
+  6: 'Genres littéraires', 7: 'Registres littéraires', 8: 'Mouvements I', 9: 'Mouvements II',
+  10: 'Méthode du commentaire', 11: 'Sujet n°1 : roman', 12: 'Sujet n°2 : poésie', 13: 'Sujet n°3 : théâtre', 14: 'Sujet n°4 : littérature d’idées',
+  15: 'Manon Lescaut', 16: 'La Peau de chagrin', 17: 'Sido', 18: 'Pour un oui ou pour un non', 19: 'On ne badine pas avec l’amour',
+  20: 'Le Menteur', 21: 'Cahiers de Douai', 22: 'Lettres d’une Péruvienne', 23: 'Pluralité des mondes', 24: 'Servitude volontaire',
+  25: 'L’épreuve orale', 26: 'Analyse linéaire', 27: 'Fiche et mémorisation', 28: 'Question de grammaire', 29: 'Œuvre choisie', 30: 'Présentation et entretien',
+  31: 'Bac blanc : commentaire', 32: 'Correction du commentaire', 33: 'Bac blanc : dissertation', 34: 'Correction de la dissertation', 35: 'Oral blanc n°1', 36: 'Oral blanc n°2 et bilan'
+};
