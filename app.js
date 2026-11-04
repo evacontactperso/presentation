@@ -452,7 +452,7 @@ function route() {
   if (h[0] === 'p') { if (typeof pgView === 'function') pgView(...pcurr()); return; }
   const [n, p, f] = curr();
   site(n, p, f);
-  { const bg = new URLSearchParams(location.search).get('bg'); if (bg === 'terra' || bg === 'white') { const s = document.querySelector('.site'); if (s) s.classList.add('bg-' + bg); } }
+  { const q = new URLSearchParams(location.search), bg = q.get('bg'), s = document.querySelector('.site'); if (s) { if (bg === 'terra' || bg === 'white') s.classList.add('bg-' + bg); if (q.get('edge') === 'flat') s.classList.add('edge-flat'); } }
 }
 
 document.addEventListener('click', e => {

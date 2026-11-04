@@ -1,7 +1,7 @@
 /* Page 20: the user's selection, every page one after another, in the order given.
    Numbers on the cards are the designs' own numbers. */
 const FINAL_SEL = [
-  ['covers', [4, 6, 8, 19, '16w', 23]], ['mission', [5, 8, 7]], ['founder', [9, 21, 6]], ['course', [1, 4, 13]],
+  ['covers', [6, 4, 8, 19, '16w', '23f']], ['mission', [5, 8, 7]], ['founder', [9, 21, 6]], ['course', [1, 4, 13]],
   ['guests', [21, 12, 22]], ['emergency', [3, 21, 12]], ['impact', [4, 5, 6]], ['stories', [1, 3, 22]],
   ['supporters', [5, 11, 21]], ['donate', [3, 5, 13]], ['monthly', [8, 19, 24]], ['volunteer', [14, 4, 13]],
   ['blog', [17, 7, 3]], ['contact', [26, 29, 30]]
@@ -13,6 +13,7 @@ function finalPage() {
     const list = list0;
     const gid = pid === 'covers' ? 'covers' : 'pg-' + pid, g = GPARTS.find(x => x.id === gid);
     const cards = list.map(n => {
+      if (n === '23f') return `<article class="gcard"><a class="shot" href="?edge=flat#/31/mission">${frame('index.html?embed=1&edge=flat#/31/mission', 'Cover, flat bottom edge')}</a><div class="gb"><h2><span>23</span> Cover</h2></div></article>`;
       if (n === '16w') return `<article class="gcard"><a class="shot" href="?bg=white#/78/mission">${frame('index.html?embed=1&bg=white#/78/mission', 'Perspective, white background')}</a><div class="gb"><h2><span>16</span> Perspective</h2></div></article>`;
       if (pid === 'covers') { const [t, id] = COVER_ORDER[n - 1]; return t === 'h' ? hcard(hById(id), id, n) : card(SITES[id - 1], id, null, n); }
       return `<article class="gcard"><a class="shot mid" href="#/p/${pid}/${n}">${frame(`index.html?embed=1#/p/${pid}/${n}`, tplName(pid, n))}</a><div class="gb"><h2><span>${String(n).padStart(2, '0')}</span> ${tplName(pid, n)}</h2></div></article>`;
@@ -54,6 +55,7 @@ function finSrcList() {
   const out = [];
   FINAL_SEL.forEach(([pid, list]) => list.forEach(n => {
     if (n === '16w') return out.push({ pid, src: 'index.html?embed=1&bg=white#/78/mission' });
+    if (n === '23f') return out.push({ pid, src: 'index.html?embed=1&edge=flat#/31/mission' });
     if (pid === 'covers') { const [t, id] = COVER_ORDER[n - 1]; return out.push({ pid, src: t === 'h' ? `index.html?embed=1#/h/${id}/mission` : `index.html?embed=1#/${id}/mission` }); }
     out.push({ pid, src: `index.html?embed=1#/p/${pid}/${n}` });
   }));

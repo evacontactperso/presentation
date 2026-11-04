@@ -115,3 +115,6 @@
 .bg-white .hero.dk .eyebrow,.bg-white .hero.dk .tag{color:#982d06!important}
 .bg-white .hero.dk .btn.primary{background:#982d06!important;color:#fff!important;border-color:#982d06!important}
 .bg-white .hero.dk .btn.ghost{background:transparent!important;color:#291e2b!important;border-color:#291e2b!important}
+
+/* cover variant: the line at the bottom of the hero is horizontal */
+.edge-flat .e-slant{clip-path:none!important}
