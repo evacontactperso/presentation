@@ -438,7 +438,7 @@ function applyVariants() {
   if (q.get('hl') === 'terra') s.classList.add('hl-terra');
   if (q.get('brand') === 'warm') s.classList.add('brand-warm');
   if (q.get('stat') === 'small') s.classList.add('stat-small');
-  if (q.get('photo') === 'wa' && typeof PH !== 'undefined' && PH.wa) { const im = s.querySelector('.v-banner .cover img'); if (im) { im.src = PH.wa.u; im.style.objectPosition = '50% 30%'; im.style.visibility = 'visible'; } }
+  if (q.get('photo') === 'wa' && typeof PH !== 'undefined' && PH.wa) { const im = s.querySelector('.v-banner .cover img'); if (im) { im.src = PH.wa.u; im.style.objectPosition = '50% 30%'; im.style.visibility = 'visible'; } s.querySelectorAll('.v-banner .stk').forEach(x => x.remove()); }
 }
 function route() {
   const h = location.hash.replace(/^#\/?/, '').split('/');
