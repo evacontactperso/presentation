@@ -152,3 +152,5 @@
 }
 
 .w-rate .bars i{display:block}
+
+.pw-strip.rc{grid-template-columns:repeat(3,1fr);align-items:stretch;gap:18px}.pw-strip.rc .pf{width:100%;aspect-ratio:4/3;border-radius:var(--r)}

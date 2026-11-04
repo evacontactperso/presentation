@@ -1,0 +1,12 @@
+/* Monthly lifeline: five sober proposals (21-25): white, one accent, hairlines, little or no photography. */
+const MO = PG_M.monthly;
+const moNames = ['Hope Sustainer', 'Freedom Builder', 'Life Changer', 'Mission Champion'];
+const moAmt = MO.items.map((x, i) => ({ a: x.t, n: moNames[i], d: x.p.split(': ')[1] }));
+const moPerks = MO.foot.stats.map(s => s[1]);
+EXTRA.monthly = EXTRA.monthly || {};
+EXTRA.monthly[21] = ['Quiet columns', () => `<section class="mo21"><p class="eyebrow">${MO.e}</p><h2>${MO.h}</h2><p class="lead">${MO.lead}</p><div class="cols">${moAmt.map(t => `<div><b>${t.a}</b><small>per month</small><h3>${t.n}</h3><p>${t.d}</p></div>`).join('')}</div><div class="ft">${xGive('Give monthly', 'ghost')}<span>${MO.body[0]}</span></div></section>`];
+EXTRA.monthly[22] = ['Plain table', () => `<section class="mo22"><div class="hd"><p class="eyebrow">${MO.e}</p><h2>${MO.h}</h2></div><div class="m22t">${moAmt.map((t, i) => `<div class="m22r ${i === 1 ? 'on' : ''}"><b>${t.a}<small>/ month</small></b><h3>${t.n}</h3><p>${t.d}</p><i>${i === 1 ? '●' : '○'}</i></div>`).join('')}</div><div class="ft"><p>${MO.lead}</p>${xGive('Give monthly')}</div></section>`];
+EXTRA.monthly[23] = ['Letter and list', () => `<section class="mo23"><div class="l"><p class="eyebrow">${MO.e}</p><h2>${MO.h}</h2><p class="lead">${MO.body[0]}</p><ul>${moPerks.map(p => `<li>${p}</li>`).join('')}</ul></div><div class="r">${moAmt.map((t, i) => `<label class="${i === 2 ? 'on' : ''}"><i></i><span><b>${t.a} <small>per month</small></b><em>${t.n}</em><u>${t.d}</u></span></label>`).join('')}${xGive('Give monthly')}</div></section>`];
+EXTRA.monthly[24] = ['Single selector', () => `<section class="mo24"><p class="eyebrow">${MO.e}</p><h2>${MO.h}</h2><div class="sw">${moAmt.map((t, i) => `<span class="${i === 1 ? 'on' : ''}">${t.a}</span>`).join('')}</div><div class="pn"><h3>${moAmt[1].n}</h3><p>${moAmt[1].d}</p><div class="pk">${moPerks.map(p => `<span>${p}</span>`).join('')}</div>${xGive('Give $50 monthly')}</div><small>${MO.lead}</small></section>`];
+EXTRA.monthly[25] = ['Slim photo, two columns', () => `<section class="mo25"><div class="ph">${pfFill('don')}</div><div class="m25b"><div class="m25t"><p class="eyebrow">${MO.e}</p><h2>${MO.h}</h2><p class="lead">${MO.lead}</p>${xGive('Give monthly')}</div><div class="m25g">${moAmt.map(t => `<div><b>${t.a}<small> / month</small></b><h3>${t.n}</h3><p>${t.d}</p></div>`).join('')}</div></div></section>`];
+PG_KEEP.monthly = (PG_KEEP.monthly || []).concat([21, 22, 23, 24, 25]);

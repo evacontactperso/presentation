@@ -386,7 +386,7 @@ function gallery(pid) {
   try { sessionStorage.setItem('gp', gp.id); } catch (e) {}
   document.title = `${gpNum(gp.id)} · ${gp.t} — Voices Unveiled design proposals`;
   if (gp.id === 'final') {
-    document.title = 'Propositions de design';
+    document.title = 'Design Proposals';
     $('#app').innerHTML = `<div class="gal gal-final">${finalPage()}</div>`;
     window.scrollTo(0, 0); $('#tb').innerHTML = ''; $('#tb').style.display = 'none'; finRenumber(); fitShots(); lazyFrames(); finNavInit();
     return;
@@ -451,7 +451,7 @@ function route() {
   if (h[0] === 'p') { if (typeof pgView === 'function') pgView(...pcurr()); return; }
   const [n, p, f] = curr();
   site(n, p, f);
-  if (new URLSearchParams(location.search).get('bg') === 'terra') { const s = document.querySelector('.site'); if (s) s.classList.add('bg-terra'); }
+  { const bg = new URLSearchParams(location.search).get('bg'); if (bg === 'terra' || bg === 'white') { const s = document.querySelector('.site'); if (s) s.classList.add('bg-' + bg); } }
 }
 
 document.addEventListener('click', e => {

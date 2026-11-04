@@ -1,229 +1,229 @@
-/* Curriculum : semaines 31 à 36 (partie 5 : révisions, bacs blancs écrits, oraux blancs). */
+/* Curriculum: weeks 31 to 36 (part 5: review, written mock exams, oral mock exams). */
 
 cw({
-  n: 31, f: 'f5', title: 'Bac blanc écrit n°1 : le commentaire en conditions réelles',
-  goal: 'Passer l’épreuve de commentaire en quatre heures, avec la répartition exacte de l’examen.',
+  n: 31, f: 'f5', title: 'Written mock exam no. 1: the commentary in real conditions',
+  goal: 'Take the commentary exam in four hours, with the exact time split of the real exam.',
   notions: [
-    'Répartition : lecture 5 min, tableau 1 h 15 (jusqu’à 1 h 20), plan 20 min (1 h 40), problématique 5 min (1 h 45), introduction 15 min (2 h), développement 1 h 30 (3 h 30), conclusion 15 min (3 h 45), relecture 15 min (4 h).',
-    'Règles visuelles de la copie : trois lignes de saut entre les blocs, alinéa de trois carreaux.',
-    'Grille de correction : compréhension, nombre et justesse des procédés, interprétation, plan, problématique, rédaction.'
+    'Time split: reading 5 min, table 1 h 15 (up to 1 h 20), outline 20 min (1 h 40), central question 5 min (1 h 45), introduction 15 min (2 h), body 1 h 30 (3 h 30), conclusion 15 min (3 h 45), proofreading 15 min (4 h).',
+    'Visual rules of the paper: three blank lines between blocks, three-square indent.',
+    'Grading grid: comprehension, number and accuracy of devices, interpretation, outline, central question, writing.'
   ],
   skills: [
-    'Rendre une copie complète dans le temps.',
-    'Réaliser un tableau d’au moins trente procédés.',
-    'Soigner la mise en page et la relecture.',
-    'Se tenir au chronomètre affiché.'
+    'Hand in a complete paper within the time.',
+    'Produce a table of at least thirty devices.',
+    'Take care of layout and proofreading.',
+    'Keep to the displayed timer.'
   ],
   watch: [
-    'Ne pas sacrifier la relecture : quinze minutes de relecture valent plusieurs points.',
-    'Ne pas écrire le développement avant d’avoir une problématique claire.',
-    'Respecter les horaires intermédiaires, notés au tableau toutes les demi-heures.'
+    'Do not sacrifice proofreading: fifteen minutes of proofreading are worth several points.',
+    'Do not write the body before having a clear central question.',
+    'Respect the intermediate times, written on the board every half hour.'
   ],
   prep: [
-    { k: 'À lire avant la séance', t: 'Les étapes 1 à 8 de la Formation 2 et le planning de l’épreuve.' },
-    { k: 'Supports', t: 'Texte inédit tiré des annales ; copies doubles ; brouillons ; chronomètre affiché ; salle d’examen.' }
+    { k: 'To read before the session', t: 'Steps 1 to 8 of Course 2 and the exam schedule.' },
+    { k: 'Materials', t: 'Unseen text taken from past exams; double sheets; draft paper; timer displayed; exam room.' }
   ],
   flow: [
-    [10, 'accroche', 'Consignes d’examen', 'Installation en salle, rappel de la répartition du temps et des règles visuelles de la copie, distribution du texte.'],
-    [5, 'exo', 'Lecture', 'Activation du chronomètre, lecture du texte, plusieurs fois.'],
-    [75, 'exo', 'Tableau d’analyse', 'Au moins trente procédés, champs lexicaux en premier.'],
-    [20, 'exo', 'Plan', 'Six sous-parties, titres avec verbe.'],
-    [5, 'exo', 'Problématique', 'Une phrase.'],
-    [15, 'copie', 'Introduction', 'Cinq éléments.'],
-    [90, 'copie', 'Développement', 'Deux ou trois parties, six sous-parties en tout ; introduction partielle et conclusion partielle de chaque partie.'],
-    [15, 'copie', 'Conclusion', 'Réponse à la problématique, ouverture.'],
-    [15, 'copie', 'Relecture', 'Propreté, syntaxe, orthographe.'],
-    [5, 'bilan', 'Ramassage des copies', 'Les copies sont ramassées ; consigne : noter à chaud les trois difficultés rencontrées.']
+    [10, 'accroche', 'Exam instructions', 'Seating in the room, reminder of the time split and of the visual rules of the paper, handing out the text.'],
+    [5, 'exo', 'Reading', 'Start the timer, read the text, several times.'],
+    [75, 'exo', 'Analysis table', 'At least thirty devices, lexical fields first.'],
+    [20, 'exo', 'Outline', 'Six sub-parts, titles with a verb.'],
+    [5, 'exo', 'Central question', 'One sentence.'],
+    [15, 'copie', 'Introduction', 'Five elements.'],
+    [90, 'copie', 'Body', 'Two or three parts, six sub-parts in all; partial introduction and partial conclusion of each part.'],
+    [15, 'copie', 'Conclusion', 'Answer to the central question, opening.'],
+    [15, 'copie', 'Proofreading', 'Neatness, syntax, spelling.'],
+    [5, 'bilan', 'Collecting the papers', 'The papers are collected; assignment: note down, while it is fresh, the three difficulties encountered.']
   ],
   drills: [
-    { t: 'Commentaire sur texte inédit', tags: ['Individuel', 'Examen', '4 h'], how: 'Conditions réelles : salle d’examen, horaires intermédiaires affichés, copie double, sans aide. Corrigé la semaine suivante avec la grille officielle.' }
+    { t: 'Commentary on an unseen text', tags: ['Individual', 'Exam', '4 h'], how: 'Real conditions: exam room, intermediate times displayed, double sheet, no help. Corrected the following week with the official grid.' }
   ],
-  special: 'Séance longue : 4 h d’épreuve et 15 min de consignes et de ramassage.'
+  special: 'Long session: 4 h of exam and 15 min of instructions and collecting.'
 });
 
 cw({
-  n: 32, f: 'f5', title: 'Correction du commentaire et remédiation',
-  goal: 'Repérer ses erreurs à l’aide de copies anonymisées et corriger les trois faiblesses les plus fréquentes.',
+  n: 32, f: 'f5', title: 'Correction of the commentary and remediation',
+  goal: 'Spot your mistakes using anonymized papers and fix the three most frequent weaknesses.',
   notions: [
-    'Le corrigé type : problématique, plan et tableau attendus.',
-    'Les trois types de faiblesse : tableau pauvre (moins de trente procédés), plan déséquilibré, introduction ou conclusion incomplète.',
-    'La grille de correction sert aussi d’outil de révision.'
+    'The model answer: expected central question, outline and table.',
+    'The three types of weakness: poor table (fewer than thirty devices), unbalanced outline, incomplete introduction or conclusion.',
+    'The grading grid also serves as a review tool.'
   ],
   skills: [
-    'Évaluer sa copie avec la grille.',
-    'Réécrire une introduction à partir des remarques reçues.',
-    'Compléter un tableau avec les procédés oubliés.',
-    'Refaire un tableau d’analyse de quinze lignes sur un texte court.'
+    'Assess your paper with the grid.',
+    'Rewrite an introduction based on the remarks received.',
+    'Complete a table with the forgotten devices.',
+    'Redo a fifteen-row analysis table on a short text.'
   ],
   watch: [
-    'Se corriger, c’est d’abord chercher ses erreurs récurrentes.',
-    'Une copie anonymisée sert d’exemple : on ne juge pas la personne.',
-    'La séance se termine par un atelier de tableau : on retrouve ses procédés manquants.'
+    'Correcting yourself means first looking for your recurring mistakes.',
+    'An anonymized paper serves as an example: we do not judge the person.',
+    'The session ends with a table workshop: you find your missing devices.'
   ],
   prep: [
-    { k: 'À lire avant la séance', t: 'Sa propre copie corrigée, avec l’annotation du professeur.' },
-    { k: 'Supports', t: 'Corrigé type du bac blanc ; trois copies anonymisées (bonne, moyenne, fragile) ; grille de correction ; un texte court pour l’atelier de tableau.' }
+    { k: 'To read before the session', t: 'Your own corrected paper, with the teacher’s annotations.' },
+    { k: 'Materials', t: 'Model answer of the mock exam; three anonymized papers (good, average, fragile); grading grid; a short text for the table workshop.' }
   ],
   flow: [
-    [10, 'accroche', 'Retour global', 'Notes, répartition, trois forces et trois faiblesses de la classe.'],
-    [30, 'corr', 'Corrigé type', 'Tableau, problématique, plan : comparaison avec les productions des élèves.'],
-    [25, 'exo', 'Analyse de trois copies', 'Binôme : évaluer trois copies anonymisées avec la grille, justifier chaque note.'],
-    [20, 'exo', 'Atelier de remédiation', 'Par profil : tableau, plan, introduction ou conclusion à réécrire, avec un tuteur.'],
-    [25, 'exo', 'Atelier : refaire un tableau', 'Individuel : un texte court, un tableau de quinze lignes en 20 minutes, comparaison avec le corrigé en 5 minutes.'],
-    [10, 'bilan', 'Bilan', 'Chacun écrit un objectif de progression pour la dissertation.']
+    [10, 'accroche', 'Overall feedback', 'Grades, distribution, three strengths and three weaknesses of the class.'],
+    [30, 'corr', 'Model answer', 'Table, central question, outline: comparison with the students’ work.'],
+    [25, 'exo', 'Analysis of three papers', 'Pairs: assess three anonymized papers with the grid, justify each grade.'],
+    [20, 'exo', 'Remediation workshop', 'By profile: table, outline, introduction or conclusion to rewrite, with a tutor.'],
+    [25, 'exo', 'Workshop: redoing a table', 'Individual: a short text, a fifteen-row table in 20 minutes, comparison with the model answer in 5 minutes.'],
+    [10, 'bilan', 'Wrap-up', 'Everyone writes a progress goal for the essay.']
   ],
   drills: [
-    { t: 'Analyse de trois copies anonymisées', tags: ['Binôme', '25 min'], how: 'Chaque binôme note les copies avec la grille de correction et justifie chaque critère à l’oral.' },
-    { t: 'Remédiation par profil', tags: ['Individuel', 'Tuteur', '20 min'], how: 'Réécriture ciblée : introduction, tableau complété, plan rééquilibré ou conclusion avec ouverture.' },
-    { t: 'Atelier : refaire un tableau', tags: ['Individuel', '25 min'], how: 'Un texte court, quinze lignes de tableau en 20 minutes, puis comparaison avec le corrigé.' }
+    { t: 'Analysis of three anonymized papers', tags: ['Pairs', '25 min'], how: 'Each pair grades the papers with the grading grid and justifies each criterion orally.' },
+    { t: 'Remediation by profile', tags: ['Individual', 'Tutor', '20 min'], how: 'Targeted rewriting: introduction, completed table, rebalanced outline or conclusion with an opening.' },
+    { t: 'Workshop: redoing a table', tags: ['Individual', '25 min'], how: 'A short text, fifteen table rows in 20 minutes, then comparison with the model answer.' }
   ]
 });
 
 cw({
-  n: 33, f: 'f5', title: 'Bac blanc écrit n°2 : la dissertation sur une œuvre au programme',
-  goal: 'Rédiger une dissertation complète en quatre heures, sur l’une des œuvres étudiées.',
+  n: 33, f: 'f5', title: 'Written mock exam no. 2: the essay on a work from the syllabus',
+  goal: 'Write a complete essay in four hours, on one of the works studied.',
   notions: [
-    'Une dissertation suit un plan en trois grandes parties, chacune avec deux ou trois sous-parties étayées par des exemples précis de l’œuvre.',
-    'L’introduction suit cinq éléments : accroche (biographie de l’auteur), présentation de l’œuvre (titre souligné, date de publication), résumé, problématique, annonce du plan.',
-    'La conclusion récapitule la réponse et ouvre sur d’autres œuvres.',
-    'Répartition conseillée des 4 heures (à ajuster) : sujet et mots-clés 15 min, plan détaillé 30 min, problématique 15 min, introduction 30 min, développement 1 h 45, conclusion 20 min, relecture 25 min.'
+    'An essay follows an outline in three main parts, each with two or three sub-parts supported by precise examples from the work.',
+    'The introduction follows five elements: hook (author’s biography), presentation of the work (underlined title, publication date), summary, central question, announcement of the outline.',
+    'The conclusion recaps the answer and opens onto other works.',
+    'Recommended split of the 4 hours (to adjust): topic and keywords 15 min, detailed outline 30 min, central question 15 min, introduction 30 min, body 1 h 45, conclusion 20 min, proofreading 25 min.'
   ],
   skills: [
-    'Analyser un sujet de dissertation et définir ses mots-clés.',
-    'Construire un plan équilibré en trois parties.',
-    'Mobiliser au moins deux citations ou scènes précises par sous-partie.',
-    'Rédiger dans le temps avec une mise en page propre.'
+    'Analyze an essay topic and define its keywords.',
+    'Build a balanced three-part outline.',
+    'Use at least two precise quotations or scenes per sub-part.',
+    'Write within the time with a neat layout.'
   ],
   watch: [
-    'Ne pas réciter la fiche de l’œuvre : répondre au sujet précis.',
-    'Définir tous les mots-clés avant de construire le plan.',
-    'Prévoir des exemples précis de l’œuvre pour chaque sous-partie, sans généralités.'
+    'Do not recite the sheet on the work: answer the precise topic.',
+    'Define all the keywords before building the outline.',
+    'Plan precise examples from the work for each sub-part, no generalities.'
   ],
   prep: [
-    { k: 'À lire avant la séance', t: 'Les fiches « La dissertation à connaître » de chaque œuvre étudiée, et les introductions et conclusions modèles.' },
-    { k: 'Supports', t: 'Trois sujets au choix portant sur trois œuvres du programme ; copies doubles ; brouillons ; chronomètre affiché.' }
+    { k: 'To read before the session', t: 'The “The essay to know” sheets of each work studied, and the model introductions and conclusions.' },
+    { k: 'Materials', t: 'Three topics to choose from, on three works of the syllabus; double sheets; draft paper; timer displayed.' }
   ],
   flow: [
-    [10, 'accroche', 'Consignes d’examen', 'Installation en salle, présentation des trois sujets, rappel de la répartition conseillée des quatre heures.'],
-    [15, 'exo', 'Analyse du sujet', 'Choix du sujet, définition des mots-clés, reformulation du sujet.'],
-    [30, 'exo', 'Plan détaillé', 'Trois parties, deux ou trois sous-parties, exemples précis de l’œuvre.'],
-    [15, 'exo', 'Problématique', 'Une question qui découle des mots-clés.'],
-    [30, 'copie', 'Introduction', 'Cinq éléments, rédigée sur la copie.'],
-    [105, 'copie', 'Développement', 'Trois parties rédigées avec introductions et conclusions partielles.'],
-    [20, 'copie', 'Conclusion', 'Réponse et ouverture sur une autre œuvre.'],
-    [25, 'copie', 'Relecture', 'Orthographe, syntaxe, propreté, cohérence du plan.'],
-    [5, 'bilan', 'Ramassage des copies', 'Les copies sont ramassées ; consigne : noter à chaud les trois difficultés rencontrées.']
+    [10, 'accroche', 'Exam instructions', 'Seating in the room, presentation of the three topics, reminder of the recommended split of the four hours.'],
+    [15, 'exo', 'Analysis of the topic', 'Choice of the topic, definition of the keywords, rewording of the topic.'],
+    [30, 'exo', 'Detailed outline', 'Three parts, two or three sub-parts, precise examples from the work.'],
+    [15, 'exo', 'Central question', 'A question that follows from the keywords.'],
+    [30, 'copie', 'Introduction', 'Five elements, written on the paper.'],
+    [105, 'copie', 'Body', 'Three parts written out with partial introductions and conclusions.'],
+    [20, 'copie', 'Conclusion', 'Answer and opening onto another work.'],
+    [25, 'copie', 'Proofreading', 'Spelling, syntax, neatness, coherence of the outline.'],
+    [5, 'bilan', 'Collecting the papers', 'The papers are collected; assignment: note down, while it is fresh, the three difficulties encountered.']
   ],
   drills: [
-    { t: 'Dissertation sur une œuvre au programme', tags: ['Individuel', 'Examen', '4 h'], how: 'Conditions réelles. Un sujet au choix sur trois. Corrigé la semaine suivante avec la grille de dissertation.' }
+    { t: 'Essay on a work from the syllabus', tags: ['Individual', 'Exam', '4 h'], how: 'Real conditions. One topic to choose from three. Corrected the following week with the essay grid.' }
   ],
-  special: 'Séance longue : 4 h d’épreuve et 15 min de consignes et de ramassage.'
+  special: 'Long session: 4 h of exam and 15 min of instructions and collecting.'
 });
 
 cw({
-  n: 34, f: 'f5', title: 'Correction de la dissertation et remédiation',
-  goal: 'Corriger la dissertation à l’aide du corrigé type et reprendre un plan avec des exemples précis.',
+  n: 34, f: 'f5', title: 'Correction of the essay and remediation',
+  goal: 'Correct the essay using the model answer and rework an outline with precise examples.',
   notions: [
-    'Le corrigé type : définition des mots-clés, problématique, plan en trois parties.',
-    'Les erreurs les plus fréquentes : plan descriptif, exemples vagues, introduction sans problématique, conclusion sans ouverture.',
-    'La grille de dissertation : analyse du sujet, plan, exemples, rédaction.'
+    'The model answer: definition of the keywords, central question, three-part outline.',
+    'The most frequent mistakes: descriptive outline, vague examples, introduction without a central question, conclusion without an opening.',
+    'The essay grid: analysis of the topic, outline, examples, writing.'
   ],
   skills: [
-    'Évaluer sa dissertation avec la grille.',
-    'Rédiger une introduction corrigée.',
-    'Compléter un plan avec des exemples précis de l’œuvre.',
-    'Reprendre un plan avec deux exemples précis par sous-partie.'
+    'Assess your essay with the grid.',
+    'Write a corrected introduction.',
+    'Complete an outline with precise examples from the work.',
+    'Rework an outline with two precise examples per sub-part.'
   ],
   watch: [
-    'Relier chaque sous-partie à la problématique.',
-    'Reprendre en priorité l’erreur la plus fréquente de sa copie.',
-    'Un plan sans exemple précis de l’œuvre ne répond pas à la problématique.'
+    'Link each sub-part to the central question.',
+    'Fix first the most frequent mistake in your paper.',
+    'An outline without precise examples from the work does not answer the central question.'
   ],
   prep: [
-    { k: 'À lire avant la séance', t: 'Sa copie corrigée et la fiche « La dissertation à connaître » de son œuvre.' },
-    { k: 'Supports', t: 'Corrigé type ; trois copies anonymisées ; grille de dissertation ; son plan de dissertation.' }
+    { k: 'To read before the session', t: 'Your corrected paper and the “The essay to know” sheet of your work.' },
+    { k: 'Materials', t: 'Model answer; three anonymized papers; essay grid; your essay outline.' }
   ],
   flow: [
-    [10, 'accroche', 'Retour global', 'Notes, trois forces et trois faiblesses de la classe.'],
-    [25, 'corr', 'Corrigé type', 'Mots-clés, problématique, plan en trois parties, exemples.'],
-    [25, 'exo', 'Analyse de trois copies', 'Binôme : notation avec la grille, justification orale.'],
-    [20, 'exo', 'Atelier de remédiation', 'Réécriture d’une introduction ou d’un plan par profil.'],
-    [25, 'exo', 'Atelier : plan détaillé avec exemples', 'Individuel : reprendre son plan de dissertation et ajouter deux exemples précis de l’œuvre par sous-partie.'],
-    [15, 'bilan', 'Bilan et plan des deux dernières semaines', 'Calendrier des oraux blancs, liste des textes à apprendre.']
+    [10, 'accroche', 'Overall feedback', 'Grades, three strengths and three weaknesses of the class.'],
+    [25, 'corr', 'Model answer', 'Keywords, central question, three-part outline, examples.'],
+    [25, 'exo', 'Analysis of three papers', 'Pairs: grading with the grid, oral justification.'],
+    [20, 'exo', 'Remediation workshop', 'Rewriting an introduction or an outline by profile.'],
+    [25, 'exo', 'Workshop: detailed outline with examples', 'Individual: rework your essay outline and add two precise examples from the work per sub-part.'],
+    [15, 'bilan', 'Wrap-up and plan for the last two weeks', 'Calendar of the oral mock exams, list of texts to learn.']
   ],
   drills: [
-    { t: 'Analyse de trois copies anonymisées', tags: ['Binôme', '25 min'], how: 'Notation avec la grille de dissertation ; chaque critère justifié à l’oral.' },
-    { t: 'Atelier de remédiation', tags: ['Individuel', '20 min'], how: 'Réécriture d’une introduction avec problématique, ou d’un plan avec exemples précis.' },
-    { t: 'Plan détaillé avec exemples', tags: ['Individuel', '25 min'], how: 'Deux exemples précis de l’œuvre par sous-partie, avec la citation ou la scène.' }
+    { t: 'Analysis of three anonymized papers', tags: ['Pairs', '25 min'], how: 'Grading with the essay grid; each criterion justified orally.' },
+    { t: 'Remediation workshop', tags: ['Individual', '20 min'], how: 'Rewriting of an introduction with a central question, or of an outline with precise examples.' },
+    { t: 'Detailed outline with examples', tags: ['Individual', '25 min'], how: 'Two precise examples from the work per sub-part, with the quotation or the scene.' }
   ]
 });
 
 cw({
-  n: 35, f: 'f5', title: 'Oral blanc n°1 : 30 minutes de préparation et 20 minutes de passage',
-  goal: 'Passer l’épreuve orale dans les conditions de l’examen : analyse linéaire, grammaire, œuvre choisie.',
+  n: 35, f: 'f5', title: 'Oral mock exam no. 1: 30 minutes of preparation and a 20-minute presentation',
+  goal: 'Take the oral exam in exam conditions: linear analysis, grammar, chosen work.',
   notions: [
-    'Déroulé du passage de 20 minutes : analyse linéaire (10 min : présentation 30 s, lecture 1 min, problématique et plan 30 s, analyse 7 min 30, conclusion 30 s), question de grammaire (2 min), œuvre choisie (8 min : présentation 3 min, entretien 5 min).',
-    'Préparation de 30 minutes : tirage du texte, brouillon de la problématique et du plan.',
-    'Œuvre choisie : présentation de 3 minutes, dont une introduction de 30 secondes et trois raisons précises, illustrées d’exemples.',
-    'Entretien : auteur, mouvement, histoire en détail, personnage ou passage préféré, couverture, titre alternatif, lien avec la vie personnelle ou l’actualité.'
+    'Flow of the 20-minute presentation: linear analysis (10 min: presentation 30 s, reading 1 min, central question and outline 30 s, analysis 7 min 30, conclusion 30 s), grammar question (2 min), chosen work (8 min: presentation 3 min, interview 5 min).',
+    'Preparation of 30 minutes: drawing of the text, draft of the central question and the outline.',
+    'Chosen work: 3-minute presentation, including a 30-second introduction and three precise reasons, illustrated with examples.',
+    'Interview: author, movement, the story in detail, favorite character or passage, cover, alternative title, link to personal life or current events.'
   ],
   skills: [
-    'Tenir 20 minutes dans le temps imparti.',
-    'Lire avec précision et expressivité.',
-    'Répondre à une question de grammaire en deux minutes.',
-    'Présenter l’œuvre choisie avec trois raisons précises et des exemples.'
+    'Keep within 20 minutes in the time allowed.',
+    'Read with precision and expressiveness.',
+    'Answer a grammar question in two minutes.',
+    'Present the chosen work with three precise reasons and examples.'
   ],
   watch: [
-    'Soigner l’entrée, le sourire et la politesse : l’examinateur observe dès le seuil.',
-    'Ne pas lire le brouillon : s’appuyer sur les mots-clés.',
-    'Gestion du temps : surveiller le chronomètre de l’examinateur.'
+    'Take care with the entrance, the smile and politeness: the examiner is watching from the threshold.',
+    'Do not read the draft: rely on the keywords.',
+    'Time management: keep an eye on the examiner’s timer.'
   ],
   prep: [
-    { k: 'À lire avant la séance', t: 'Les fiches de ses 16 textes et la fiche de son œuvre choisie.' },
-    { k: 'Supports', t: 'Les 16 textes tirés au sort ; chronomètre ; grille d’oral ; salle dédoublée, groupes de trois élèves.' }
+    { k: 'To read before the session', t: 'The sheets of your 16 texts and the sheet of your chosen work.' },
+    { k: 'Materials', t: 'The 16 texts drawn by lot; timer; oral grid; split room, groups of three students.' }
   ],
   flow: [
-    [10, 'accroche', 'Consignes et tirage des textes', 'Rappel du déroulé (trente minutes de préparation, vingt minutes de passage) et de la grille ; tirage au sort des textes.'],
-    [30, 'oral', 'Préparation', 'Trente minutes de préparation en salle, brouillon de la problématique et du plan.'],
-    [60, 'oral', 'Trois passages de 20 minutes', 'Chaque passage : analyse linéaire, question de grammaire, œuvre choisie. Un observateur remplit la grille.'],
-    [20, 'bilan', 'Bilan collectif', 'Retour sur les trois passages ; trois constats pour la classe. Les élèves qui ne passent pas travaillent en autonomie sur leurs fiches ; la séance est dédoublée en groupes de trois.']
+    [10, 'accroche', 'Instructions and drawing of the texts', 'Reminder of the flow (thirty minutes of preparation, twenty minutes of presentation) and of the grid; drawing of the texts by lot.'],
+    [30, 'oral', 'Preparation', 'Thirty minutes of preparation in the room, draft of the central question and the outline.'],
+    [60, 'oral', 'Three 20-minute presentations', 'Each presentation: linear analysis, grammar question, chosen work. An observer fills in the grid.'],
+    [20, 'bilan', 'Group review', 'Feedback on the three presentations; three findings for the class. Students who are not presenting work independently on their sheets; the session is split into groups of three.']
   ],
   drills: [
-    { t: 'Passage de 20 minutes', tags: ['Individuel', 'Examen', '20 min'], how: 'Analyse linéaire de 10 minutes, question de grammaire de 2 minutes, œuvre choisie de 8 minutes. Grille remplie par l’examinateur.' },
-    { t: 'Préparation de 30 minutes', tags: ['Individuel', 'Brouillon'], how: 'Problématique et plan rédigés en 30 minutes sur le texte tiré au sort ; lecture préparée à voix haute.' }
+    { t: '20-minute presentation', tags: ['Individual', 'Exam', '20 min'], how: '10-minute linear analysis, 2-minute grammar question, 8-minute chosen work. Grid filled in by the examiner.' },
+    { t: '30-minute preparation', tags: ['Individual', 'Draft'], how: 'Central question and outline written in 30 minutes on the text drawn by lot; reading prepared aloud.' }
   ]
 });
 
 cw({
-  n: 36, f: 'f5', title: 'Oral blanc n°2 et bilan de l’année',
-  goal: 'Passer un deuxième oral blanc, mesurer sa progression et fixer la dernière ligne droite.',
+  n: 36, f: 'f5', title: 'Oral mock exam no. 2 and review of the year',
+  goal: 'Take a second oral mock exam, measure your progress and set the final stretch.',
   notions: [
-    'La progression se mesure en comparant la grille du premier oral blanc avec celle du second.',
-    'Points d’éloquence à valoriser : lecture précise, articulation, présence ancrée, sourire, politesse, clarté de la structure.',
-    'La dernière ligne droite : relire les 16 fiches, refaire les tableaux, entraîner la grammaire.'
+    'Progress is measured by comparing the grid of the first oral mock exam with that of the second.',
+    'Public-speaking points to highlight: precise reading, articulation, grounded presence, smile, politeness, clarity of structure.',
+    'The final stretch: reread the 16 sheets, redo the tables, practice grammar.'
   ],
   skills: [
-    'Améliorer les deux points faibles du premier oral blanc.',
-    'Enchaîner analyse linéaire, grammaire et œuvre choisie sans temps mort.',
-    'Planifier ses révisions jusqu’à l’examen.'
+    'Improve the two weak points of the first oral mock exam.',
+    'Chain linear analysis, grammar and chosen work without dead time.',
+    'Plan your review up to the exam.'
   ],
   watch: [
-    'Se concentrer sur deux axes de progression, pas sur dix.',
-    'Ne pas apprendre par cœur au point de perdre la spontanéité.',
-    'S’organiser : l’organisation est le nerf de la guerre de l’oral.'
+    'Focus on two axes of progress, not on ten.',
+    'Do not learn by heart to the point of losing spontaneity.',
+    'Get organized: organization is the backbone of the oral exam.'
   ],
   prep: [
-    { k: 'À lire avant la séance', t: 'La grille du premier oral blanc, avec ses deux points faibles soulignés.' },
-    { k: 'Supports', t: 'Les 16 textes tirés au sort, chronomètre, grille d’oral, tableau d’organisation.' }
+    { k: 'To read before the session', t: 'The grid of the first oral mock exam, with its two weak points underlined.' },
+    { k: 'Materials', t: 'The 16 texts drawn by lot, timer, oral grid, organization table.' }
   ],
   flow: [
-    [10, 'accroche', 'Consignes et tirage des textes', 'Rappel des deux points faibles du premier oral blanc ; tirage au sort d’un nouveau texte.'],
-    [30, 'oral', 'Préparation', 'Trente minutes de préparation en salle, brouillon de la problématique et du plan.'],
-    [60, 'oral', 'Trois passages de 20 minutes', 'Mêmes conditions que la séance précédente, comparaison avec la première grille.'],
-    [20, 'bilan', 'Bilan de l’année', 'Chaque élève rédige son plan de révision jusqu’à l’épreuve : textes à apprendre, tableaux à refaire, grammaire.']
+    [10, 'accroche', 'Instructions and drawing of the texts', 'Reminder of the two weak points of the first oral mock exam; drawing of a new text by lot.'],
+    [30, 'oral', 'Preparation', 'Thirty minutes of preparation in the room, draft of the central question and the outline.'],
+    [60, 'oral', 'Three 20-minute presentations', 'Same conditions as the previous session, comparison with the first grid.'],
+    [20, 'bilan', 'Review of the year', 'Each student writes their review plan up to the exam: texts to learn, tables to redo, grammar.']
   ],
   drills: [
-    { t: 'Passage de 20 minutes', tags: ['Individuel', 'Examen', '20 min'], how: 'Mêmes conditions que l’oral blanc n°1 ; comparaison des deux grilles pour mesurer la progression.' },
-    { t: 'Plan de révision', tags: ['Individuel', '10 min'], how: 'Un tableau jusqu’à l’examen : textes à apprendre, tableaux à refaire, séances de grammaire, calendrier.' }
+    { t: '20-minute presentation', tags: ['Individual', 'Exam', '20 min'], how: 'Same conditions as oral mock exam no. 1; comparison of the two grids to measure progress.' },
+    { t: 'Review plan', tags: ['Individual', '10 min'], how: 'A table up to the exam: texts to learn, tables to redo, grammar sessions, calendar.' }
   ]
 });

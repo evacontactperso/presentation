@@ -1,382 +1,382 @@
-/* Curriculum : semaines 15 à 24 (Formation 3 : dissertation), une œuvre par semaine.
-   Chaque fiche suit la même séance : quiz de lecture, identité et biographie, résumé, mots-clés du parcours,
-   « la dissertation à connaître », entraînement à l’introduction, conclusion et ouverture, atelier de citations. */
+/* Curriculum: weeks 15 to 24 (Course 3: essay, "dissertation"), one work per week.
+   Each sheet follows the same session: reading quiz, identity and biography, summary, keywords of the theme,
+   "the essay to know", introduction practice, conclusion and opening, quotation workshop. */
 
 function diss(o) {
   const odd = o.n % 2 === 1;
   const flow = [
-    [6, 'accroche', 'Quiz de lecture', `Cinq questions sur l’intrigue de ${o.short} : ${o.quiz}`],
-    [10, 'cours', 'Fiche d’identité et biographie', `${o.ident} La biographie sert d’accroche à l’introduction : ${o.bio}`],
-    [10, 'exo', 'Le résumé de l’œuvre', `Individuel, 5 min : résumer ${o.short} de mémoire en dix lignes, puis comparer avec le résumé de la fiche. ${o.resume}`],
-    [10, 'cours', 'Les mots-clés du parcours', o.kw],
-    [30, 'cours', 'La dissertation à connaître', o.plan],
-    [18, 'copie', 'Entraînement : l’introduction', `Individuel, 15 min, puis relecture croisée de 3 min. Cinq éléments : accroche (biographie), présentation de l’œuvre (titre souligné, date de publication), résumé détaillé, problématique, annonce du plan. ${o.intro}`],
-    [10, 'copie', 'Conclusion et ouverture', `Réponse à la problématique, rappel des grandes parties et sous-parties, ouverture détaillée. ${o.concl}`]
+    [6, 'accroche', 'Reading quiz', `Five questions on the plot of ${o.short}: ${o.quiz}`],
+    [10, 'cours', 'Identity card and biography', `${o.ident} The biography serves as the hook of the introduction: ${o.bio}`],
+    [10, 'exo', 'Summary of the work', `Individual, 5 min: summarize ${o.short} from memory in ten lines, then compare with the summary on the sheet. ${o.resume}`],
+    [10, 'cours', 'Keywords of the theme', o.kw],
+    [30, 'cours', 'The essay to know', o.plan],
+    [18, 'copie', 'Practice: the introduction', `Individual, 15 min, then 3-minute cross-proofreading. Five elements: hook (biography), presentation of the work (underlined title, publication date), detailed summary, central question, announcement of the outline. ${o.intro}`],
+    [10, 'copie', 'Conclusion and opening', `Answer to the central question, reminder of the main parts and sub-parts, detailed opening. ${o.concl}`]
   ];
-  flow.push([odd ? 20 : 15, 'exo', 'Atelier : citations et plan détaillé', `Individuel, ${odd ? 15 : 10} min : choisir trois citations ou scènes de ${o.short} pour illustrer une sous-partie, avec l’effet ou le procédé qui les rend probantes ; mise en commun de 5 min.`]);
-  flow.push([odd ? 6 : 11, 'bilan', 'Bilan', o.bilan]);
+  flow.push([odd ? 20 : 15, 'exo', 'Workshop: quotations and detailed outline', `Individual, ${odd ? 15 : 10} min: choose three quotations or scenes from ${o.short} to illustrate a sub-part, with the effect or device that makes them convincing; 5-minute class discussion.`]);
+  flow.push([odd ? 6 : 11, 'bilan', 'Wrap-up', o.bilan]);
   cw({
     n: o.n, f: 'f3', title: o.title, goal: o.goal, notions: o.notions, skills: o.skills, watch: o.watch,
     prep: [
-      { k: 'À lire avant la séance', t: o.read },
-      { k: 'Supports', t: `La fiche de ${o.short} (biographie, résumé, mots-clés, dissertation à connaître, introduction et conclusion, autres œuvres, entraînement) ; l’exemplaire de l’œuvre ; une feuille pour le plan en trois parties.` }
+      { k: 'To read before the session', t: o.read },
+      { k: 'Materials', t: `The sheet on ${o.short} (biography, summary, keywords, essay to know, introduction and conclusion, other works, practice); the copy of the work; a sheet for the three-part outline.` }
     ],
     flow,
     drills: [
-      { t: 'Résumé en dix lignes', tags: ['Individuel', '5 min'], how: `Résumer ${o.short} de mémoire en dix lignes, puis comparer avec le résumé de la fiche. Les oublis sont soulignés et réécrits.` },
-      { t: 'Plan en trois parties avec exemples', tags: ['Individuel', 'Sur feuille'], how: `Écrire le plan « à connaître » avec, sous chaque sous-partie, une citation ou une scène précise de ${o.short}. Exemple attendu : ${o.ex}` },
-      { t: 'Introduction rédigée', tags: ['Individuel', 'Chronométré', '15 min'], how: 'Rédaction complète sur copie, en un seul paragraphe avec alinéa de trois carreaux, puis relecture croisée avec une grille de cinq éléments.' },
-      { t: 'Atelier : citations et plan détaillé', tags: ['Individuel', odd ? '15 min' : '10 min'], how: `Trois citations ou scènes de ${o.short} pour une sous-partie, avec l’effet à analyser ; mise en commun à voix haute.` }
+      { t: 'Ten-line summary', tags: ['Individual', '5 min'], how: `Summarize ${o.short} from memory in ten lines, then compare with the summary on the sheet. Omissions are underlined and rewritten.` },
+      { t: 'Three-part outline with examples', tags: ['Individual', 'On paper'], how: `Write the “essay to know” outline with, under each sub-part, a precise quotation or scene from ${o.short}. Expected example: ${o.ex}` },
+      { t: 'Written introduction', tags: ['Individual', 'Timed', '15 min'], how: 'Complete writing on the paper, in a single paragraph with a three-square indent, then cross-proofreading with a five-element grid.' },
+      { t: 'Workshop: quotations and detailed outline', tags: ['Individual', odd ? '15 min' : '10 min'], how: `Three quotations or scenes from ${o.short} for one sub-part, with the effect to analyze; class discussion aloud.` }
     ]
   });
 }
 
 diss({
-  n: 15, k: 8, short: '« Manon Lescaut »', src: 'Texte de l’œuvre, au choix du professeur (par exemple un épisode de la fuite d’Amiens, de l’évasion de Saint-Lazare ou de la Louisiane).',
-  title: '« Manon Lescaut », de l’abbé Prévost : personnages en marge, plaisirs du romanesque',
-  goal: 'Construire un plan de dissertation sur le plaisir du lecteur et la marginalité des personnages, avec exemples précis.',
-  quiz: 'les amants, la fuite d’Amiens, le séminaire, Chaillot, Saint-Lazare, la Louisiane.',
-  ident: 'Histoire du chevalier Des Grieux et de Manon Lescaut, dernier tome des « Mémoires et aventures d’un homme de qualité », 1731 ; roman-mémoires, narration à la première personne.',
-  bio: 'Prévost naît en 1697 à Hesdin, devient prêtre, quitte l’abbaye sans autorisation et s’exile en Angleterre et en Hollande ; le roman fait scandale en 1731 et est interdit en 1733.',
-  resume: 'Le chevalier Des Grieux raconte son amour pour Manon, jeune femme séduisante et ambitieuse. Aveuglé par sa passion, il quitte la vie religieuse à laquelle il était destiné et glisse vers la débauche : tricheries, vol, prison, jusqu’à la déportation en Louisiane. Le résumé de la séance relève les grands épisodes dans l’ordre.',
-  kw: 'Définitions de « personnage » (une personne fictive créée par l’auteur), « en marge » (du latin margo : bord, périphérie), « plaisir » (satisfaction suscitée par la lecture), « romanesque » (le plaisir des aventures et des émotions fortes). Chaque mot est défini puis relié à l’œuvre.',
-  plan: 'Le lecteur a du plaisir à lire « Manon Lescaut » car il est : fasciné par la marginalité et l’immoralité des personnages (marginalité morale, itinéraire) ; touché par la passion amoureuse (déclarations, actions, obstacles) ; entraîné par les aventures (péripéties rapides, espaces variés comme Chaillot) ; intéressé par la critique morale de Prévost (Avis de l’auteur, Des Grieux jeune homme modèle, figures de raison comme Tiberge) ; troublé par l’ambiguïté de la leçon morale (des personnages à la fois fautifs et victimes) ; intéressé par la critique sociale (système judiciaire, hiérarchies, pouvoir de la fortune, inégalité entre les sexes).',
-  intro: 'Problématique attendue : en quoi la marginalité des personnages et la richesse de l’intrigue font-elles le plaisir du lecteur ?',
-  concl: 'Ouverture suggérée par la fiche : « La Princesse de Clèves », où la raison passe avant la passion, à l’inverse de Manon ; autres œuvres de la fiche : « Les Misérables », « Roméo et Juliette ».',
-  bilan: 'Chaque élève écrit les six arguments de la fiche en une ligne. Consigne : refaire le plan de mémoire.',
+  n: 15, k: 8, short: '“Manon Lescaut”', src: 'Text of the work, chosen by the teacher (for example an episode of the flight from Amiens, the escape from Saint-Lazare or Louisiana).',
+  title: '“Manon Lescaut” by Abbé Prévost: outcast characters, pleasures of the novel',
+  goal: 'Build an essay outline on the reader’s pleasure and the characters’ marginality, with precise examples.',
+  quiz: 'the lovers, the flight from Amiens, the seminary, Chaillot, Saint-Lazare, Louisiana.',
+  ident: 'The story of the Chevalier Des Grieux and Manon Lescaut, last volume of the “Mémoires et aventures d’un homme de qualité”, 1731; memoir novel, first-person narration.',
+  bio: 'Prévost was born in 1697 in Hesdin, became a priest, left the abbey without permission and went into exile in England and Holland; the novel caused a scandal in 1731 and was banned in 1733.',
+  resume: 'The Chevalier Des Grieux tells of his love for Manon, an attractive and ambitious young woman. Blinded by his passion, he leaves the religious life he was destined for and slides into debauchery: cheating, theft, prison, up to deportation to Louisiana. The summary of the session lists the main episodes in order.',
+  kw: 'Definitions of “character” (a fictional person created by the author), “on the margins” (from the Latin margo: edge, periphery), “pleasure” (satisfaction brought by reading), “romanesque” (the pleasure of adventures and strong emotions). Each word is defined, then linked to the work.',
+  plan: 'The reader enjoys reading “Manon Lescaut” because they are: fascinated by the characters’ marginality and immorality (moral marginality, itinerary); moved by romantic passion (declarations, actions, obstacles); carried along by the adventures (fast-moving events, varied settings such as Chaillot); interested in Prévost’s moral criticism (the author’s Notice, Des Grieux as a model young man, figures of reason like Tiberge); troubled by the ambiguity of the moral lesson (characters who are both guilty and victims); interested in the social criticism (judicial system, hierarchies, the power of fortune, inequality between the sexes).',
+  intro: 'Expected central question: how do the characters’ marginality and the richness of the plot make the reader’s pleasure?',
+  concl: 'Opening suggested by the sheet: “La Princesse de Clèves”, where reason comes before passion, unlike Manon; other works on the sheet: “Les Misérables”, “Romeo and Juliet”.',
+  bilan: 'Each student writes the six arguments of the sheet in one line. Assignment: redo the outline from memory.',
   notions: [
-    'Genre : roman-mémoires, avec un narrateur qui est aussi le personnage central. Parcours : « Personnages en marge, plaisirs du romanesque ».',
-    'Marginalité : morale (les personnages n’ont pas les mêmes normes que le reste de la société), sociale, géographique.',
-    'Plaisirs du romanesque : passion, aventures, rebondissements, variété des lieux (Amiens, Saint-Lazare, Chaillot, la Louisiane).',
-    'Critique morale : l’« Avis de l’auteur », le contraste entre le Des Grieux sage du début et ses chutes, la figure de Tiberge.',
-    'Critique sociale : le système judiciaire, la rigidité des hiérarchies, la puissance de la fortune.'
+    'Genre: memoir novel, with a narrator who is also the central character. Theme: “Outcast characters, pleasures of the novel”.',
+    'Marginality: moral (the characters do not share the norms of the rest of society), social, geographic.',
+    'Pleasures of the novel: passion, adventures, plot twists, variety of places (Amiens, Saint-Lazare, Chaillot, Louisiana).',
+    'Moral criticism: the “Avis de l’auteur” (Author’s Notice), the contrast between the wise Des Grieux of the beginning and his falls, the figure of Tiberge.',
+    'Social criticism: the judicial system, the rigidity of hierarchies, the power of fortune.'
   ],
   skills: [
-    'Rédiger une introduction avec accroche biographique, présentation et résumé.',
-    'Justifier chaque sous-partie par une scène ou une citation de l’œuvre.',
-    'Expliquer l’effet de la narration à la première personne : l’empathie du lecteur pour Des Grieux.',
-    'Proposer une ouverture comparant Manon et une autre héroïne.'
+    'Write an introduction with a biographical hook, presentation and summary.',
+    'Justify each sub-part with a scene or a quotation from the work.',
+    'Explain the effect of first-person narration: the reader’s empathy for Des Grieux.',
+    'Propose an opening comparing Manon with another heroine.'
   ],
   watch: [
-    'Des Grieux est narrateur : il plaide sa cause, le lecteur est placé en position d’empathie.',
-    'Ne pas réduire l’œuvre à une histoire d’amour : la critique morale et sociale compte autant.',
-    'Manon est à la fois attirée par l’argent et capable d’un amour sincère : l’ambiguïté est le point-clé.'
+    'Des Grieux is the narrator: he pleads his case, the reader is placed in a position of empathy.',
+    'Do not reduce the work to a love story: moral and social criticism matter just as much.',
+    'Manon is both attracted by money and capable of sincere love: the ambiguity is the key point.'
   ],
-  read: 'La fiche « Manon Lescaut » en entier, en particulier le résumé, les définitions du parcours et le plan « à connaître ».',
-  ex: 'l’évasion de Saint-Lazare ou le duel en Louisiane pour illustrer le plaisir de l’aventure.'
+  read: 'The whole “Manon Lescaut” sheet, in particular the summary, the definitions of the theme and the “to know” outline.',
+  ex: 'the escape from Saint-Lazare or the duel in Louisiana to illustrate the pleasure of adventure.'
 });
 
 diss({
-  n: 16, k: 0, short: '« La Peau de chagrin »', g: 'négation (totale, partielle, restrictive, lexicale).', e: 'politesse : travailler l’entrée et la sortie de la salle, la salutation, le remerciement, avec un binôme qui joue l’examinateur.',
-  title: '« La Peau de chagrin », de Balzac : les romans de l’énergie, création et destruction',
-  goal: 'Comprendre comment Balzac oppose la vie intense, destructrice, et la vie contemplative, créatrice, tout en entretenant l’ambiguïté.',
-  quiz: 'Raphaël de Valentin, la peau, le talisman qui rétrécit à chaque désir, la vie intense, la vie contemplative.',
-  ident: '« La Peau de chagrin », 1831, roman, qui fait partie de « La Comédie humaine » ; parcours « les romans de l’énergie, création et destruction ».',
-  bio: 'Balzac naît en 1799 à Tours ; sa famille change son nom de « Balssa » en « Balzac » ; il se lance dans le droit pour faire plaisir à son père mais rêve d’écrire.',
-  resume: 'Un jeune homme ruiné reçoit une peau magique qui exauce ses désirs, mais rétrécit à chaque souhait, et sa vie se raccourcit avec elle. Le résumé de la séance suit les étapes du roman, depuis le vœu initial jusqu’à la mort du héros.',
-  kw: 'Définitions de « roman » (une intrigue construite avec personnages dans un cadre spatio-temporel), « énergie » (la force vitale qui anime les êtres, selon Balzac), « création » et « destruction ». Chaque mot est relié à la peau qui rétrécit.',
-  plan: 'La vie intense (fondée sur le Vouloir et le Pouvoir) est destructrice à long terme : débauche, épuisement de l’énergie vitale. La vie contemplative (fondée sur le Savoir) préserve l’énergie et génère des créations intellectuelles durables. Cependant, la morale de Balzac est ambiguë : la vie contemplative peut aussi mener à la mort par renoncement au désir et au plaisir, et la vie intense peut produire une vitalité sublime. Le roman est enfin à la fois réaliste et fantastique.',
-  intro: 'Problématique attendue : comment Balzac montre-t-il que l’énergie vitale peut être créatrice ou destructrice selon la manière de la dépenser ?',
-  concl: 'Ouvertures de la fiche : « Faust » de Goethe, « Le Portrait de Dorian Gray » d’Oscar Wilde, « Le Chef-d’œuvre inconnu » de Balzac.',
-  bilan: 'Chaque élève écrit trois lignes : vie intense, vie contemplative, ambiguïté. Consigne : relire les chapitres sur la peau.',
+  n: 16, k: 0, short: '“La Peau de chagrin”', g: 'negation (total, partial, restrictive, lexical).', e: 'politeness: practice the entrance and exit from the room, the greeting, the thank-you, with a partner who plays the examiner.',
+  title: '“La Peau de chagrin” (The Magic Skin) by Balzac: novels of energy, creation and destruction',
+  goal: 'Understand how Balzac contrasts the intense, destructive life with the contemplative, creative life, while keeping the ambiguity.',
+  quiz: 'Raphaël de Valentin, the skin, the talisman that shrinks with each wish, the intense life, the contemplative life.',
+  ident: '“La Peau de chagrin”, 1831, novel, part of “La Comédie humaine”; theme “novels of energy, creation and destruction”.',
+  bio: 'Balzac was born in 1799 in Tours; his family changed his name from “Balssa” to “Balzac”; he took up law to please his father but dreamed of writing.',
+  resume: 'A ruined young man receives a magic skin that grants his wishes, but shrinks with each wish, and his life grows shorter along with it. The summary of the session follows the stages of the novel, from the first wish to the hero’s death.',
+  kw: 'Definitions of “novel” (a plot built with characters in a space-time setting), “energy” (the life force that animates beings, according to Balzac), “creation” and “destruction”. Each word is linked to the skin that shrinks.',
+  plan: 'The intense life (based on Willing and Being able) is destructive in the long term: debauchery, exhaustion of the life energy. The contemplative life (based on Knowing) preserves energy and generates lasting intellectual creations. However, Balzac’s moral is ambiguous: the contemplative life can also lead to death through renouncing desire and pleasure, and the intense life can produce a sublime vitality. Finally, the novel is both realistic and fantastic.',
+  intro: 'Expected central question: how does Balzac show that life energy can be creative or destructive depending on how it is spent?',
+  concl: 'Openings on the sheet: Goethe’s “Faust”, Oscar Wilde’s “The Picture of Dorian Gray”, Balzac’s “Le Chef-d’œuvre inconnu” (The Unknown Masterpiece).',
+  bilan: 'Each student writes three lines: intense life, contemplative life, ambiguity. Assignment: reread the chapters on the skin.',
   notions: [
-    'Genre : roman, qui mêle réalisme (décors, société parisienne) et fantastique (le talisman). Parcours : « Les romans de l’énergie : création et destruction ».',
-    'Énergie vitale : chacun en possède une quantité limitée, qu’il peut dépenser ou préserver.',
-    'Vie intense : vouloir et pouvoir, plaisir et débauche, destructrice à long terme.',
-    'Vie contemplative : savoir, préserver son énergie, créer des œuvres durables.',
-    'Ambiguïté : aucune des deux vies n’est clairement meilleure ; le lecteur doit choisir.'
+    'Genre: novel, mixing realism (settings, Parisian society) and the fantastic (the talisman). Theme: “Novels of energy: creation and destruction”.',
+    'Life energy: everyone has a limited amount, which they can spend or preserve.',
+    'Intense life: willing and being able, pleasure and debauchery, destructive in the long term.',
+    'Contemplative life: knowing, preserving one’s energy, creating lasting works.',
+    'Ambiguity: neither of the two lives is clearly better; the reader must choose.'
   ],
   skills: [
-    'Expliquer la peau comme symbole de l’énergie vitale.',
-    'Relier chaque sous-partie à une scène du roman.',
-    'Montrer l’ambiguïté de la morale de Balzac en citant les deux faces.',
-    'Écrire une ouverture qui compare le pacte avec le talisman à un autre pacte littéraire.'
+    'Explain the skin as a symbol of life energy.',
+    'Link each sub-part to a scene of the novel.',
+    'Show the ambiguity of Balzac’s moral by quoting both sides.',
+    'Write an opening that compares the pact with the talisman to another literary pact.'
   ],
   watch: [
-    'Ne pas conclure que Balzac condamne la vie intense : l’ambiguïté est voulue.',
-    'Le roman est à la fois réaliste et fantastique : ne pas choisir l’un contre l’autre.',
-    'Faire le lien entre le rétrécissement de la peau et celui de la vie du héros.'
+    'Do not conclude that Balzac condemns the intense life: the ambiguity is intended.',
+    'The novel is both realistic and fantastic: do not choose one against the other.',
+    'Make the link between the shrinking of the skin and the shrinking of the hero’s life.'
   ],
-  read: 'La fiche « La Peau de chagrin », avec le plan « à connaître » et les définitions du parcours.',
-  ex: 'la peau qui rétrécit après chaque désir, pour illustrer la perte d’énergie.'
+  read: 'The “La Peau de chagrin” sheet, with the “to know” outline and the definitions of the theme.',
+  ex: 'the skin that shrinks after each wish, to illustrate the loss of energy.'
 });
 
 diss({
-  n: 17, k: 9, short: '« Sido » et « Les Vrilles de la vigne »', src: 'Texte de l’œuvre, au choix du professeur (par exemple une page sur le jardin ou sur la mère de Colette).',
-  title: '« Sido » et « Les Vrilles de la vigne », de Colette : la célébration du monde',
-  goal: 'Montrer comment Colette célèbre les êtres chers et la nature, tout en gardant une relation ambiguë avec la ville et les adultes.',
-  quiz: 'Sido, le père, les frères, le jardin, les animaux, la ville, les Vrilles de la vigne.',
-  ident: '« Sido et Les Vrilles de la vigne », 1908 pour les Vrilles et 1930 pour Sido ; récit autobiographique ; parcours « la célébration du monde ».',
-  bio: 'Colette naît en 1873 à Saint-Sauveur-en-Puisaye, dans une maison entourée de jardins ; sa mère, Sido, lui transmet le goût de la nature, et elle grandit entre bibliothèque et jardin.',
-  resume: 'Colette évoque sa mère Sido, son père, ses frères et le jardin de son enfance, puis, dans les Vrilles de la vigne, ses souvenirs de la nature, de la ville et de l’âge adulte. Le résumé de la séance distingue les deux recueils.',
-  kw: 'Définitions de « célébration » (un acte par lequel on honore une personne, un événement ou une valeur), « monde » (l’ensemble des êtres, des lieux et des choses qui entourent Colette).',
-  plan: 'Une célébration du monde des êtres chers : la famille, dont la mère, indépendante, charismatique, spirituelle, au fort caractère, qui parle le langage de la nature. Une célébration de la nature et de la vie sauvage : les plantes, les animaux, les sens qui s’exhalent. Une relation ambiguë au monde de la ville et des adultes : le rejet de la ville, l’exil, la nostalgie.',
-  intro: 'Problématique attendue : comment Colette célèbre-t-elle son enfance, les êtres chers et la nature ?',
-  concl: 'Ouvertures de la fiche : « Histoire de ma vie » de George Sand, « Rêveries du promeneur solitaire » de Rousseau, « Du côté de chez Swann » de Proust.',
-  bilan: 'Chaque élève cite une scène pour chaque grande partie. Consigne : refaire le plan de mémoire.',
+  n: 17, k: 9, short: '“Sido” and “Les Vrilles de la vigne”', src: 'Text of the work, chosen by the teacher (for example a page about the garden or about Colette’s mother).',
+  title: '“Sido” and “Les Vrilles de la vigne” (The Tendrils of the Vine) by Colette: the celebration of the world',
+  goal: 'Show how Colette celebrates loved ones and nature, while keeping an ambiguous relationship with the city and adults.',
+  quiz: 'Sido, the father, the brothers, the garden, the animals, the city, Les Vrilles de la vigne.',
+  ident: '“Sido and Les Vrilles de la vigne”, 1908 for the Vrilles and 1930 for Sido; autobiographical narrative; theme “the celebration of the world”.',
+  bio: 'Colette was born in 1873 in Saint-Sauveur-en-Puisaye, in a house surrounded by gardens; her mother, Sido, passed on to her a taste for nature, and she grew up between library and garden.',
+  resume: 'Colette evokes her mother Sido, her father, her brothers and the garden of her childhood, then, in the Vrilles de la vigne, her memories of nature, the city and adulthood. The summary of the session distinguishes the two collections.',
+  kw: 'Definitions of “celebration” (an act by which one honors a person, an event or a value), “world” (all the beings, places and things that surround Colette).',
+  plan: 'A celebration of the world of loved ones: the family, including the mother, independent, charismatic, witty, strong-willed, who speaks the language of nature. A celebration of nature and wild life: plants, animals, the senses that breathe out. An ambiguous relationship to the world of the city and adults: rejection of the city, exile, nostalgia.',
+  intro: 'Expected central question: how does Colette celebrate her childhood, her loved ones and nature?',
+  concl: 'Openings on the sheet: George Sand’s “Histoire de ma vie”, Rousseau’s “Reveries of the Solitary Walker”, Proust’s “Swann’s Way”.',
+  bilan: 'Each student cites one scene for each main part. Assignment: redo the outline from memory.',
   notions: [
-    'Genre : récit autobiographique. Parcours : « La célébration du monde ».',
-    'Les êtres chers : la mère, femme indépendante, qui a des avis tranchés et un fort caractère, symbole de liberté, qui semble parler le langage de la nature.',
-    'La nature et la vie sauvage : observation lente et précise, richesse des figures de style, hommage à la richesse des souvenirs.',
-    'La ville et les adultes : un monde plus ambigu, entre rejet et nostalgie.',
-    'Comparaison utile : Rousseau et Colette observent la nature avec lenteur et la voient comme un refuge.'
+    'Genre: autobiographical narrative. Theme: “The celebration of the world”.',
+    'Loved ones: the mother, an independent woman with firm opinions and a strong character, symbol of freedom, who seems to speak the language of nature.',
+    'Nature and wild life: slow and precise observation, richness of figures of speech, tribute to the richness of memories.',
+    'The city and adults: a more ambiguous world, between rejection and nostalgia.',
+    'Useful comparison: Rousseau and Colette observe nature slowly and see it as a refuge.'
   ],
   skills: [
-    'Citer deux passages qui illustrent la célébration de la mère.',
-    'Repérer l’écriture sensorielle de Colette (odeurs, couleurs, sons).',
-    'Expliquer l’ambiguïté de la relation à la ville.',
-    'Proposer une ouverture comparant Colette et Rousseau.'
+    'Quote two passages that illustrate the celebration of the mother.',
+    'Spot Colette’s sensory writing (smells, colors, sounds).',
+    'Explain the ambiguity of the relationship to the city.',
+    'Propose an opening comparing Colette and Rousseau.'
   ],
   watch: [
-    'Ne pas lire Sido comme une simple biographie : c’est une célébration, donc un texte qui choisit, embellit.',
-    'Relier la forme au fond : la précision des figures de style rend hommage à la richesse des souvenirs.',
-    'Ne pas oublier les deux recueils dans l’introduction : Sido et Les Vrilles.'
+    'Do not read Sido as a simple biography: it is a celebration, so a text that chooses and embellishes.',
+    'Link form to content: the precision of the figures of speech pays tribute to the richness of the memories.',
+    'Do not forget the two collections in the introduction: Sido and Les Vrilles.'
   ],
-  read: 'La fiche « Sido et Les Vrilles de la vigne », avec les deux résumés et le plan en trois parties.',
-  ex: 'une citation sur la mère et le jardin pour illustrer la célébration des êtres chers.'
+  read: 'The “Sido and Les Vrilles de la vigne” sheet, with the two summaries and the three-part outline.',
+  ex: 'a quotation about the mother and the garden to illustrate the celebration of loved ones.'
 });
 
 diss({
-  n: 18, k: 0, short: '« Pour un oui ou pour un non »', g: 'analyse logique d’une phrase de la pièce, de la proposition principale aux subordonnées.', e: 'relation avec l’interlocuteur : répondre à une question surprise en regardant la personne, en reformulant, sans précipitation.',
-  title: '« Pour un oui ou pour un non », de Nathalie Sarraute : théâtre et dispute',
-  goal: 'Expliquer comment une dispute sur la parole devient une dispute sur le fond, et ce que le théâtre apporte à cette dispute.',
-  quiz: 'les deux amis, le reproche sur le ton, les silences, la parole, la dispute.',
-  ident: '« Pour un oui ou pour un non », Nathalie Sarraute, 1986 ; pièce de théâtre ; parcours « Théâtre et dispute ».',
-  bio: 'Sarraute naît en 1900 en Russie, grandit entre la Russie et la France, étudie à Oxford et à Berlin, puis s’installe à Paris ; elle est associée au Nouveau Roman.',
-  resume: 'Deux amis se disputent à cause d’une petite phrase, d’un ton, d’un silence. La dispute se déploie sur la parole, puis sur le fond de leur relation. Le résumé de la séance reprend les étapes de la dispute.',
-  kw: 'Définitions de « théâtre » (œuvre écrite pour être représentée sur scène devant un public, qui représente directement l’action) et de « dispute » (un affrontement par la parole, qui révèle des désaccords plus profonds).',
-  plan: 'Thème 1 : l’évolution de l’objet de la dispute, d’une dispute superficielle sur la parole, sur la forme, à une dispute plus fondamentale sur le fond (reproches, mondes incompatibles). Thème 2 : la parole, entre dissimulation et révélation de la vérité de la raison de la dispute. Thème 3 : la parole, entre violence et apaisement (montée en violence, puis extériorisation qui apaise). Thème 4 : théâtre et dispute, ce qu’ils s’apportent mutuellement (la dispute est utile au théâtre, le théâtre est utile à la dispute).',
-  intro: 'Problématique attendue : comment la dispute fait-elle avancer l’action et révèle-t-elle la vérité des personnages ?',
-  concl: 'Ouverture à choisir parmi les autres œuvres du programme : « On ne badine pas avec l’amour » (jeux de parole) ou « Le Menteur » (mensonge et comédie).',
-  bilan: 'Chaque élève écrit les quatre thèmes en une ligne. Consigne : relire la pièce en entier.',
+  n: 18, k: 0, short: '“Pour un oui ou pour un non”', g: 'logical analysis of a sentence from the play, from the main clause to the subordinate clauses.', e: 'relationship with the interlocutor: answer a surprise question while looking at the person, rewording, without rushing.',
+  title: '“Pour un oui ou pour un non” (For Yes or For No) by Nathalie Sarraute: theater and quarrel',
+  goal: 'Explain how a quarrel about speech becomes a quarrel about substance, and what theater brings to this quarrel.',
+  quiz: 'the two friends, the reproach about the tone, the silences, speech, the quarrel.',
+  ident: '“Pour un oui ou pour un non”, Nathalie Sarraute, 1986; play; theme “Theater and quarrel”.',
+  bio: 'Sarraute was born in 1900 in Russia, grew up between Russia and France, studied in Oxford and Berlin, then settled in Paris; she is associated with the New Novel.',
+  resume: 'Two friends quarrel because of a small phrase, a tone, a silence. The quarrel spreads over speech, then over the substance of their relationship. The summary of the session retraces the stages of the quarrel.',
+  kw: 'Definitions of “theater” (a work written to be performed on stage in front of an audience, which directly represents the action) and of “quarrel” (a confrontation through speech, which reveals deeper disagreements).',
+  plan: 'Theme 1: the evolution of the object of the quarrel, from a superficial quarrel about speech, about form, to a more fundamental quarrel about substance (reproaches, incompatible worlds). Theme 2: speech, between concealment and revelation of the truth about the reason for the quarrel. Theme 3: speech, between violence and appeasement (rise in violence, then an externalization that calms). Theme 4: theater and quarrel, what they bring each other (the quarrel is useful to theater, theater is useful to the quarrel).',
+  intro: 'Expected central question: how does the quarrel move the action forward and reveal the truth about the characters?',
+  concl: 'Opening to choose from the other works of the syllabus: “On ne badine pas avec l’amour” (games of speech) or “Le Menteur” (lying and comedy).',
+  bilan: 'Each student writes the four themes in one line. Assignment: reread the whole play.',
   notions: [
-    'Genre : pièce de théâtre. Parcours : « Théâtre et dispute ».',
-    'Dispute sur la forme : la parole, le sens des mots, un ton.',
-    'Dispute sur le fond : reproches, mondes incompatibles.',
-    'La parole révèle ou dissimule la vérité de la raison de la dispute.',
-    'La parole peut monter en violence, puis apaiser par l’extériorisation.'
+    'Genre: play. Theme: “Theater and quarrel”.',
+    'Quarrel about form: speech, the meaning of words, a tone.',
+    'Quarrel about substance: reproaches, incompatible worlds.',
+    'Speech reveals or conceals the truth about the reason for the quarrel.',
+    'Speech can rise to violence, then calm through externalization.'
   ],
   skills: [
-    'Citer une réplique de dispute sur la forme et une de dispute sur le fond.',
-    'Analyser le rôle des silences, des répétitions et des phrases courtes dans la pièce.',
-    'Montrer que le théâtre met la dispute en scène et que la dispute nourrit le théâtre.',
-    'Proposer une ouverture comparant deux disputes de théâtre.'
+    'Quote one line from a quarrel about form and one from a quarrel about substance.',
+    'Analyze the role of silences, repetitions and short sentences in the play.',
+    'Show that theater stages the quarrel and that the quarrel feeds theater.',
+    'Propose an opening comparing two theater quarrels.'
   ],
   watch: [
-    'Ne pas résumer la pièce par « deux amis qui se disputent pour rien » : la dispute sur le fond est essentielle.',
-    'Penser à la mise en scène : les silences et les gestes comptent.',
-    'Relier chaque thème à des répliques précises.'
+    'Do not sum up the play as “two friends quarreling over nothing”: the quarrel about substance is essential.',
+    'Think of the staging: silences and gestures matter.',
+    'Link each theme to precise lines.'
   ],
-  read: 'La fiche « Pour un oui ou pour un non », avec les quatre thèmes et les définitions du parcours.',
-  ex: 'une réplique sur le ton pour illustrer la dispute sur la forme.'
+  read: 'The “Pour un oui ou pour un non” sheet, with the four themes and the definitions of the theme.',
+  ex: 'a line about the tone to illustrate the quarrel about form.'
 });
 
 diss({
-  n: 19, k: 10, short: '« On ne badine pas avec l’amour »', src: 'Texte de l’œuvre, au choix du professeur (par exemple une scène entre Camille et Perdican).',
-  title: '« On ne badine pas avec l’amour », de Musset : les jeux du cœur et de la parole',
-  goal: 'Montrer comment la parole sert le jeu, révèle l’amour, puis devient coupable.',
-  quiz: 'Camille, Perdican, le couvent, Rosette, le badinage, la fin tragique.',
-  ident: '« On ne badine pas avec l’amour », Alfred de Musset, 1834 ; pièce de théâtre ; parcours « les jeux du cœur et de la parole ».',
-  bio: 'Musset naît en 1810 dans une famille cultivée de la petite noblesse, brille au lycée Henri-IV et fréquente très jeune les cercles romantiques de Charles Nodier.',
-  resume: 'Perdican et Camille, cousins, se retrouvent. Chacun cache son amour par orgueil et teste l’autre ; le jeu fait souffrir Rosette et mène à la mort. Le résumé de la séance suit les trois actes.',
-  kw: 'Définitions de « jeux » (stratégies, manipulations, mises à l’épreuve entre personnages), « cœur » (sentiments) et « parole » (instrument des jeux, de l’aveu et de la faute).',
-  plan: 'La parole mensongère et manipulatrice : les personnages utilisent les mots pour jouer avec les sentiments de l’autre (cause : l’orgueil blessé, la peur d’être trompée). La parole révélatrice : la parole révèle aussi des sentiments croissants, l’amour véritable. La parole coupable : le badinage a des conséquences tragiques, l’œuvre est tragique.',
-  intro: 'Problématique attendue : comment la parole est-elle à la fois le moyen du jeu amoureux et la cause du drame ?',
-  concl: 'Ouverture à choisir parmi les autres œuvres du programme : « Pour un oui ou pour un non » (dispute par la parole) ou « Le Menteur » (jeu et mensonge).',
-  bilan: 'Chaque élève écrit les trois paroles (mensongère, révélatrice, coupable). Consigne : refaire le plan de mémoire.',
+  n: 19, k: 10, short: '“On ne badine pas avec l’amour”', src: 'Text of the work, chosen by the teacher (for example a scene between Camille and Perdican).',
+  title: '“On ne badine pas avec l’amour” (No Trifling with Love) by Musset: games of the heart and of speech',
+  goal: 'Show how speech serves the game, reveals love, then becomes guilty.',
+  quiz: 'Camille, Perdican, the convent, Rosette, the trifling, the tragic ending.',
+  ident: '“On ne badine pas avec l’amour”, Alfred de Musset, 1834; play; theme “games of the heart and of speech”.',
+  bio: 'Musset was born in 1810 into a cultured family of the lesser nobility, shone at the Lycée Henri-IV and, very young, frequented Charles Nodier’s Romantic circles.',
+  resume: 'Perdican and Camille, cousins, meet again. Each hides their love out of pride and tests the other; the game makes Rosette suffer and leads to death. The summary of the session follows the three acts.',
+  kw: 'Definitions of “games” (strategies, manipulations, tests between characters), “heart” (feelings) and “speech” (instrument of the games, of the confession and of the fault).',
+  plan: 'Deceitful and manipulative speech: the characters use words to play with the other’s feelings (cause: wounded pride, fear of being deceived). Revealing speech: speech also reveals growing feelings, true love. Guilty speech: the trifling has tragic consequences, the work is tragic.',
+  intro: 'Expected central question: how is speech both the means of the love game and the cause of the drama?',
+  concl: 'Opening to choose from the other works of the syllabus: “Pour un oui ou pour un non” (quarrel through speech) or “Le Menteur” (game and lying).',
+  bilan: 'Each student writes the three kinds of speech (deceitful, revealing, guilty). Assignment: redo the outline from memory.',
   notions: [
-    'Genre : pièce de théâtre romantique, mêlant comique et tragique. Parcours : « Les jeux du cœur et de la parole ».',
-    'Cause du jeu : l’orgueil blessé de Camille et de Perdican, qui s’aiment mais n’osent l’avouer.',
-    'Camille a peur d’être trompée à cause des récits entendus au couvent.',
-    'La parole révèle les sentiments malgré le jeu.',
-    'La conséquence : un drame, qui rend la pièce tragique.'
+    'Genre: Romantic play, mixing comedy and tragedy. Theme: “Games of the heart and of speech”.',
+    'Cause of the game: the wounded pride of Camille and Perdican, who love each other but dare not admit it.',
+    'Camille fears being deceived because of the stories she heard in the convent.',
+    'Speech reveals the feelings despite the game.',
+    'The consequence: a drama, which makes the play tragic.'
   ],
   skills: [
-    'Expliquer le jeu de Camille et de Perdican en citant des répliques précises.',
-    'Montrer comment le jeu fait souffrir Rosette.',
-    'Analyser la fin de la pièce comme une faute de la parole.',
-    'Proposer une ouverture comparant Musset à une autre pièce du programme.'
+    'Explain Camille and Perdican’s game by quoting precise lines.',
+    'Show how the game makes Rosette suffer.',
+    'Analyze the end of the play as a fault of speech.',
+    'Propose an opening comparing Musset to another play on the syllabus.'
   ],
   watch: [
-    'Ne pas traiter la pièce comme une comédie : le dénouement est tragique.',
-    'Insister sur le lien entre orgueil et parole : le mot est une arme.',
-    'Citer des répliques, pas seulement des scènes.'
+    'Do not treat the play as a comedy: the outcome is tragic.',
+    'Insist on the link between pride and speech: the word is a weapon.',
+    'Quote lines, not just scenes.'
   ],
-  read: 'La fiche « On ne badine pas avec l’amour », avec les trois paroles et les définitions du parcours.',
-  ex: 'une réplique de Perdican qui provoque Camille pour illustrer la parole manipulatrice.'
+  read: 'The “On ne badine pas avec l’amour” sheet, with the three kinds of speech and the definitions of the theme.',
+  ex: 'a line by Perdican that provokes Camille to illustrate manipulative speech.'
 });
 
 diss({
-  n: 20, k: 0, short: '« Le Menteur »', g: 'nature des cinq premiers mots d’une phrase (question de l’examinateur qui contrôle le programme du collège).', e: 'regard et gestes : tenir son regard sur l’examinateur, garder les mains visibles, ne pas gesticuler.',
-  title: '« Le Menteur », de Corneille : mensonge et comédie',
-  goal: 'Montrer les aspects positifs et négatifs du mensonge de Dorante, et la critique de la société parisienne.',
-  quiz: 'Dorante, Clarice, les Tuileries, les mensonges successifs, le père, le dénouement.',
-  ident: '« Le Menteur », Pierre Corneille, 1642 ; pièce de théâtre, comédie ; parcours « Mensonge et comédie ».',
-  bio: 'Corneille naît en 1606 à Rouen, devient avocat, puis se consacre au théâtre ; « Mélite » (1629) renouvelle la comédie et attire l’attention de Richelieu.',
-  resume: 'Dorante, jeune étudiant en droit, arrive à Paris et ment pour séduire : il se prétend soldat et amoureux depuis un an. Les mensonges s’enchaînent et se compliquent. Le résumé de la séance suit les actes.',
-  kw: 'Définition de « mensonge » : une affirmation contraire à la vérité, faite sciemment dans l’intention de tromper, qui suppose la conscience de la fausseté et la volonté de tromper. Définition de « comédie » : une pièce qui fait rire et met en scène des travers.',
-  plan: 'Les aspects positifs du mensonge : son utilité (se vanter, séduire, échapper à une difficulté), sa maîtrise comme un art (Dorante est un metteur en scène et un comédien talentueux : chaque mensonge est une pièce de théâtre), son comique. Les aspects négatifs : la critique du mensonge de Dorante et de ses dangers, la critique du mensonge dans la société parisienne.',
-  intro: 'Problématique attendue : comment le mensonge fait-il la comédie, et que dit la pièce de ses dangers ?',
-  concl: 'Ouverture à choisir : « L’Avare » de Molière, comédie vue en commentaire, ou « On ne badine pas avec l’amour » du programme.',
-  bilan: 'Chaque élève cite trois mensonges de Dorante avec leur utilité. Consigne : relire les scènes des Tuileries.',
+  n: 20, k: 0, short: '“Le Menteur”', g: 'nature of the first five words of a sentence (an examiner’s question that checks middle-school grammar).', e: 'eyes and gestures: keep your gaze on the examiner, keep your hands visible, do not gesticulate.',
+  title: '“Le Menteur” (The Liar) by Corneille: lying and comedy',
+  goal: 'Show the positive and negative aspects of Dorante’s lying, and the criticism of Parisian society.',
+  quiz: 'Dorante, Clarice, the Tuileries, the successive lies, the father, the outcome.',
+  ident: '“Le Menteur”, Pierre Corneille, 1642; play, comedy; theme “Lying and comedy”.',
+  bio: 'Corneille was born in 1606 in Rouen, became a lawyer, then devoted himself to theater; “Mélite” (1629) renewed comedy and attracted Richelieu’s attention.',
+  resume: 'Dorante, a young law student, arrives in Paris and lies to seduce: he claims to be a soldier and to have been in love for a year. The lies pile up and get more complicated. The summary of the session follows the acts.',
+  kw: 'Definition of “lie”: a statement contrary to the truth, made knowingly with the intent to deceive, which presupposes awareness of the falsehood and the will to deceive. Definition of “comedy”: a play that makes people laugh and stages foibles.',
+  plan: 'The positive aspects of lying: its usefulness (boasting, seducing, escaping a difficulty), its mastery as an art (Dorante is a gifted director and actor: each lie is a play), its humor. The negative aspects: the criticism of Dorante’s lying and its dangers, the criticism of lying in Parisian society.',
+  intro: 'Expected central question: how does lying make comedy, and what does the play say about its dangers?',
+  concl: 'Opening to choose: Molière’s “L’Avare”, a comedy seen in the commentary, or “On ne badine pas avec l’amour” from the syllabus.',
+  bilan: 'Each student cites three of Dorante’s lies with their usefulness. Assignment: reread the Tuileries scenes.',
   notions: [
-    'Genre : comédie. Parcours : « Mensonge et comédie ».',
-    'Première motivation du mensonge : la vantardise, pour séduire Clarice (Dorante prétend être un grand guerrier).',
-    'Dorante comme metteur en scène : le mensonge est une pièce dans la pièce.',
-    'Le comique du mensonge : situations, quiproquos, enchaînements.',
-    'La critique : les dangers du mensonge pour Dorante et la société parisienne qui le tolère.'
+    'Genre: comedy. Theme: “Lying and comedy”.',
+    'First motivation for lying: boasting, to seduce Clarice (Dorante claims to be a great warrior).',
+    'Dorante as director: the lie is a play within the play.',
+    'The humor of the lie: situations, mix-ups, chains of events.',
+    'The criticism: the dangers of lying for Dorante and the Parisian society that tolerates it.'
   ],
   skills: [
-    'Distinguer au moins trois motivations du mensonge de Dorante.',
-    'Analyser une scène de mensonge comme un petit théâtre.',
-    'Montrer le comique de mots, de situation et de caractère.',
-    'Proposer une ouverture sur un autre menteur de comédie.'
+    'Distinguish at least three motivations for Dorante’s lying.',
+    'Analyze a scene of lying as a small theater.',
+    'Show the humor of words, of situation and of character.',
+    'Propose an opening on another liar of comedy.'
   ],
   watch: [
-    'Ne pas dire que Corneille approuve le mensonge : il montre ses charmes et ses dangers.',
-    'Utiliser le vocabulaire du théâtre : réplique, quiproquo, aparté.',
-    'Citer des mensonges précis, pas seulement l’idée générale.'
+    'Do not say that Corneille approves of lying: he shows its charms and its dangers.',
+    'Use theater vocabulary: line, mix-up (quiproquo), aside.',
+    'Cite precise lies, not just the general idea.'
   ],
-  read: 'La fiche « Le Menteur », avec la définition du mensonge et le plan en deux parties.',
-  ex: 'la rencontre aux Tuileries, où Dorante se prétend soldat pour séduire Clarice.'
+  read: 'The “Le Menteur” sheet, with the definition of lying and the two-part outline.',
+  ex: 'the meeting at the Tuileries, where Dorante claims to be a soldier to seduce Clarice.'
 });
 
 diss({
-  n: 21, k: 11, short: '« Cahiers de Douai »', src: 'Un poème des Cahiers de Douai, au choix du professeur (par exemple un sonnet de fugue ou de nature).',
-  title: '« Cahiers de Douai », de Rimbaud : émancipations créatrices',
-  goal: 'Montrer que l’émancipation de Rimbaud est personnelle, politique et sociale, puis poétique.',
-  quiz: 'Charleville, les fugues, Douai, Izambard, la nature, l’autorité.',
-  ident: '« Cahiers de Douai », Arthur Rimbaud, rédigé en 1870 et publié en 1893 ; recueil de poésie ; parcours « Émancipations créatrices ».',
-  bio: 'Rimbaud naît en 1854 à Charleville, élève brillant, il écrit ses premiers poèmes à partir de 1869 et compose les Cahiers de Douai en 1870, à quinze ou seize ans.',
-  resume: 'Un adolescent s’affranchit de son foyer, de la ville et de l’autorité, et invente une poésie nouvelle dans des poèmes de fugue, de nature, de satire sociale. Le résumé de la séance présente le recueil par grands thèmes.',
-  kw: 'Définition d’« émancipation » : du latin emancipare, affranchir de l’autorité du père ; processus par lequel un individu ou un groupe se libère d’une dépendance. Définition de « créatrices » : qui inventent des formes nouvelles.',
-  plan: 'L’émancipation de Rimbaud est d’abord personnelle : il s’émancipe de l’autorité du foyer par ses fugues, de la ville en fuyant dans la nature, de l’enfance par ses premières expériences amoureuses. Elle est également politique et sociale : il s’émancipe de l’autorité royale, religieuse et bourgeoise, en les dénonçant dans ses poèmes. Elle est enfin poétique : tout en respectant la tradition, il cherche à créer son propre style, à l’aide d’innovations.',
-  intro: 'Problématique attendue : en quoi l’émancipation de Rimbaud est-elle à la fois personnelle, politique et poétique ?',
-  concl: 'Ouverture au choix de l’élève : un poète du parcours qui s’émancipe aussi d’une tradition ou d’une autorité.',
-  bilan: 'Chaque élève écrit trois émancipations avec un poème chacune. Consigne : refaire le plan de mémoire.',
+  n: 21, k: 11, short: '“Cahiers de Douai”', src: 'A poem from the Cahiers de Douai, chosen by the teacher (for example a sonnet about running away or about nature).',
+  title: '“Cahiers de Douai” (The Douai Notebooks) by Rimbaud: creative emancipations',
+  goal: 'Show that Rimbaud’s emancipation is personal, political and social, then poetic.',
+  quiz: 'Charleville, the runaways, Douai, Izambard, nature, authority.',
+  ident: '“Cahiers de Douai”, Arthur Rimbaud, written in 1870 and published in 1893; poetry collection; theme “Creative emancipations”.',
+  bio: 'Rimbaud was born in 1854 in Charleville, a brilliant student; he wrote his first poems from 1869 and composed the Cahiers de Douai in 1870, at fifteen or sixteen.',
+  resume: 'A teenager frees himself from his home, from the town and from authority, and invents a new poetry in poems of running away, of nature, of social satire. The summary of the session presents the collection by main themes.',
+  kw: 'Definition of “emancipation”: from the Latin emancipare, to free from the father’s authority; a process by which an individual or a group frees itself from dependence. Definition of “creative”: that invent new forms.',
+  plan: 'Rimbaud’s emancipation is first personal: he frees himself from the authority of home through his runaways, from the town by fleeing into nature, from childhood through his first romantic experiences. It is also political and social: he frees himself from royal, religious and bourgeois authority by denouncing them in his poems. Finally, it is poetic: while respecting tradition, he seeks to create his own style, through innovations.',
+  intro: 'Expected central question: in what way is Rimbaud’s emancipation at once personal, political and poetic?',
+  concl: 'Opening of the student’s choice: a poet of the theme who also frees himself from a tradition or an authority.',
+  bilan: 'Each student writes three emancipations with one poem each. Assignment: redo the outline from memory.',
   notions: [
-    'Genre : recueil de poésie, composé de poèmes variés.',
-    'Émancipation personnelle : fugues, nature, premières amours.',
-    'Émancipation politique et sociale : critique des autorités royales, religieuses et bourgeoises.',
-    'Émancipation poétique : innovations de rythme, de langue, de sujets.',
-    'Un poète adolescent qui écrit à quinze ou seize ans.'
+    'Genre: poetry collection, made of varied poems.',
+    'Personal emancipation: runaways, nature, first loves.',
+    'Political and social emancipation: criticism of royal, religious and bourgeois authorities.',
+    'Poetic emancipation: innovations of rhythm, of language, of subjects.',
+    'A teenage poet writing at fifteen or sixteen.'
   ],
   skills: [
-    'Citer un poème pour chaque forme d’émancipation.',
-    'Analyser une innovation poétique précise (rime, rythme, vocabulaire).',
-    'Expliquer pourquoi Rimbaud choisit la nature comme refuge.',
-    'Proposer une ouverture vers un autre poète émancipé.'
+    'Quote a poem for each form of emancipation.',
+    'Analyze a precise poetic innovation (rhyme, rhythm, vocabulary).',
+    'Explain why Rimbaud chooses nature as a refuge.',
+    'Propose an opening toward another emancipated poet.'
   ],
   watch: [
-    'Pour la poésie, citer par numéro de vers et nommer la forme (sonnet, quatrain).',
-    'Ne pas réduire Rimbaud à un révolté : il respecte aussi la tradition.',
-    'La dimension sociale se lit dans les satires de l’autorité.'
+    'For poetry, quote by verse number and name the form (sonnet, quatrain).',
+    'Do not reduce Rimbaud to a rebel: he also respects tradition.',
+    'The social dimension is read in the satires of authority.'
   ],
-  read: 'La fiche « Cahiers de Douai », avec les trois émancipations et la définition du parcours.',
-  ex: 'un poème de fugue dans la nature pour illustrer l’émancipation personnelle.'
+  read: 'The “Cahiers de Douai” sheet, with the three emancipations and the definition of the theme.',
+  ex: 'a poem about running away into nature to illustrate personal emancipation.'
 });
 
 diss({
-  n: 22, k: 0, short: '« Lettres d’une Péruvienne »', g: 'fonction d’un groupe de mots dans une phrase de la fiche.', e: 'rythme et silences : lire un passage en marquant les pauses, sans combler les silences par des « euh ».',
-  title: '« Lettres d’une Péruvienne », de Graffigny : « un nouvel univers s’est offert à mes yeux »',
-  goal: 'Montrer que Zilia découvre trois univers : géographique, social et culturel, puis intérieur.',
-  quiz: 'Zilia, Aza, la traversée de l’Atlantique, la campagne française, Paris, la quipos.',
-  ident: '« Lettres d’une Péruvienne », Françoise de Graffigny, 1747 ; recueil de lettres ; parcours « un nouvel univers s’est offert à mes yeux ».',
-  bio: 'Graffigny naît à Nancy en 1695 ; son enfance est marquée par la sévérité de son père, et un mariage forcé à dix-sept ans fait de sa vie un enfer conjugal.',
-  resume: 'Zilia, une jeune Péruvienne arrachée à son pays par les conquistadors, écrit à son fiancé Aza ; elle découvre la France et traverse l’exil. Le résumé de la séance suit les lettres et leur progression.',
-  kw: 'Définitions de « nouvel » (jamais vu, inédit) et « univers » (le monde de Zilia : géographique, social, intérieur). La citation du parcours est reliée à son contexte dans le roman.',
-  plan: 'La découverte d’un nouvel univers géographique, qui est un récit de voyage (la traversée de l’Atlantique, les paysages de la campagne française). La découverte d’un nouvel univers social et culturel, qui est un regard extérieur et une critique de la société (par exemple l’objectivation du corps des femmes). La découverte d’un nouvel univers intérieur et de la liberté intérieure : un récit d’apprentissage et d’émancipation, le passage de la dépendance à l’autonomie.',
-  intro: 'Problématique attendue : comment le regard d’une étrangère sur la France critique-t-il la société et conduit-elle à sa propre liberté ?',
-  concl: 'Ouverture possible : « Les Lettres persanes » de Montesquieu, autre regard d’étranger sur la société française.',
-  bilan: 'Chaque élève cite une scène pour chacun des trois univers. Consigne : relire les lettres sur l’apprentissage de la langue.',
+  n: 22, k: 0, short: '“Lettres d’une Péruvienne”', g: 'function of a group of words in a sentence from the sheet.', e: 'rhythm and silences: read a passage marking the pauses, without filling the silences with “euh” (um).',
+  title: '“Lettres d’une Péruvienne” (Letters of a Peruvian Woman) by Graffigny: “a new universe opened before my eyes”',
+  goal: 'Show that Zilia discovers three universes: geographic, social and cultural, then inner.',
+  quiz: 'Zilia, Aza, the crossing of the Atlantic, the French countryside, Paris, the quipus.',
+  ident: '“Lettres d’une Péruvienne”, Françoise de Graffigny, 1747; collection of letters; theme “a new universe opened before my eyes”.',
+  bio: 'Graffigny was born in Nancy in 1695; her childhood was marked by her father’s severity, and a forced marriage at seventeen turned her life into a marital hell.',
+  resume: 'Zilia, a young Peruvian woman torn from her country by the conquistadors, writes to her fiancé Aza; she discovers France and goes through exile. The summary of the session follows the letters and their progression.',
+  kw: 'Definitions of “new” (never seen, unprecedented) and “universe” (Zilia’s world: geographic, social, inner). The quotation of the theme is linked to its context in the novel.',
+  plan: 'The discovery of a new geographic universe, which is a travel narrative (the crossing of the Atlantic, the landscapes of the French countryside). The discovery of a new social and cultural universe, which is an outside gaze and a criticism of society (for example the objectification of women’s bodies). The discovery of a new inner universe and inner freedom: a story of apprenticeship and emancipation, the passage from dependence to autonomy.',
+  intro: 'Expected central question: how does a foreign woman’s view of France criticize society and lead her to her own freedom?',
+  concl: 'Possible opening: Montesquieu’s “Lettres persanes”, another foreigner’s view of French society.',
+  bilan: 'Each student cites one scene for each of the three universes. Assignment: reread the letters on learning the language.',
   notions: [
-    'Genre : recueil de lettres (roman épistolaire), récit de voyage, roman d’apprentissage.',
-    'Univers géographique : traversée de l’Atlantique, paysages de la campagne française.',
-    'Univers social : critique de la société française, regard extérieur et naïf.',
-    'Univers intérieur : liberté intérieure, émancipation, passage de la dépendance à l’autonomie.',
-    'L’exil forcé d’une déracinée, surmonté par l’écriture.'
+    'Genre: collection of letters (epistolary novel), travel narrative, novel of apprenticeship.',
+    'Geographic universe: crossing of the Atlantic, landscapes of the French countryside.',
+    'Social universe: criticism of French society, outside and naive gaze.',
+    'Inner universe: inner freedom, emancipation, passage from dependence to autonomy.',
+    'The forced exile of an uprooted woman, overcome through writing.'
   ],
   skills: [
-    'Reconnaître les trois formes du roman : épistolaire, voyage, apprentissage.',
-    'Citer une lettre pour chacun des trois univers.',
-    'Expliquer comment le regard naïf de Zilia produit une critique.',
-    'Proposer une ouverture sur un autre regard d’étranger.'
+    'Recognize the three forms of the novel: epistolary, travel, apprenticeship.',
+    'Quote a letter for each of the three universes.',
+    'Explain how Zilia’s naive gaze produces criticism.',
+    'Propose an opening on another foreigner’s view.'
   ],
   watch: [
-    'Zilia écrit pour Aza : la forme de la lettre commande le ton.',
-    'La critique de la société passe par la naïveté feinte du regard extérieur.',
-    'Ne pas oublier l’évolution : Zilia gagne en autonomie au fil des lettres.'
+    'Zilia writes for Aza: the form of the letter commands the tone.',
+    'The criticism of society passes through the feigned naivety of the outside gaze.',
+    'Do not forget the evolution: Zilia gains autonomy over the course of the letters.'
   ],
-  read: 'La fiche « Lettres d’une Péruvienne », avec les trois univers et les définitions du parcours.',
-  ex: 'la traversée de l’Atlantique ou la découverte des paysages français.'
+  read: 'The “Lettres d’une Péruvienne” sheet, with the three universes and the definitions of the theme.',
+  ex: 'the crossing of the Atlantic or the discovery of the French landscapes.'
 });
 
 diss({
-  n: 23, k: 12, short: '« Entretiens sur la pluralité des mondes »', src: 'Texte de l’œuvre, au choix du professeur (par exemple un passage de la première soirée, entre le philosophe et la Marquise).',
-  title: '« Entretiens sur la pluralité des mondes », de Fontenelle : le goût de la science',
-  goal: 'Comprendre comment Fontenelle rend la science accessible et plaisante, et ce que cela coûte à la vérité.',
-  quiz: 'la Marquise, le philosophe, les soirées, le jardin, les tourbillons, les mondes habités.',
-  ident: '« Entretiens sur la pluralité des mondes », Bernard Le Bouyer de Fontenelle, 1686 ; essai sous forme de dialogue ; parcours « Le goût de la science ».',
-  bio: 'Fontenelle naît en 1657 à Rouen, neveu de Pierre et Thomas Corneille, abandonne le droit pour les lettres et se fait remarquer par un style limpide qui rend claires des idées complexes.',
-  resume: 'Un philosophe explique à une marquise, au fil de soirées dans un jardin, que d’autres mondes sont habités. Le dialogue commence en badinage amoureux et devient leçon d’astronomie. Le résumé de la séance suit les soirées.',
-  kw: 'Définitions de « goût » (la faculté de bien juger ce qui est beau ou harmonieux) et de « science » (l’ensemble des connaissances rationnelles qui expliquent le monde). Chaque mot est relié à la Marquise.',
-  plan: 'Le projet pédagogique de l’auteur : rendre la science et la philosophie accessibles, comme Cicéron traduisait la philosophie grecque en latin. Une conversation qui commence comme un badinage amoureux. Premier objectif : susciter le plaisir et le goût de la science chez la Marquise et ses lecteurs. Deuxième objectif : instruire et éduquer. Question de fond : pour plaire, le narrateur sacrifie-t-il la vérité ?',
-  intro: 'Problématique attendue : comment Fontenelle donne-t-il le goût de la science sans la déformer ?',
-  concl: 'Ouverture possible : un autre ouvrage de vulgarisation du siècle des Lumières, ou un dialogue philosophique.',
-  bilan: 'Chaque élève écrit trois façons de rendre la science plaisante. Consigne : refaire le plan de mémoire.',
+  n: 23, k: 12, short: '“Entretiens sur la pluralité des mondes”', src: 'Text of the work, chosen by the teacher (for example a passage from the first evening, between the philosopher and the Marquise).',
+  title: '“Entretiens sur la pluralité des mondes” (Conversations on the Plurality of Worlds) by Fontenelle: the taste for science',
+  goal: 'Understand how Fontenelle makes science accessible and pleasant, and what this costs the truth.',
+  quiz: 'the Marquise, the philosopher, the evenings, the garden, the vortices, the inhabited worlds.',
+  ident: '“Entretiens sur la pluralité des mondes”, Bernard Le Bouyer de Fontenelle, 1686; essay in the form of a dialogue; theme “The taste for science”.',
+  bio: 'Fontenelle was born in 1657 in Rouen, nephew of Pierre and Thomas Corneille, gave up law for letters and became known for a limpid style that makes complex ideas clear.',
+  resume: 'A philosopher explains to a marquise, over evenings in a garden, that other worlds are inhabited. The dialogue begins as amorous banter and becomes an astronomy lesson. The summary of the session follows the evenings.',
+  kw: 'Definitions of “taste” (the faculty of judging well what is beautiful or harmonious) and of “science” (all the rational knowledge that explains the world). Each word is linked to the Marquise.',
+  plan: 'The author’s educational project: making science and philosophy accessible, as Cicero translated Greek philosophy into Latin. A conversation that begins as amorous banter. First goal: arouse the pleasure and taste of science in the Marquise and in readers. Second goal: instruct and educate. Underlying question: to please, does the narrator sacrifice the truth?',
+  intro: 'Expected central question: how does Fontenelle give a taste for science without distorting it?',
+  concl: 'Possible opening: another popular-science work of the Enlightenment, or a philosophical dialogue.',
+  bilan: 'Each student writes three ways of making science pleasant. Assignment: redo the outline from memory.',
   notions: [
-    'Genre : essai sous forme de dialogue. Parcours : « Le goût de la science ».',
-    'Projet pédagogique : rendre accessibles la science et la philosophie à un public non spécialiste.',
-    'Le badinage amoureux sert de cadre pour captiver la Marquise.',
-    'Deux objectifs : plaire (susciter le goût) et instruire.',
-    'Question critique : la vérité est-elle sacrifiée pour plaire ?'
+    'Genre: essay in the form of a dialogue. Theme: “The taste for science”.',
+    'Educational project: making science and philosophy accessible to a non-specialist audience.',
+    'Amorous banter serves as a frame to captivate the Marquise.',
+    'Two goals: to please (arouse taste) and to instruct.',
+    'Critical question: is the truth sacrificed in order to please?'
   ],
   skills: [
-    'Citer les procédés du dialogue (comparaisons, images, ton galant).',
-    'Distinguer plaire et instruire dans un extrait.',
-    'Analyser la figure de la Marquise comme lectrice modèle.',
-    'Ouvrir sur un autre texte de vulgarisation.'
+    'Cite the devices of the dialogue (comparisons, images, gallant tone).',
+    'Distinguish pleasing and instructing in an excerpt.',
+    'Analyze the figure of the Marquise as a model reader.',
+    'Open onto another popular-science text.'
   ],
   watch: [
-    'Le dialogue n’est pas un simple décor : il organise la démonstration.',
-    'La critique de la vérité sacrifiée doit être discutée, pas affirmée.',
-    'Relier le goût à l’esthétique et au plaisir, pas seulement à la préférence.'
+    'The dialogue is not mere decor: it organizes the demonstration.',
+    'The criticism that truth is sacrificed must be discussed, not asserted.',
+    'Link taste to aesthetics and pleasure, not just to preference.'
   ],
-  read: 'La fiche « Entretiens sur la pluralité des mondes », avec le plan en cinq points et les définitions du parcours.',
-  ex: 'la comparaison avec Cicéron dans la préface pour illustrer le projet pédagogique.'
+  read: 'The “Entretiens sur la pluralité des mondes” sheet, with the five-point outline and the definitions of the theme.',
+  ex: 'the comparison with Cicero in the preface to illustrate the educational project.'
 });
 
 diss({
-  n: 24, k: 0, short: '« Discours de la servitude volontaire »', g: 'enchaînement complet : analyse logique puis question de nature et fonction.', e: 'enchaînement complet de l’oral en conditions réelles, avec chronomètre.',
-  title: '« Discours de la servitude volontaire », de La Boétie : défendre et entretenir la liberté',
-  goal: 'Comprendre comment La Boétie présente un paradoxe, en explique les causes, puis cherche à éveiller les consciences.',
-  quiz: 'le tyran, le peuple, la liberté naturelle, la coutume, les hommes qui consentent.',
-  ident: '« Discours de la servitude volontaire », Étienne de La Boétie, 1577 ; discours ; parcours « Défendre » et « entretenir » la liberté.',
-  bio: 'La Boétie naît en 1530 à Sarlat, orphelin, reçoit une éducation humaniste, devient conseiller au parlement de Bordeaux à vingt-trois ans et prône la tolérance pendant les guerres de Religion.',
-  resume: 'La Boétie s’étonne que tant d’hommes obéissent à un seul tyran sans y être forcés. Il analyse les causes de cette servitude et appelle ses lecteurs à retrouver leur liberté. Le résumé de la séance suit les trois grands mouvements du texte.',
-  kw: 'Définitions de « défendre » (protéger contre une menace : ici contre la tyrannie) et d’« entretenir » (maintenir en bon état, faire durer). Chaque mot est relié à la liberté naturelle.',
-  plan: 'La Boétie présente le paradoxe central : la servitude volontaire est absurde et éveille l’étonnement (les hommes ont renoncé à leur liberté naturelle, un bien précieux). Il établit ensuite qu’elle s’explique par des causes précises. Il cherche enfin à éveiller les consciences et à persuader par de nombreux procédés rhétoriques. Il transmet les valeurs humanistes.',
-  intro: 'Problématique attendue : comment La Boétie fait-il comprendre l’absurdité de la servitude volontaire et pousse-t-il à défendre la liberté ?',
-  concl: 'Ouverture possible : un autre texte de pensée politique de la Renaissance ou des Lumières.',
-  bilan: 'Chaque élève écrit le paradoxe, deux causes et un procédé de persuasion. Consigne : relire le discours en entier.',
+  n: 24, k: 0, short: '“Discours de la servitude volontaire”', g: 'complete sequence: logical analysis, then question on nature and function.', e: 'complete sequence of the oral exam in real conditions, with a timer.',
+  title: '“Discours de la servitude volontaire” (Discourse on Voluntary Servitude) by La Boétie: defending and nurturing freedom',
+  goal: 'Understand how La Boétie presents a paradox, explains its causes, then seeks to awaken consciences.',
+  quiz: 'the tyrant, the people, natural freedom, custom, the men who consent.',
+  ident: '“Discours de la servitude volontaire”, Étienne de La Boétie, 1577; discourse; theme “Defending” and “nurturing” freedom.',
+  bio: 'La Boétie was born in 1530 in Sarlat, an orphan, received a humanist education, became a councilor at the Parliament of Bordeaux at twenty-three and advocated tolerance during the Wars of Religion.',
+  resume: 'La Boétie is astonished that so many men obey a single tyrant without being forced to. He analyzes the causes of this servitude and calls on his readers to regain their freedom. The summary of the session follows the three main movements of the text.',
+  kw: 'Definitions of “defending” (protecting against a threat: here against tyranny) and of “nurturing” (keeping in good condition, making last). Each word is linked to natural freedom.',
+  plan: 'La Boétie presents the central paradox: voluntary servitude is absurd and arouses astonishment (men have given up their natural freedom, a precious good). He then establishes that it is explained by precise causes. Finally, he seeks to awaken consciences and to persuade through numerous rhetorical devices. He passes on humanist values.',
+  intro: 'Expected central question: how does La Boétie make us understand the absurdity of voluntary servitude and push us to defend freedom?',
+  concl: 'Possible opening: another text of political thought from the Renaissance or the Enlightenment.',
+  bilan: 'Each student writes the paradox, two causes and one persuasion device. Assignment: reread the whole discourse.',
   notions: [
-    'Genre : discours, texte argumentatif oratoire. Parcours : « Défendre » et « entretenir » la liberté.',
-    'Paradoxe central : l’homme a renoncé à sa liberté, un bien précieux, sans y être contraint.',
-    'Les causes : l’habitude, la coutume, les mécanismes du pouvoir.',
-    'L’éveil des consciences : procédés rhétoriques (questions, apostrophes, exemples) pour persuader.',
-    'Valeurs humanistes : liberté, dignité, raison.'
+    'Genre: discourse, oratorical argumentative text. Theme: “Defending” and “nurturing” freedom.',
+    'Central paradox: man has given up his freedom, a precious good, without being forced to.',
+    'The causes: habit, custom, the mechanisms of power.',
+    'The awakening of consciences: rhetorical devices (questions, apostrophes, examples) to persuade.',
+    'Humanist values: freedom, dignity, reason.'
   ],
   skills: [
-    'Identifier le paradoxe et le formuler en une phrase.',
-    'Repérer les procédés de persuasion dans un extrait.',
-    'Expliquer les causes de la servitude citées par La Boétie.',
-    'Relier le texte aux valeurs humanistes.'
+    'Identify the paradox and state it in one sentence.',
+    'Spot the persuasion devices in an excerpt.',
+    'Explain the causes of servitude cited by La Boétie.',
+    'Link the text to humanist values.'
   ],
   watch: [
-    'Ne pas résumer le Discours à une simple critique du tyran : il met en cause le consentement des hommes.',
-    'Insister sur la dimension oratoire : le texte cherche à persuader.',
-    'Contextualiser : les guerres de Religion éclairent la visée du texte.'
+    'Do not sum up the Discourse as a simple criticism of the tyrant: it calls into question the consent of men.',
+    'Insist on the oratorical dimension: the text seeks to persuade.',
+    'Contextualize: the Wars of Religion shed light on the aim of the text.'
   ],
-  read: 'La fiche « Discours de la servitude volontaire », avec les quatre axes du plan et les définitions du parcours.',
-  ex: 'une apostrophe aux hommes pour illustrer l’éveil des consciences.'
+  read: 'The “Discours de la servitude volontaire” sheet, with the four axes of the outline and the definitions of the theme.',
+  ex: 'an apostrophe to men to illustrate the awakening of consciences.'
 });

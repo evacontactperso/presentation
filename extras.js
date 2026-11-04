@@ -28,7 +28,7 @@ EXTRA.reviews = {
 
 EXTRA.supporters = {
   /* 21 · rating hero (Google-review style) */
-  21: ['Reviews summary', () => `<section class="sp21"><div class="sum"><p class="eyebrow">Supporter testimonials</p><h2>Why they give.</h2>${xStars}<p>Reviews from donors, partners and friends.</p>${xGive('Join them')}</div><div class="rv">${XS.slice(0, 4).map(r => `<article><div class="t"><span class="av">${xIni(r.t)}</span><div><b>${r.t}</b><small>${r.s}</small></div></div>${xStars}<p>${E(r.p)}</p></article>`).join('')}</div></section>`],
+  21: ['Reviews summary', () => `<section class="sp21"><div class="sum"><p class="eyebrow">Supporter testimonials</p><h2>Why they give.</h2><p>Reviews from donors, partners and friends.</p>${xGive('Join them')}</div><div class="rv">${XS.slice(0, 4).map(r => `<article><div class="t"><span class="av">${xIni(r.t)}</span><div><b>${r.t}</b><small>${r.s}</small></div></div>${xStars}<p>${E(r.p)}</p></article>`).join('')}</div></section>`],
   /* 22 · one big trust quote */
   22: ['Where your money goes', () => `<section class="sp22"><div class="big"><span class="qm">“</span><blockquote>${E(XS[7].p)}</blockquote><cite>${XS[7].t} · ${XS[7].s}</cite></div><div class="row">${XS.slice(0, 3).map(r => `<article><p>${E(r.p)}</p><b>${r.t}</b><small>${r.s}</small></article>`).join('')}</div></section>`],
   /* 23 · card carousel */

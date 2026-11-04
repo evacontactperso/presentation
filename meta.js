@@ -2,24 +2,24 @@
    « Mon CV » (the same CV page as in the Jarva app, A4 sheets) and « Mes sites ». */
 
 const META = [
-  { id: 'cv', t: 'Mon CV', href: '#/cv', on: h => /^#\/cv\b/.test(h) || h === '' || h === '#' || h === '#/' },
-  { id: 'sites', t: 'Mes sites', href: '#/sites', on: h => /^#\/sites\b/.test(h) },
+  { id: 'cv', t: 'My CV', href: '#/cv', on: h => /^#\/cv\b/.test(h) || h === '' || h === '#' || h === '#/' },
+  { id: 'sites', t: 'My Sites', href: '#/sites', on: h => /^#\/sites\b/.test(h) },
   { id: 'curriculum', t: 'Curriculum', href: '#/curriculum', on: h => /^#\/curriculum\b/.test(h) },
-  { id: 'design', t: 'Propositions de design', href: '#/gallery/covers', on: h => /^#\/(gallery|\d+|h|p)\b/.test(h) }
+  { id: 'design', t: 'Design Proposals', href: '#/gallery/covers', on: h => /^#\/(gallery|\d+|h|p)\b/.test(h) }
 ];
 function metaBar() {
   const bar = document.getElementById('metabar');
   if (!bar) return;
   if (EMBED) { bar.style.display = 'none'; return; }
   const h = location.hash, ICO = {cv: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>', sites: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2.5"/><path d="M3 9h18M8 21h8"/></svg>', curriculum: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M8 7h8M8 11h6"/></svg>', design: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2 0-1.2-.9-1.6-.9-2.7 0-.9.7-1.6 1.7-1.6H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7" r="1"/></svg>'};
-  bar.innerHTML = `<div class="mb-in"><a class="mb-brand" href="#/cv"><img class="mb-logo" src="${LOGO}" alt="Voices Unveiled"><span class="mb-name"><b>Eva Rousso</b><small>CV, sites et propositions</small></span></a><nav>${META.map(m => `<a href="${m.id === 'design' ? '#/gallery/final' : m.href}" class="${m.on(h) ? 'on' : ''}">${ICO[m.id]}<span>${m.t}</span></a>`).join('')}</nav></div>`;
+  bar.innerHTML = `<div class="mb-in"><a class="mb-brand" href="#/cv"><img class="mb-logo" src="${LOGO}" alt="Voices Unveiled"><span class="mb-name"><b>Eva Rousso</b><small>CV, sites &amp; proposals</small></span></a><nav>${META.map(m => `<a href="${m.id === 'design' ? '#/gallery/final' : m.href}" class="${m.on(h) ? 'on' : ''}">${ICO[m.id]}<span>${m.t}</span></a>`).join('')}</nav></div>`;
 }
 window.addEventListener('hashchange', metaBar);
 
 /* ---------- Mon CV (A4 sheets, same look as the Jarva CV page) ---------- */
-const cvTypo = t => String(t).replace(/ ([:;!?»])/g, ' $1').replace(/« /g, '« ').replace(/ –/g, ' –').replace(/(\S) (?=\d)/g, '$1 ');
+const cvTypo = t => String(t).replace(/(\S) (?=\d)/g, '$1\u00a0'); /* American English: no space before : ; ! ? */
 const cx = s => sxEsc(cvTypo(s));
-const cvLab = it => `${it.label ? `<b class="lb">${cx(it.label)}</b>${it.text ? ' : ' : ''}` : ''}${it.text ? cx(it.text) : ''}`;
+const cvLab = it => `${it.label ? `<b class="lb">${cx(it.label)}</b>${it.text ? ': ' : ''}` : ''}${it.text ? cx(it.text) : ''}`;
 const CV_ICON = { mail: '<path d="M3 5h18v14H3z"/><path d="m3 6 9 7 9-7"/>', phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z"/>', link: '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>', place: '<path d="M12 21s-6-5.5-6-10a6 6 0 0 1 12 0c0 4.5-6 10-6 10Z"/><circle cx="12" cy="11" r="2.2"/>' };
 const cvKind = t => /@/.test(t) ? 'mail' : /^\+?[\d\s().-]{7,}$/.test(t) ? 'phone' : /\.|https?:/.test(t) ? 'link' : 'place';
 const cvTitle = s => `<div class="cv-title"><h2>${cx(s.title)}</h2><i></i></div>`;
@@ -48,10 +48,10 @@ function cvBlocks(cv) {
 
 function cvPage() {
   if (typeof cvPageD === 'function') return cvPageD(1); /* only the bandeau format is kept */
-  document.title = 'Mon CV';
+  document.title = 'My CV';
   const MM = 96 / 25.4, BODY = (297 - 15 - 18) * MM;
   const blocks = cvBlocks(CV_DATA);
-  $('#app').innerHTML = `<div class="cvpage"><div class="cv-bar"><span class="cvd-links"><a class="on" href="#/cv">Original</a>${typeof CVD !== 'undefined' ? CVD.map((x, i) => `<a href="#/cv/${i + 1}">${i + 1} · ${x.n}</a>`).join('') : ''}</span><button class="cv-print" onclick="window.print()">Imprimer</button></div><div class="cv-measure"><div id="cvm">${blocks.map(b => `<div class="flow">${b.html}</div>`).join('')}</div></div><div id="cvs" class="cv-sheets"></div></div>`;
+  $('#app').innerHTML = `<div class="cvpage"><div class="cv-bar"><span class="cvd-links"><a class="on" href="#/cv">Original</a>${typeof CVD !== 'undefined' ? CVD.map((x, i) => `<a href="#/cv/${i + 1}">${i + 1} · ${x.n}</a>`).join('') : ''}</span><button class="cv-print" onclick="window.print()">Print</button></div><div class="cv-measure"><div id="cvm">${blocks.map(b => `<div class="flow">${b.html}</div>`).join('')}</div></div><div id="cvs" class="cv-sheets"></div></div>`;
   $('#tb').style.display = 'none';
   const lay = () => {
     const kids = [...document.querySelectorAll('#cvm>.flow')];
@@ -78,34 +78,34 @@ function cvPage() {
 /* ---------- Mes sites ---------- */
 /* Her screenshots, one after the other (captures/): her organisation app, L’Atelier des Méthodes, Altera Food. */
 const SITE_SHOTS = [
-  ['01-jarva-agenda', 'Application d’organisation personnelle : Agenda'],
-  ['02-jarva-vue', 'Application d’organisation personnelle : Vue'],
-  ['03-jarva-films', 'Application d’organisation personnelle : Films et séries'],
-  ['04-jarva-mariage', 'Application d’organisation personnelle : Mariage'],
-  ['05-jarva-sommeil', 'Application d’organisation personnelle : Sommeil'],
-  ['06-jarva-livre', 'Application d’organisation personnelle : Livre'],
-  ['07-atelier-diagnostic', 'L’Atelier des Méthodes : un diagnostic complet'],
-  ['08-atelier-suivi', 'L’Atelier des Méthodes : un suivi régulier'],
-  ['09-atelier-piliers', 'L’Atelier des Méthodes : une méthode en 5 piliers'],
-  ['10-atelier-programme', 'L’Atelier des Méthodes : le programme du stage'],
-  ['11-altera-accueil', 'Altera Food : page d’accueil'],
-  ['12-altera-levers', 'Altera Food : Choose your levers'],
-  ['13-altera-blog', 'Altera Food : blog'],
-  ['14-marketing-accueil', 'Site d’une entreprise marketing : page d’accueil et plateforme']
+  ['01-jarva-agenda', 'Personal organization app: Calendar'],
+  ['02-jarva-vue', 'Personal organization app: Overview'],
+  ['03-jarva-films', 'Personal organization app: Movies & TV shows'],
+  ['04-jarva-mariage', 'Personal organization app: Wedding'],
+  ['05-jarva-sommeil', 'Personal organization app: Sleep'],
+  ['06-jarva-livre', 'Personal organization app: Book'],
+  ['07-atelier-diagnostic', 'L’Atelier des Méthodes: a complete diagnostic'],
+  ['08-atelier-suivi', 'L’Atelier des Méthodes: regular follow-up'],
+  ['09-atelier-piliers', 'L’Atelier des Méthodes: a 5-pillar method'],
+  ['10-atelier-programme', 'L’Atelier des Méthodes: the course program'],
+  ['11-altera-accueil', 'Altera Food: home page'],
+  ['12-altera-levers', 'Altera Food: Choose your levers'],
+  ['13-altera-blog', 'Altera Food: blog'],
+  ['14-marketing-accueil', 'A marketing company’s website: home page and platform']
 ];
 function sitesPage() {
-  document.title = 'Mes sites';
+  document.title = 'My Sites';
   $('#tb').style.display = 'none';
   /* sections and pictures in the order she asked for (Jarva last); a picture is found by its file prefix */
   const G = [
-    ['atelier', 'Site de mon entreprise de soutien scolaire', ['08', '07', '10', '09']],
-    ['altera', 'Le site d’une association', ['11', '12', '13']],
-    ['marketing', 'Site d’une entreprise marketing', ['14']],
-    ['jarva', 'Application d’organisation personnelle', ['01', '02', '03', '04', '05', '06']]
+    ['atelier', 'Website of my tutoring company', ['08', '07', '10', '09']],
+    ['altera', 'A nonprofit’s website', ['11', '12', '13']],
+    ['marketing', 'A marketing company’s website', ['14']],
+    ['jarva', 'My personal organization app', ['01', '02', '03', '04', '05', '06']]
   ];
   const shot = p => SITE_SHOTS.find(s => s[0].startsWith(p + '-'));
   let seen = 0;
-  $('#app').innerHTML = `<div class="sitespage"><div class="fin-layout"><nav class="fin-nav" aria-label="Mes sites">${G.map(([id, t], k) => `<button type="button" data-sec="ms-${id}" class="${k === 0 ? 'on' : ''}"><i class="n">${k + 1}</i><span>${t}</span></button>`).join('')}</nav>
+  $('#app').innerHTML = `<div class="sitespage"><div class="fin-layout"><nav class="fin-nav" aria-label="My sites">${G.map(([id, t], k) => `<button type="button" data-sec="ms-${id}" class="${k === 0 ? 'on' : ''}"><i class="n">${k + 1}</i><span>${t}</span></button>`).join('')}</nav>
     <div class="fin-main">${G.map(([id, t, list]) => `<div class="gpart" id="ms-${id}"><h2 class="gp">${t}</h2><div class="sp-shots">${list.map(p => { const [f, alt] = shot(p); return `<img src="captures/${f}.jpg" alt="${sxEsc(alt)}" ${seen++ > 1 ? 'loading="lazy"' : ''} decoding="async">`; }).join('')}</div></div>`).join('')}</div></div></div>`;
   window.scrollTo(0, 0);
   if (typeof finNavInit === 'function') finNavInit();

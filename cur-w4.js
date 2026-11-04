@@ -1,253 +1,253 @@
-/* Curriculum : semaines 25 à 30 (Formation 4 : oral).
-   Source : la partie « Formation 4 - Oral » du document (épreuve de 20 minutes, 16 analyses linéaires, grammaire,
-   œuvre choisie, entretien, éloquence, organisation). */
+/* Curriculum: weeks 25 to 30 (Course 4: oral exam).
+   Source: the "Course 4 - Oral" part of the document (20-minute exam, 16 linear analyses, grammar,
+   chosen work, interview, public speaking, organization). */
 
 cw({
-  n: 25, f: 'f4', title: 'L’épreuve orale et son organisation',
-  goal: 'Comprendre le déroulé exact de l’épreuve et mettre en place l’organisation des 16 textes.',
+  n: 25, f: 'f4', title: 'The oral exam and its organization',
+  goal: 'Understand the exact flow of the exam and set up the organization of the 16 texts.',
   notions: [
-    'Date : entre fin juin et début juillet, une semaine après l’écrit. Objet : 16 textes étudiés pendant l’année, la grammaire et l’œuvre choisie.',
-    'Déroulé : 30 minutes de brouillon, puis 20 minutes de passage.',
-    'Passage de 20 minutes : analyse linéaire (10 min : présentation 30 s, lecture 1 min, problématique et plan 30 s, analyse 7 min 30, conclusion 30 s), question de grammaire (2 min), œuvre choisie (8 min : présentation 3 min, entretien 5 min).',
-    'Rythme : deux textes par mois, d’octobre à mai. Pour chaque texte, quatre étapes : cours, fiche, appris, entraînement.',
-    'Tableau d’organisation : mois, titre de l’extrait, auteur, œuvre, et trois cases à cocher (cours, fiche, appris).',
-    'Rangement : un classeur ou un lutin ; première pochette pour le tableau, deuxième pour la liste des textes, puis une pochette par texte (texte imprimé au recto, fiche d’analyse au verso).'
+    'Date: between late June and early July, one week after the written exam. Content: 16 texts studied during the year, grammar and the chosen work.',
+    'Flow: 30 minutes of preparation, then a 20-minute presentation.',
+    'The 20-minute presentation: linear analysis (10 min: presentation 30 s, reading 1 min, central question and outline 30 s, analysis 7 min 30, conclusion 30 s), grammar question (2 min), chosen work (8 min: presentation 3 min, interview 5 min).',
+    'Rhythm: two texts per month, from October to May. For each text, four steps: lesson, sheet, learned, practice.',
+    'Organization table: month, title of the excerpt, author, work, and three boxes to tick (lesson, sheet, learned).',
+    'Filing: a binder or folder; first pocket for the table, second for the list of texts, then one pocket per text (text printed on the front, analysis sheet on the back).'
   ],
   skills: [
-    'Décrire de mémoire les trois parties du passage et leur durée.',
-    'Remplir le tableau d’organisation avec ses 16 textes et un calendrier réaliste.',
-    'Monter son classeur ou son lutin selon la règle « une pochette = un texte ».',
-    'Planifier le fichage dans la semaine qui suit chaque cours.'
+    'Describe from memory the three parts of the presentation and their duration.',
+    'Fill in the organization table with the 16 texts and a realistic calendar.',
+    'Put together your binder or folder following the rule “one pocket = one text”.',
+    'Plan the making of the sheet within the week following each lesson.'
   ],
   watch: [
-    'Ne pas laisser traîner : chaque année, des élèves se retrouvent à deux semaines de l’épreuve avec une dizaine de textes ni fichés ni appris, et le cerveau ne peut pas tout absorber.',
-    'Ne pas se concentrer uniquement sur l’écrit : l’organisation est ce qui fait réussir l’oral.',
-    'Imprimer chaque texte en quatre exemplaires : fiche, entraînements, oraux différents.'
+    'Do not let things drag: every year, students find themselves two weeks from the exam with about ten texts neither summarized on sheets nor learned, and the brain cannot absorb everything.',
+    'Do not focus only on the written exam: organization is what makes the oral exam succeed.',
+    'Print each text in four copies: sheet, practice, different oral exercises.'
   ],
   prep: [
-    { k: 'À lire avant la séance', t: 'La page « L’épreuve orale » de la Formation 4 : date, objet, déroulé, présentation du passage.' },
-    { k: 'Supports', t: 'Le tableau d’organisation vierge (16 lignes) ; la liste des textes donnée par le professeur ; un classeur ou un lutin ; un chronomètre.' }
+    { k: 'To read before the session', t: 'The “The oral exam” page of Course 4: date, content, flow, presentation of the exam.' },
+    { k: 'Materials', t: 'The blank organization table (16 rows); the list of texts given by the teacher; a binder or folder; a timer.' }
   ],
   flow: [
-    [10, 'accroche', 'Ce que l’on sait de l’oral', 'Cinq questions sur l’épreuve de l’année précédente ou sur l’écrit : tour de table, sans correction, pour faire apparaître les attentes.'],
-    [20, 'cours', 'Le déroulé minute par minute', 'Trente minutes de brouillon, puis vingt minutes de passage ; schéma de la répartition projeté et recopié.'],
-    [15, 'cours', 'Les trois parties et ce que le jury évalue', 'Analyse linéaire (10 min), question de grammaire (2 min), œuvre choisie (8 min) : ce qui est attendu dans chacune.'],
-    [20, 'cours', 'Le tableau d’organisation et le rythme de l’année', 'Deux textes par mois, quatre étapes par texte ; lecture ligne à ligne du tableau.'],
-    [20, 'exo', 'Remplir son tableau', 'Individuel : inscrire ses 16 textes (titre, auteur, œuvre), fixer un mois pour chacun et la date limite du fichage.'],
-    [20, 'exo', 'Monter son classeur', 'Individuel : pochette 1 (tableau), pochette 2 (liste des textes), premières pochettes de texte avec recto et verso.'],
-    [15, 'bilan', 'Bilan', 'Chacun annonce ses deux premiers textes et la date de fichage. Consigne : imprimer les textes en quatre exemplaires.']
+    [10, 'accroche', 'What we know about the oral exam', 'Five questions about last year’s exam or the written exam: round table, no correction, to bring out expectations.'],
+    [20, 'cours', 'The minute-by-minute flow', 'Thirty minutes of preparation, then twenty minutes of presentation; diagram of the split projected and copied.'],
+    [15, 'cours', 'The three parts and what the jury assesses', 'Linear analysis (10 min), grammar question (2 min), chosen work (8 min): what is expected in each.'],
+    [20, 'cours', 'The organization table and the rhythm of the year', 'Two texts per month, four steps per text; row-by-row reading of the table.'],
+    [20, 'exo', 'Filling in your table', 'Individual: enter your 16 texts (title, author, work), set a month for each and the deadline for making the sheet.'],
+    [20, 'exo', 'Setting up your binder', 'Individual: pocket 1 (table), pocket 2 (list of texts), first text pockets with front and back.'],
+    [15, 'bilan', 'Wrap-up', 'Everyone announces their first two texts and the date for the sheet. Assignment: print the texts in four copies.']
   ],
   drills: [
-    { t: 'Quiz sur le déroulé', tags: ['Classe entière', '5 min'], how: 'Cinq questions éclair sur les durées de chaque partie ; réponses à voix haute.' },
-    { t: 'Remplir le tableau d’organisation', tags: ['Individuel', '20 min'], how: 'Seize lignes : mois, titre, auteur, œuvre ; cases cours, fiche, appris à cocher au fil de l’année.' },
-    { t: 'Montage du classeur', tags: ['Individuel', '20 min'], how: 'Pochette 1 : tableau ; pochette 2 : liste ; une pochette par texte avec le texte imprimé au recto et la fiche au verso.' }
+    { t: 'Quiz on the flow', tags: ['Whole class', '5 min'], how: 'Five rapid-fire questions on the duration of each part; answers aloud.' },
+    { t: 'Filling in the organization table', tags: ['Individual', '20 min'], how: 'Sixteen rows: month, title, author, work; lesson, sheet, learned boxes to tick through the year.' },
+    { t: 'Setting up the binder', tags: ['Individual', '20 min'], how: 'Pocket 1: table; pocket 2: list; one pocket per text with the text printed on the front and the sheet on the back.' }
   ]
 });
 
 cw({
-  n: 26, f: 'f4', title: 'L’analyse linéaire : les cinq temps des dix minutes',
-  goal: 'Construire et présenter une analyse linéaire de dix minutes, en tenant la durée de chaque temps.',
+  n: 26, f: 'f4', title: 'The linear analysis: the five stages of the ten minutes',
+  goal: 'Build and deliver a ten-minute linear analysis, keeping to the duration of each stage.',
   notions: [
-    'Les cinq temps : présentation de l’auteur, de l’œuvre et du passage (30 s) ; lecture (1 min) ; problématique et plan (30 s) ; analyse linéaire (7 min 30) ; conclusion (30 s).',
-    'L’analyse linéaire suit le texte dans l’ordre, mouvement par mouvement, en citant, en nommant le procédé et en interprétant.',
-    'Les outils de la Formation 1 servent ici : les 15 procédés, le genre, le registre, le mouvement littéraire.',
-    'La lecture compte : elle doit être précise et expressive (pauses, intonation, articulation).',
-    'Un texte déjà commenté peut être repris : le tableau d’analyse fournit les relevés, le plan fournit les mouvements.'
+    'The five stages: presentation of the author, the work and the passage (30 s); reading (1 min); central question and outline (30 s); linear analysis (7 min 30); conclusion (30 s).',
+    'The linear analysis follows the text in order, movement by movement, quoting, naming the device and interpreting.',
+    'The tools of Course 1 are used here: the 15 devices, the genre, the register, the literary movement.',
+    'The reading counts: it must be precise and expressive (pauses, intonation, articulation).',
+    'A text already commented on can be reused: the analysis table provides the findings, the outline provides the movements.'
   ],
   skills: [
-    'Découper un texte en trois ou quatre mouvements et les titrer.',
-    'Formuler en 30 secondes une problématique et l’annoncer avec le plan.',
-    'Lire un texte de façon expressive en une minute.',
-    'Tenir sept minutes trente d’analyse avec au moins huit relevés cités.'
+    'Divide a text into three or four movements and give them titles.',
+    'Formulate a central question in 30 seconds and announce it with the outline.',
+    'Read a text expressively in one minute.',
+    'Keep going for seven minutes thirty of analysis with at least eight quoted findings.'
   ],
   watch: [
-    'Ne pas réciter un commentaire composé : l’analyse linéaire suit l’ordre du texte, elle ne regroupe pas par thèmes.',
-    'Surveiller la durée de la présentation : dépasser trente secondes écrase l’analyse.',
-    'Citer à chaque relevé : un procédé sans citation n’est pas une analyse.'
+    'Do not recite a commentaire composé: the linear analysis follows the order of the text, it does not group by themes.',
+    'Watch the length of the presentation: going over thirty seconds squeezes the analysis.',
+    'Quote at each finding: a device without a quotation is not an analysis.'
   ],
   prep: [
-    { k: 'À lire avant la séance', t: 'La répartition du passage dans « L’épreuve orale » et le tableau d’analyse du cri d’Harpagon (Formation 2, sujet de théâtre).' },
-    { k: 'Supports', t: 'Le texte du cri d’Harpagon, lignes numérotées ; le tableau de la séance 13 ; une grille d’analyse linéaire ; un chronomètre.' }
+    { k: 'To read before the session', t: 'The split of the presentation in “The oral exam” and the analysis table of Harpagon’s cry (Course 2, theater topic).' },
+    { k: 'Materials', t: 'The text of Harpagon’s cry, lines numbered; the table of session 13; a linear-analysis grid; a timer.' }
   ],
   flow: [
-    [8, 'accroche', 'Quiz sur la semaine 25', 'Dix questions sur les durées et les parties de l’épreuve.'],
-    [15, 'cours', 'Les cinq temps de l’analyse linéaire', 'Durée, contenu et pièges de chaque temps, avec un exemple chronométré projeté.'],
-    [15, 'cours', 'La lecture : précision et expressivité', 'Pauses, intonation, articulation ; démonstration par le professeur, puis lecture de deux élèves.'],
-    [20, 'cours', 'Du tableau d’analyse à l’analyse linéaire', 'Comment passer des lignes du tableau à une analyse suivie en trois mouvements, avec huit relevés.'],
-    [25, 'exo', 'Construire l’analyse du cri d’Harpagon', 'Individuel : trois mouvements titrés, problématique de 30 secondes, huit relevés ordonnés dans le tableau de la séance 13.'],
-    [30, 'oral', 'Passages en binôme', 'Chacun présente son analyse en dix minutes devant son binôme, qui chronomètre et remplit la grille ; retour de dix minutes pour les deux.'],
-    [7, 'bilan', 'Bilan', 'Chacun écrit le temps qui lui a posé le plus de difficulté. Consigne : retravailler la lecture à voix haute.']
+    [8, 'accroche', 'Quiz on week 25', 'Ten questions on the durations and parts of the exam.'],
+    [15, 'cours', 'The five stages of the linear analysis', 'Duration, content and pitfalls of each stage, with a timed example projected.'],
+    [15, 'cours', 'The reading: precision and expressiveness', 'Pauses, intonation, articulation; demonstration by the teacher, then reading by two students.'],
+    [20, 'cours', 'From the analysis table to the linear analysis', 'How to move from the rows of the table to a continuous analysis in three movements, with eight findings.'],
+    [25, 'exo', 'Building the analysis of Harpagon’s cry', 'Individual: three titled movements, a 30-second central question, eight findings ordered in the table of session 13.'],
+    [30, 'oral', 'Presentations in pairs', 'Each person presents their analysis in ten minutes to their partner, who times it and fills in the grid; ten-minute feedback for both.'],
+    [7, 'bilan', 'Wrap-up', 'Everyone writes the stage that gave them the most difficulty. Assignment: work on the reading aloud.']
   ],
   drills: [
-    { t: 'Construction de l’analyse linéaire', tags: ['Individuel', '25 min'], how: 'Trois mouvements titrés, une problématique, huit relevés avec citation, procédé et interprétation, dans l’ordre du texte.' },
-    { t: 'Passage de dix minutes en binôme', tags: ['Binôme', 'Chronométré', '10 min'], how: 'L’un parle, l’autre chronomètre et coche une grille : durée de chaque temps, citations, lecture. Les rôles s’inversent.' },
-    { t: 'Lecture expressive', tags: ['Classe entière', '5 min'], how: 'Deux élèves lisent le texte, la classe relève ce qui rend la lecture expressive (pauses, intonation, articulation).' }
+    { t: 'Building the linear analysis', tags: ['Individual', '25 min'], how: 'Three titled movements, a central question, eight findings with quotation, device and interpretation, in the order of the text.' },
+    { t: 'Ten-minute presentation in pairs', tags: ['Pairs', 'Timed', '10 min'], how: 'One speaks, the other times and ticks a grid: duration of each stage, quotations, reading. Roles are swapped.' },
+    { t: 'Expressive reading', tags: ['Whole class', '5 min'], how: 'Two students read the text, the class notes what makes the reading expressive (pauses, intonation, articulation).' }
   ]
 });
 
 cw({
-  n: 27, f: 'f4', title: 'La fiche d’analyse linéaire et la mémorisation',
-  goal: 'Fabriquer une fiche complète à partir de plusieurs sources et la mémoriser.',
+  n: 27, f: 'f4', title: 'The linear-analysis sheet and memorization',
+  goal: 'Make a complete sheet from several sources and memorize it.',
   notions: [
-    'Une fiche n’est pas huit notes sur une feuille volante pour un texte de 32 lignes : elle est exhaustive et rédigée.',
-    'Étape 1, les ressources : ne pas se contenter du cours du professeur (classe nombreuse, retard sur le programme, analyses parfois très poussées) ; chercher « nom de l’extrait + œuvre + analyse linéaire », ou une citation longue du milieu du texte, puis garder les trois meilleures analyses.',
-    'Étape 2, le brouillon : avoir devant soi les quatre analyses (professeur et trois autres) et les fusionner.',
-    'Étape 3, la fiche au propre : à la main (on s’approprie, on retient mieux ; crayon à papier ou stylo effaçable) ou sur ordinateur (modifiable à l’infini).',
-    'Le cycle de chaque texte : cours en classe avec prise de notes, fiche dans la semaine, apprentissage, entraînement oral.'
+    'A sheet is not eight notes on a loose page for a 32-line text: it is exhaustive and written out.',
+    'Step 1, resources: do not rely only on the teacher’s lesson (large class, behind on the syllabus, analyses sometimes very advanced); search “name of the excerpt + work + linear analysis”, or a long quotation from the middle of the text, then keep the three best analyses.',
+    'Step 2, the draft: have the four analyses in front of you (teacher’s and three others) and merge them.',
+    'Step 3, the final sheet: by hand (you make it your own, you remember better; pencil or erasable pen) or on a computer (endlessly editable).',
+    'The cycle for each text: lesson in class with note-taking, sheet within the week, learning, oral practice.'
   ],
   skills: [
-    'Chercher et sélectionner trois analyses fiables sur un même texte.',
-    'Fusionner quatre sources en un brouillon : mouvements, procédés, interprétations.',
-    'Mettre une fiche au propre selon le format choisi.',
-    'Mémoriser une analyse en la redisant à voix haute.'
+    'Search for and select three reliable analyses of the same text.',
+    'Merge four sources into a draft: movements, devices, interpretations.',
+    'Write up a sheet neatly in the chosen format.',
+    'Memorize an analysis by saying it again aloud.'
   ],
   watch: [
-    'Ne pas laisser un texte étudié en classe pendant des semaines : on l’oublie. Le fichage se fait dans la semaine.',
-    'Compléter la fiche avec les procédés que le professeur n’avait pas cités ou que l’on a oublié de noter.',
-    'Une fiche manuscrite ne se corrige pas facilement : privilégier le crayon à papier.'
+    'Do not leave a text studied in class for weeks: it gets forgotten. The sheet is made within the week.',
+    'Complete the sheet with the devices the teacher did not cite or that you forgot to note.',
+    'A handwritten sheet is not easy to correct: prefer pencil.'
   ],
   prep: [
-    { k: 'À lire avant la séance', t: 'La méthode « Faire une fiche d’analyse linéaire » de la Formation 4 (ressources, brouillon, fiche au propre).' },
-    { k: 'Supports', t: 'Un texte du corpus avec l’analyse du professeur ; trois analyses linéaires du même texte (imprimées ou sur ordinateur) ; feuilles de brouillon ; crayons à papier.' }
+    { k: 'To read before the session', t: 'The method “Making a linear-analysis sheet” of Course 4 (resources, draft, final sheet).' },
+    { k: 'Materials', t: 'A text from the list with the teacher’s analysis; three linear analyses of the same text (printed or on a computer); draft paper; pencils.' }
   ],
   flow: [
-    [8, 'accroche', 'Quiz sur la semaine 26', 'Cinq temps de l’analyse, durée de chacun : rappel à voix haute.'],
-    [15, 'cours', 'Pourquoi une fiche complète', 'Les erreurs fréquentes ; ce qu’une fiche doit contenir ; exemple d’une bonne et d’une mauvaise fiche.'],
-    [15, 'cours', 'Étape 1 : sélectionner les ressources', 'Les limites du cours seul ; comment chercher sur internet ; critères pour garder le top 3.'],
-    [20, 'exo', 'Atelier : comparer quatre analyses', 'En binôme : repérer, dans les trois analyses trouvées, les procédés absents des notes du cours.'],
-    [25, 'exo', 'Étape 2 : le brouillon', 'Individuel : fusionner les quatre analyses d’un texte court dans un tableau mouvement, procédés, interprétation.'],
-    [15, 'cours', 'Étape 3 : la fiche au propre', 'À la main ou sur ordinateur : avantages et inconvénients ; mise en page ; règle « une pochette = un texte ».'],
-    [15, 'exo', 'Apprendre la fiche', 'Binôme : relire, cacher, redire à voix haute les mouvements et les relevés ; vérification mutuelle.'],
-    [7, 'bilan', 'Bilan', 'Chacun fixe la date où sa fiche du texte du mois sera terminée.']
+    [8, 'accroche', 'Quiz on week 26', 'Five stages of the analysis, duration of each: recall aloud.'],
+    [15, 'cours', 'Why a complete sheet', 'Common mistakes; what a sheet must contain; example of a good and a bad sheet.'],
+    [15, 'cours', 'Step 1: selecting the resources', 'The limits of the lesson alone; how to search online; criteria for keeping the top 3.'],
+    [20, 'exo', 'Workshop: comparing four analyses', 'In pairs: spot, in the three analyses found, the devices absent from the lesson notes.'],
+    [25, 'exo', 'Step 2: the draft', 'Individual: merge the four analyses of a short text into a movement, devices, interpretation table.'],
+    [15, 'cours', 'Step 3: the final sheet', 'By hand or on a computer: advantages and drawbacks; layout; rule “one pocket = one text”.'],
+    [15, 'exo', 'Learning the sheet', 'Pairs: reread, cover, say aloud the movements and the findings; mutual checking.'],
+    [7, 'bilan', 'Wrap-up', 'Everyone sets the date when their sheet for the month’s text will be finished.']
   ],
   drills: [
-    { t: 'Comparaison de quatre analyses', tags: ['Binôme', '20 min'], how: 'Un tableau à deux colonnes : ce que le cours disait, ce que les trois autres analyses ajoutent.' },
-    { t: 'Brouillon de fiche', tags: ['Individuel', '25 min'], how: 'Tableau mouvement, procédés, interprétation, alimenté par les quatre sources, avec les citations.' },
-    { t: 'Récitation à voix haute', tags: ['Binôme', '15 min'], how: 'Relire, cacher la fiche, redire les mouvements et les relevés ; l’autre vérifie et signale les oublis.' }
+    { t: 'Comparison of four analyses', tags: ['Pairs', '20 min'], how: 'A two-column table: what the lesson said, what the three other analyses add.' },
+    { t: 'Draft of a sheet', tags: ['Individual', '25 min'], how: 'Movement, devices, interpretation table, fed by the four sources, with the quotations.' },
+    { t: 'Recitation aloud', tags: ['Pairs', '15 min'], how: 'Reread, cover the sheet, say the movements and findings again; the other checks and points out omissions.' }
   ]
 });
 
 cw({
-  n: 28, f: 'f4', title: 'La question de grammaire',
-  goal: 'Répondre en deux minutes à une question de grammaire sur le texte tiré au sort.',
+  n: 28, f: 'f4', title: 'The grammar question',
+  goal: 'Answer in two minutes a grammar question on the text drawn by lot.',
   notions: [
-    'La question dure deux minutes et suit l’analyse linéaire.',
-    'Programme officiel : l’interrogation, la négation, les propositions (repérer la principale et les subordonnées : relative, complétive, circonstancielle).',
-    'Programme officieux : des classes grammaticales ou des fonctions, par exemple la nature des cinq premiers mots de la phrase ; le correcteur vérifie le programme de collège.',
-    'Il faut s’y prendre dès le début de l’année : une remise à niveau un dimanche après-midi ou pendant les vacances suffit.'
+    'The question lasts two minutes and follows the linear analysis.',
+    'Official syllabus: interrogation, negation, clauses (spotting the main clause and the subordinate clauses: relative, complement, adverbial).',
+    'Unofficial syllabus: word classes or functions, for example the nature of the first five words of the sentence; the examiner checks the middle-school syllabus.',
+    'You need to start at the beginning of the year: a catch-up on a Sunday afternoon or during the holidays is enough.'
   ],
   skills: [
-    'Repérer la proposition principale et les subordonnées d’une phrase.',
-    'Identifier une interrogation directe ou indirecte, totale ou partielle.',
-    'Identifier les formes de la négation.',
-    'Donner la nature et la fonction des mots d’une phrase.'
+    'Spot the main clause and the subordinate clauses of a sentence.',
+    'Identify a direct or indirect, total or partial question.',
+    'Identify the forms of negation.',
+    'Give the nature and function of the words of a sentence.'
   ],
   watch: [
-    'Ne pas avoir peur : ce sont deux points offerts.',
-    'Ne pas attendre la dernière semaine : traîner ce problème coûte des points à chaque oral blanc.',
-    'Répondre en commençant par la nature, puis la fonction, puis la proposition.'
+    'Do not be afraid: these are two points handed to you.',
+    'Do not wait for the last week: dragging this problem costs points at every mock oral.',
+    'Answer by starting with the nature, then the function, then the clause.'
   ],
   prep: [
-    { k: 'À lire avant la séance', t: 'La partie « Question de grammaire » de la Formation 4 ; ses cours de grammaire du collège.' },
-    { k: 'Supports', t: 'Quatre phrases tirées des œuvres du programme, une par élève ; un tableau des natures et des fonctions ; un chronomètre.' }
+    { k: 'To read before the session', t: 'The “Grammar question” part of Course 4; your middle-school grammar lessons.' },
+    { k: 'Materials', t: 'Four sentences taken from the works on the syllabus, one per student; a table of natures and functions; a timer.' }
   ],
   flow: [
-    [8, 'accroche', 'Quiz de nature', 'Dix mots à classer selon leur nature : nom, verbe, adjectif, déterminant, pronom, adverbe, préposition, conjonction.'],
-    [15, 'cours', 'Les propositions', 'Proposition principale, proposition indépendante, proposition subordonnée ; comment les repérer.'],
-    [15, 'cours', 'Les trois subordonnées', 'Relative (pronom relatif et antécédent), complétive (« que », fonction COD), circonstancielle (temps, cause, conséquence, but, concession, condition).'],
-    [15, 'cours', 'L’interrogation et la négation', 'Interrogation directe et indirecte, totale et partielle ; formes de la négation.'],
-    [25, 'exo', 'Analyse logique de quatre phrases', 'Individuel : quatre phrases des œuvres du programme, propositions et subordonnées, correction collective.'],
-    [15, 'exo', 'Nature et fonction des cinq premiers mots', 'Individuel : cinq phrases, cinq premiers mots de chacune ; correction à voix haute.'],
-    [20, 'oral', 'Simulation de la question', 'Quatre élèves passent au tableau, deux minutes chacun, chronomètre en main, sur une phrase tirée au sort.'],
-    [7, 'bilan', 'Bilan', 'Chacun écrit les trois points de grammaire qu’il doit revoir. Consigne : dix minutes de grammaire par semaine.']
+    [8, 'accroche', 'Nature quiz', 'Ten words to classify by nature: noun, verb, adjective, determiner, pronoun, adverb, preposition, conjunction.'],
+    [15, 'cours', 'Clauses', 'Main clause, independent clause, subordinate clause; how to spot them.'],
+    [15, 'cours', 'The three subordinate clauses', 'Relative (relative pronoun and antecedent), complement (“que”, function direct object), adverbial (time, cause, consequence, purpose, concession, condition).'],
+    [15, 'cours', 'Interrogation and negation', 'Direct and indirect, total and partial questions; forms of negation.'],
+    [25, 'exo', 'Logical analysis of four sentences', 'Individual: four sentences from the works on the syllabus, clauses and subordinate clauses, class correction.'],
+    [15, 'exo', 'Nature and function of the first five words', 'Individual: five sentences, first five words of each; correction aloud.'],
+    [20, 'oral', 'Simulation of the question', 'Four students go to the board, two minutes each, timer in hand, on a sentence drawn by lot.'],
+    [7, 'bilan', 'Wrap-up', 'Everyone writes the three grammar points they must review. Assignment: ten minutes of grammar per week.']
   ],
   drills: [
-    { t: 'Analyse logique de quatre phrases', tags: ['Individuel', '25 min'], how: 'Pour chaque phrase : proposition principale, subordonnées et leur type, justification.' },
-    { t: 'Nature et fonction des cinq premiers mots', tags: ['Individuel', '15 min'], how: 'Un tableau mot, nature, fonction ; correction orale avec reformulation.' },
-    { t: 'Question de deux minutes', tags: ['Au tableau', 'Chronométré', '2 min'], how: 'L’élève annonce la nature, la fonction, puis les propositions ; la classe note la durée et la rigueur.' }
+    { t: 'Logical analysis of four sentences', tags: ['Individual', '25 min'], how: 'For each sentence: main clause, subordinate clauses and their type, justification.' },
+    { t: 'Nature and function of the first five words', tags: ['Individual', '15 min'], how: 'A word, nature, function table; oral correction with rewording.' },
+    { t: 'Two-minute question', tags: ['At the board', 'Timed', '2 min'], how: 'The student announces the nature, the function, then the clauses; the class notes the duration and the rigor.' }
   ]
 });
 
 cw({
-  n: 29, f: 'f4', title: 'L’œuvre choisie : choisir, lire, faire sa fiche de lecture',
-  goal: 'Choisir son œuvre, organiser sa lecture et monter une fiche de lecture structurée.',
+  n: 29, f: 'f4', title: 'The chosen work: choosing, reading, making your reading sheet',
+  goal: 'Choose your work, organize your reading and put together a structured reading sheet.',
   notions: [
-    'Trois choix : œuvre intégrale (connue par la dissertation, aucune lecture en plus, mais moins originale et mieux connue des correcteurs) ; œuvre cursive (plus originale, mais une lecture en plus et moins de ressources) ; œuvre personnelle (très originale, à relier à l’un des parcours de l’année, mais une lecture en plus et peu de ressources).',
-    'Lire efficacement : ne pas se lancer directement ; connaître le résumé et les analyses avant, choisir trois vidéos d’analyse et deux livres d’analyse, puis lire.',
-    'Agenda de lecture : un nombre de pages par jour, un tableau sur trois semaines, une case à cocher chaque jour.',
-    'Lire un stylo à la main, en repérant les passages intéressants, amusants, originaux, les personnages dont on parlera.',
-    'Fiche de lecture : carte d’identité, biographie détaillée, contexte historique, mouvement littéraire, réception, résumé détaillé, personnages, grands thèmes, lien avec le parcours, raisons du choix avec exemples, liste de questions possibles avec réponses.'
+    'Three choices: complete work (known from the essay, no extra reading, but less original and better known to the examiners); cursive work (more original, but one extra reading and fewer resources); personal work (very original, to be linked to one of the themes of the year, but one extra reading and few resources).',
+    'Reading efficiently: do not dive in directly; know the summary and the analyses beforehand, choose three analysis videos and two analysis books, then read.',
+    'Reading schedule: a number of pages per day, a three-week table, a box to tick each day.',
+    'Read with a pen in hand, marking the interesting, funny, original passages and the characters you will talk about.',
+    'Reading sheet: identity card, detailed biography, historical context, literary movement, reception, detailed summary, characters, major themes, link to the theme, reasons for the choice with examples, list of possible questions with answers.'
   ],
   skills: [
-    'Comparer les trois choix et trancher en justifiant.',
-    'Construire un agenda de lecture sur trois semaines.',
-    'Remplir la carte d’identité et la biographie d’une œuvre.',
-    'Lister six choses aimées dans le livre, avant d’en garder trois.'
+    'Compare the three choices and decide, with justification.',
+    'Build a three-week reading schedule.',
+    'Fill in the identity card and the biography of a work.',
+    'List six things liked in the book, before keeping three.'
   ],
   watch: [
-    'Se décider tôt : une œuvre intégrale évite une lecture, une œuvre personnelle demande plus de temps.',
-    'Lire en étant obsédé par ce que l’on pourra raconter : après la lecture, on oublie 75 % des exemples.',
-    'Les raisons du choix doivent être précises, pas vagues (« c’était drôle »).'
+    'Decide early: a complete work saves a reading, a personal work takes more time.',
+    'Reading while obsessed with what you will be able to tell: after reading, you forget 75% of the examples.',
+    'The reasons for the choice must be precise, not vague (“it was funny”).'
   ],
   prep: [
-    { k: 'À lire avant la séance', t: 'La méthode « L’œuvre choisie » de la Formation 4 : les trois choix, lire efficacement, la fiche de lecture.' },
-    { k: 'Supports', t: 'La liste des œuvres intégrales de l’année ; un modèle de fiche de lecture vierge à onze rubriques ; une feuille pour l’agenda de lecture.' }
+    { k: 'To read before the session', t: 'The method “The chosen work” of Course 4: the three choices, reading efficiently, the reading sheet.' },
+    { k: 'Materials', t: 'The list of the complete works of the year; a blank reading-sheet template with eleven sections; a sheet for the reading schedule.' }
   ],
   flow: [
-    [8, 'accroche', 'Quiz sur la semaine 28', 'Cinq questions de grammaire : natures et propositions.'],
-    [20, 'cours', 'Les trois choix : avantages et inconvénients', 'Intégrale, cursive, personnelle ; tableau comparatif projeté et complété.'],
-    [15, 'exo', 'Décider', 'Individuel : écrire les avantages et les inconvénients de deux options, puis choisir et le justifier.'],
-    [20, 'cours', 'Lire efficacement', 'Préparer la lecture (résumé, trois vidéos, deux livres d’analyse), l’agenda de lecture, la lecture au stylo.'],
-    [15, 'exo', 'Agenda de lecture', 'Individuel : pages par jour, tableau sur trois semaines, cases à cocher.'],
-    [15, 'cours', 'La fiche de lecture', 'Les onze rubriques et leur contenu ; exemple de fiche.'],
-    [20, 'exo', 'Commencer sa fiche', 'Individuel : carte d’identité, début de la biographie, liste de cinq choses aimées dans le livre.'],
-    [7, 'bilan', 'Bilan', 'Chacun annonce son œuvre choisie et sa date de fin de lecture.']
+    [8, 'accroche', 'Quiz on week 28', 'Five grammar questions: natures and clauses.'],
+    [20, 'cours', 'The three choices: advantages and drawbacks', 'Complete, cursive, personal; comparison table projected and completed.'],
+    [15, 'exo', 'Deciding', 'Individual: write the advantages and drawbacks of two options, then choose and justify.'],
+    [20, 'cours', 'Reading efficiently', 'Preparing the reading (summary, three videos, two analysis books), the reading schedule, reading with a pen.'],
+    [15, 'exo', 'Reading schedule', 'Individual: pages per day, three-week table, boxes to tick.'],
+    [15, 'cours', 'The reading sheet', 'The eleven sections and their content; example of a sheet.'],
+    [20, 'exo', 'Starting your sheet', 'Individual: identity card, start of the biography, list of five things liked in the book.'],
+    [7, 'bilan', 'Wrap-up', 'Everyone announces their chosen work and their reading end date.']
   ],
   drills: [
-    { t: 'Grille de choix de l’œuvre', tags: ['Individuel', '15 min'], how: 'Deux colonnes par option : avantages et inconvénients ; décision justifiée en deux phrases.' },
-    { t: 'Agenda de lecture', tags: ['Individuel', '15 min'], how: 'Nombre de pages par jour, tableau de trois semaines avec une case à cocher pour chaque jour.' },
-    { t: 'Début de la fiche de lecture', tags: ['Individuel', '20 min'], how: 'Carte d’identité, biographie, cinq choses aimées dans le livre à réduire à trois.' }
+    { t: 'Work-choice grid', tags: ['Individual', '15 min'], how: 'Two columns per option: advantages and drawbacks; decision justified in two sentences.' },
+    { t: 'Reading schedule', tags: ['Individual', '15 min'], how: 'Number of pages per day, three-week table with a box to tick for each day.' },
+    { t: 'Start of the reading sheet', tags: ['Individual', '20 min'], how: 'Identity card, biography, five things liked in the book to be cut down to three.' }
   ]
 });
 
 cw({
-  n: 30, f: 'f4', title: 'La présentation de trois minutes, l’entretien et l’éloquence',
-  goal: 'Présenter son œuvre en trois minutes, répondre à l’entretien de cinq minutes et soigner sa manière de parler.',
+  n: 30, f: 'f4', title: 'The three-minute presentation, the interview and public speaking',
+  goal: 'Present your work in three minutes, answer the five-minute interview and polish your way of speaking.',
   notions: [
-    'Présentation en trois minutes maximum : présentation rapide de l’auteur, du mouvement et de l’œuvre (30 s) ; trois raisons, chacune avec un exemple précis et des impressions personnelles (45 s chacune) ; une courte conclusion.',
-    'Les raisons doivent être précises et illustrées, pas vagues ; on peut s’appuyer sur le réalisme, la portée symbolique ou philosophique, en se les appropriant avec une touche personnelle.',
-    'Entretien de cinq minutes : lister toutes les questions possibles et préparer les réponses ; environ 80 % des questions pourront être improvisées.',
-    'Questions classiques : biographie de l’auteur, réception de l’œuvre, histoire de rédaction et de publication, mouvement littéraire, autres auteurs du mouvement, genre précis, autres œuvres de l’auteur, lien avec le parcours, contexte historique, écriture, autre titre, image de couverture, adaptation, lien avec l’actualité, lien avec la vie personnelle.',
-    'Éloquence : lecture précise, articulation, présence ancrée et affirmée, sourire, politesse, clarté de la structure et des mots-clés, voix posée.'
+    'Presentation of three minutes maximum: quick presentation of the author, the movement and the work (30 s); three reasons, each with a precise example and personal impressions (45 s each); a short conclusion.',
+    'The reasons must be precise and illustrated, not vague; you can lean on realism, symbolic or philosophical significance, making them your own with a personal touch.',
+    'Five-minute interview: list all possible questions and prepare the answers; about 80% of the questions can be improvised.',
+    'Classic questions: author’s biography, reception of the work, history of writing and publication, literary movement, other authors of the movement, precise genre, other works by the author, link to the theme, historical context, writing, other title, cover image, adaptation, link to current events, link to personal life.',
+    'Public speaking: precise reading, articulation, grounded and assertive presence, smile, politeness, clarity of structure and keywords, steady voice.'
   ],
   skills: [
-    'Rédiger et dire une présentation de trois minutes chronométrées.',
-    'Illustrer chaque raison par un exemple précis de l’œuvre.',
-    'Répondre à cinq questions d’entretien sans hésitation.',
-    'Corriger sa lecture, son articulation et sa posture.'
+    'Write and deliver a timed three-minute presentation.',
+    'Illustrate each reason with a precise example from the work.',
+    'Answer five interview questions without hesitation.',
+    'Correct your reading, articulation and posture.'
   ],
   watch: [
-    'Ne pas négliger les questions simples (genre, mouvement, biographie) : un élève qui ne les prépare pas perd des points faciles.',
-    'La politesse commence à l’entrée de la salle et finit à la sortie : l’examinateur observe tout le temps.',
-    'Ne pas lire sa feuille : s’appuyer sur les mots-clés et regarder l’examinateur.'
+    'Do not neglect the simple questions (genre, movement, biography): a student who does not prepare them loses easy points.',
+    'Politeness starts at the entrance of the room and ends at the exit: the examiner is observing the whole time.',
+    'Do not read your sheet: rely on the keywords and look at the examiner.'
   ],
   prep: [
-    { k: 'À lire avant la séance', t: 'Les parties « La présentation », « L’entretien » et « L’éloquence » de la Formation 4.' },
-    { k: 'Supports', t: 'La fiche de lecture de la semaine 29 ; la liste des questions classiques d’entretien ; un chronomètre ; une grille d’éloquence.' }
+    { k: 'To read before the session', t: 'The parts “The presentation”, “The interview” and “Public speaking” of Course 4.' },
+    { k: 'Materials', t: 'The reading sheet from week 29; the list of classic interview questions; a timer; a public-speaking grid.' }
   ],
   flow: [
-    [8, 'accroche', 'Quiz sur la semaine 29', 'Chacun cite l’œuvre qu’il a choisie et les trois raisons envisagées.'],
-    [15, 'cours', 'La structure de la présentation de trois minutes', 'Le chronométrage : 30 s, trois fois 45 s, conclusion ; exemple dit par le professeur.'],
-    [25, 'exo', 'Écrire sa présentation', 'Individuel : introduction de 30 secondes, trois raisons avec exemple et impressions personnelles.'],
-    [20, 'oral', 'Dire sa présentation', 'En binôme : trois minutes chacun, chronométrées, avec retour sur la précision des exemples.'],
-    [20, 'cours', 'L’entretien : préparer toutes les questions', 'Les questions classiques, comment préparer les réponses, comment improviser sur les autres.'],
-    [15, 'oral', 'Jeu d’entretien', 'En binôme : cinq questions chacun, cinq minutes d’entretien chronométrées.'],
-    [10, 'cours', 'L’éloquence', 'Lecture, articulation, présence, sourire, politesse à l’entrée et à la sortie, voix posée.'],
-    [7, 'bilan', 'Bilan', 'Chacun note un point d’éloquence à corriger. Consigne : finaliser la fiche de lecture.']
+    [8, 'accroche', 'Quiz on week 29', 'Everyone cites the work they chose and the three reasons they have in mind.'],
+    [15, 'cours', 'The structure of the three-minute presentation', 'The timing: 30 s, three times 45 s, conclusion; example given by the teacher.'],
+    [25, 'exo', 'Writing your presentation', 'Individual: 30-second introduction, three reasons with example and personal impressions.'],
+    [20, 'oral', 'Delivering your presentation', 'In pairs: three minutes each, timed, with feedback on the precision of the examples.'],
+    [20, 'cours', 'The interview: preparing all the questions', 'The classic questions, how to prepare the answers, how to improvise on the others.'],
+    [15, 'oral', 'Interview game', 'In pairs: five questions each, five minutes of timed interview.'],
+    [10, 'cours', 'Public speaking', 'Reading, articulation, presence, smile, politeness at entry and exit, steady voice.'],
+    [7, 'bilan', 'Wrap-up', 'Everyone notes one public-speaking point to correct. Assignment: finalize the reading sheet.']
   ],
   drills: [
-    { t: 'Rédaction de la présentation', tags: ['Individuel', '25 min'], how: 'Introduction de 30 secondes ; trois raisons chacune avec un exemple précis et une impression personnelle ; conclusion courte.' },
-    { t: 'Présentation chronométrée', tags: ['Binôme', '3 min'], how: 'Chacun dit sa présentation en trois minutes ; l’autre chronomètre et relève les exemples précis et les phrases vagues.' },
-    { t: 'Entretien de cinq minutes', tags: ['Binôme', 'Chronométré', '5 min'], how: 'Cinq questions classiques tirées de la liste ; l’examinateur fictif note les hésitations.' }
+    { t: 'Writing the presentation', tags: ['Individual', '25 min'], how: '30-second introduction; three reasons each with a precise example and a personal impression; short conclusion.' },
+    { t: 'Timed presentation', tags: ['Pairs', '3 min'], how: 'Each person gives their presentation in three minutes; the other times it and notes the precise examples and the vague sentences.' },
+    { t: 'Five-minute interview', tags: ['Pairs', 'Timed', '5 min'], how: 'Five classic questions drawn from the list; the pretend examiner notes the hesitations.' }
   ]
 });

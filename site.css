@@ -65,10 +65,14 @@ body{background:var(--hz-bg)}
 .sitespage .fin-nav{padding:14px;border-radius:24px}.sitespage .fin-nav button{font-size:16px;line-height:1.35;padding:14px 18px;border-radius:14px}
 @media(max-width:900px){.gal.gal-final,.sitespage{padding-left:16px;padding-right:16px}.gal-final .fin-layout,.sitespage .fin-layout{grid-template-columns:1fr}.sitespage .fin-nav button{font-size:14px;padding:9px 14px}}
 
-/* Propositions de design: the cards are plain pictures, not links: no pointer, no hover effect */
-.gal-final .gcard,.gal-final .gcard *{cursor:default!important;pointer-events:none;transition:none!important}
-.gal-final .gcard:hover,.gal-final .gcard:hover *{transform:none!important;filter:none!important}
-.gal-final .gcard:hover{box-shadow:var(--hz-card)}
+/* Propositions de design: each card opens its own section, enlarged, in a lightbox (nothing else of the page is shown) */
+.gal-final .gcard{cursor:pointer}.gal-final .gcard *{cursor:pointer!important}.gal-final .gcard iframe{pointer-events:none}
+.gal-final .gcard,.gal-final .gcard *{transition:none!important}.gal-final .gcard:hover{transform:none!important}
+.lb{position:fixed;inset:0;z-index:10000;background:rgba(23,23,22,.82);display:grid;place-items:center;cursor:zoom-out}
+.lb .lb-win{position:relative;overflow:hidden;border-radius:14px;background:#fff;box-shadow:0 40px 90px -30px rgba(0,0,0,.7)}
+.lb .lb-win iframe{position:absolute;left:0;top:0;border:0;transform-origin:0 0;pointer-events:none}
+.lb .lb-x{position:fixed;top:18px;right:22px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#291e2b;font:700 22px/1 'Plus Jakarta Sans',sans-serif;cursor:pointer;box-shadow:0 10px 24px -10px rgba(0,0,0,.6)}
+.lb .lb-n{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);padding:8px 16px;border-radius:99px;background:rgba(255,255,255,.14);color:#fff;font:700 13px 'Plus Jakarta Sans',sans-serif;letter-spacing:.06em}
 
 /* numbered round badges in the left menus: dark with a white number, inverted on the selected item */
 .fin-nav button{display:flex;align-items:center;gap:12px}

@@ -1,9 +1,9 @@
-/* Two CV designs kept (1 bandeau, 2 colonne latérale; the code for 3-6 stays in cvdHead/CSS), built on the Voices Unveiled proposals (palette, rounded shapes, Plus Jakarta Sans).
+/* Two CV designs kept (1 header band, 2 side column; the code for 3-6 stays in cvdHead/CSS), built on the Voices Unveiled proposals (palette, rounded shapes, Plus Jakarta Sans).
    Route: #/cv/1 … #/cv/6 ; #/cv is the original Jarva-style CV. Same data (CV_DATA), same A4 pagination. */
 
 const CVD = [
-  { n: 'Bandeau', t: 'Un bandeau sombre en dégradé noir vers terracotta, photo ronde, titres terracotta.' },
-  { n: 'Colonne latérale', t: 'Colonne aubergine avec photo, contact, langues et centres d’intérêt ; parcours à droite.' }
+  { n: 'Header band', t: 'A dark band fading from black to terracotta, round photo, terracotta headings.' },
+  { n: 'Side column', t: 'Aubergine column with photo, contact, languages and interests; career on the right.' }
 ];
 
 const cvdPhoto = (cls = '') => CV_PHOTO ? `<img class="ph ${cls}" src="${CV_PHOTO}" alt="${sxEsc(CV_DATA.name)}">` : '';
@@ -43,10 +43,10 @@ const cvdSide = () => {
 };
 
 function cvPageD(d) {
-  document.title = 'Mon CV';
+  document.title = 'My CV';
   const MM = 96 / 25.4, BODY = (297 - 33) * MM, cls = `cvd cvd${d}`;
   const blocks = cvdBlocks(d);
-  const bar = `<div class="cv-bar"><span></span><button class="cv-print" onclick="window.print()">Imprimer</button></div>`;
+  const bar = `<div class="cv-bar"><span></span><button class="cv-print" onclick="window.print()">Print</button></div>`;
   $('#app').innerHTML = `<div class="cvpage cvd-page">${bar}<div class="cv-measure"><div id="cvm" class="${cls}">${blocks.map(b => `<div class="flow ${b.k}">${b.html}</div>`).join('')}</div></div><div id="cvs" class="cv-sheets ${cls}"></div></div>`;
   $('#tb').style.display = 'none';
   const lay = () => {

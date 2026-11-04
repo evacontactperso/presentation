@@ -297,7 +297,7 @@ function pwPage(id, L) {
   let inner;
   if (ph === 'n') inner = `${head}${body}`;
   else if (side === 't') inner = `<div class="pw-ban">${pf(m.ph[0], 'wide')}</div>${head}${body}`;
-  else if (side === 's') inner = `${head}<div class="pw-strip">${pf(m.ph[0], 'arch')}${pf(m.ph[1], 'circle')}${pf(m.ph[2], 'squircle')}</div>${body}`;
+  else if (side === 's') inner = (id === 'impact' && L === 6) ? `${head}<div class="pw-strip rc">${pf(m.ph[0], 'rect43')}${pf(m.ph[1], 'rect43')}${pf(m.ph[2], 'rect43')}</div>${body}` : `${head}<div class="pw-strip">${pf(m.ph[0], 'arch')}${pf(m.ph[1], 'circle')}${pf(m.ph[2], 'squircle')}</div>${body}`; /* impact 6: three equal rectangles */
   else { const fig = `<div class="pw-fig fg-${shp}">${pf(m.ph[0], pic[shp] || 'rect')}</div>`; inner = `<div class="pw-cols ${side === 'l' ? 'fl' : 'fr'}">${fig}<div class="pw-main">${head}${body}</div></div>`; }
   return `<div class="site cw1 pg sxp pw-page"><section class="pw f-${fr}"><div class="wrap pw-in">${inner}</div></section></div>`;
 }

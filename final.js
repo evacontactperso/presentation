@@ -1,19 +1,19 @@
 /* Page 20: the user's selection, every page one after another, in the order given.
    Numbers on the cards are the designs' own numbers. */
 const FINAL_SEL = [
-  ['covers', [21, 7, 3, '16t', 6, 19]], ['mission', [5, 8, 7]], ['founder', [9, 21, 6]], ['course', [1, 4, 13]],
+  ['covers', [4, 6, 8, 19, '16w', 23]], ['mission', [5, 8, 7]], ['founder', [9, 21, 6]], ['course', [1, 4, 13]],
   ['guests', [21, 12, 22]], ['emergency', [3, 21, 12]], ['impact', [4, 5, 6]], ['stories', [1, 3, 22]],
-  ['supporters', [5, 11, 21]], ['donate', [3, 5, 13]], ['monthly', [1, 8, 19]], ['volunteer', [14, 4, 13]],
+  ['supporters', [5, 11, 21]], ['donate', [3, 5, 13]], ['monthly', [1, 8, 19, 21, 22, 23, 24, 25]], ['volunteer', [14, 4, 13]],
   ['blog', [17, 7, 3]], ['contact', [26, 29, 30]]
 ];
 GPARTS.push({ id: 'final', t: 'Final selection' });
 function finalPage() {
   const sec = ([pid, list0]) => {
     /* Cover pages: her selection first, then every other cover proposal of the original page 1 */
-    const list = pid === 'covers' ? list0.concat([...COVER_NUMS].sort((x, y) => x - y).filter(n => !list0.includes(n))) : list0;
+    const list = list0;
     const gid = pid === 'covers' ? 'covers' : 'pg-' + pid, g = GPARTS.find(x => x.id === gid);
     const cards = list.map(n => {
-      if (n === '16t') return `<article class="gcard"><a class="shot" href="?bg=terra#/78/mission">${frame('index.html?embed=1&bg=terra#/78/mission', 'Perspective, terracotta')}</a><div class="gb"><h2><span>16</span> Perspective<em>site 78 · terracotta background</em></h2><p class="cwn">Deep terracotta</p></div></article>`;
+      if (n === '16w') return `<article class="gcard"><a class="shot" href="?bg=white#/78/mission">${frame('index.html?embed=1&bg=white#/78/mission', 'Perspective, white background')}</a><div class="gb"><h2><span>16</span> Perspective</h2></div></article>`;
       if (pid === 'covers') { const [t, id] = COVER_ORDER[n - 1]; return t === 'h' ? hcard(hById(id), id, n) : card(SITES[id - 1], id, null, n); }
       return `<article class="gcard"><a class="shot mid" href="#/p/${pid}/${n}">${frame(`index.html?embed=1#/p/${pid}/${n}`, tplName(pid, n))}</a><div class="gb"><h2><span>${String(n).padStart(2, '0')}</span> ${tplName(pid, n)}</h2></div></article>`;
     }).join('');
@@ -48,3 +48,32 @@ function finRenumber() {
     if (gb) gb.innerHTML = `<h2><span>${String(i + 1).padStart(2, '0')}</span></h2>`;
   });
 }
+
+/* lightbox: the section shown in a card, enlarged; nothing of the rest of the page can be seen. Click, Esc or × closes; ← → move between cards. */
+function finLightbox(card) {
+  const cards = [...document.querySelectorAll('.gal-final .gcard')];
+  let idx = cards.indexOf(card);
+  const lb = document.createElement('div');
+  lb.className = 'lb';
+  lb.innerHTML = '<div class="lb-win"></div><button class="lb-x" aria-label="Close">×</button><span class="lb-n"></span>';
+  document.body.appendChild(lb);
+  const win = lb.querySelector('.lb-win');
+  const show = i => {
+    idx = (i + cards.length) % cards.length;
+    const src = cards[idx].querySelector('iframe'), cs = getComputedStyle(src);
+    const w = parseFloat(cs.width) || 1280, h = parseFloat(cs.height) || 800;
+    const k = Math.min(window.innerWidth * 0.94 / w, window.innerHeight * 0.88 / h);
+    win.style.width = w * k + 'px'; win.style.height = h * k + 'px';
+    win.innerHTML = `<iframe src="${src.getAttribute('src') || src.dataset.src}" title="" style="width:${w}px;height:${h}px;transform:scale(${k})"></iframe>`;
+    lb.querySelector('.lb-n').textContent = String(idx + 1).padStart(2, '0') + ' / ' + String(cards.length).padStart(2, '0');
+  };
+  const close = () => { lb.remove(); document.removeEventListener('keydown', key); };
+  const key = e => { if (e.key === 'Escape') close(); else if (e.key === 'ArrowRight') show(idx + 1); else if (e.key === 'ArrowLeft') show(idx - 1); };
+  lb.addEventListener('click', close);
+  document.addEventListener('keydown', key);
+  show(idx);
+}
+document.addEventListener('click', e => {
+  const card = e.target.closest('.gal-final .gcard');
+  if (card) { e.preventDefault(); finLightbox(card); }
+});
