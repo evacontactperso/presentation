@@ -43,7 +43,7 @@ const cvdSide = () => {
 };
 
 function cvPageD(d) {
-  document.title = `Mon CV · design ${d}`;
+  document.title = 'Mon CV';
   const MM = 96 / 25.4, BODY = (297 - 33) * MM, cls = `cvd cvd${d}`;
   const blocks = cvdBlocks(d);
   const bar = `<div class="cv-bar"><span></span><button class="cv-print" onclick="window.print()">Imprimer</button></div>`;
