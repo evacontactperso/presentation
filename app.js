@@ -441,6 +441,17 @@ const curr = () => {
   return [IDS.includes(id) ? id : IDS[0], PAGES.includes(h[1]) ? h[1] : 'mission', 0];
 };
 const step = (n, k) => IDS[(IDS.indexOf(n) + k + IDS.length) % IDS.length];
+/* cover variants asked for in the design proposals: ?bg=terra|white, ?edge=flat, ?hl=terra (the highlighted word in deep terracotta) */
+function applyVariants() {
+  const q = new URLSearchParams(location.search), s = document.querySelector('.site');
+  if (!s) return;
+  const bg = q.get('bg');
+  if (bg === 'terra' || bg === 'white') s.classList.add('bg-' + bg);
+  if (q.get('edge') === 'flat') s.classList.add('edge-flat');
+  if (q.get('hl') === 'terra') s.classList.add('hl-terra');
+  if (q.get('brand') === 'warm') s.classList.add('brand-warm');
+  if (q.get('stat') === 'small') s.classList.add('stat-small');
+}
 function route() {
   const h = location.hash.replace(/^#\/?/, '').split('/');
   if (!h[0] || h[0] === 'cv') { if (typeof cvPage === 'function') cvPage(); return; }
@@ -448,11 +459,11 @@ function route() {
   if (h[0] === 'sites') { if (typeof sitesPage === 'function') sitesPage(); return; }
   if (h[0] === 'gallery') return gallery(h[1] || lastPart);
   if (h[0] === 'section') { if (typeof sectionPage === 'function') sectionPage(h[1]); return; }
-  if (h[0] === 'h') { const [n, p] = hcurr(); return heroView(n, p); }
+  if (h[0] === 'h') { const [n, p] = hcurr(); heroView(n, p); applyVariants(); return; }
   if (h[0] === 'p') { if (typeof pgView === 'function') pgView(...pcurr()); return; }
   const [n, p, f] = curr();
   site(n, p, f);
-  { const q = new URLSearchParams(location.search), bg = q.get('bg'), s = document.querySelector('.site'); if (s) { if (bg === 'terra' || bg === 'white') s.classList.add('bg-' + bg); if (q.get('edge') === 'flat') s.classList.add('edge-flat'); } }
+  applyVariants();
 }
 
 document.addEventListener('click', e => {
