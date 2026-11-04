@@ -3,7 +3,7 @@
 const FINAL_SEL = [
   ['covers', [4, 6, 8, 19, '16w', 23]], ['mission', [5, 8, 7]], ['founder', [9, 21, 6]], ['course', [1, 4, 13]],
   ['guests', [21, 12, 22]], ['emergency', [3, 21, 12]], ['impact', [4, 5, 6]], ['stories', [1, 3, 22]],
-  ['supporters', [5, 11, 21]], ['donate', [3, 5, 13]], ['monthly', [1, 8, 19, 21, 22, 23, 24, 25]], ['volunteer', [14, 4, 13]],
+  ['supporters', [5, 11, 21]], ['donate', [3, 5, 13]], ['monthly', [8, 19, 24]], ['volunteer', [14, 4, 13]],
   ['blog', [17, 7, 3]], ['contact', [26, 29, 30]]
 ];
 GPARTS.push({ id: 'final', t: 'Final selection' });
