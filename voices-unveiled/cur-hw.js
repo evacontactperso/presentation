@@ -1,0 +1,50 @@
+/* Curriculum: homework for the next session, by week (key = week number). */
+const CUR_HW = {
+  1: ['Redo exercise 1 without the answer key: the lexical fields of the Harpagon excerpt.', 'Learn the list of the 15 devices using the initials.', 'Read the “Figures of speech” sheet.'],
+  2: ['Redo from memory the classification of the 16 figures of speech by family.', 'Pick out eight figures in a poem of your choice, with their effect.', 'Read the sheets “Moods and tenses”, “Negation” and “Short and long sentences”.'],
+  3: ['Redo exercise 4 (value of the tenses) and correct the mini-test.', 'Pick out five negations in a text of your choice and say what is absent or refused.', 'Read the sheets “Logical connectors”, “Adverbial complements” and “Direct objects and subjects”.'],
+  4: ['Redo one of the three texts of the session (connectors, adverbials, or subjects and direct objects).', 'Write the plan of the reasoning of an argumentative text from its connectors.', 'Read the sheets “Pejorative and positive terms”, “Personal pronouns”, “Levels of language” and “Singular and plural”.'],
+  5: ['Write from memory the list of the 15 devices, with an example for each.', 'Redo a synthesis table on another short-story excerpt.', 'Read the sheet “Literary genres”.'],
+  6: ['Learn the nine sub-genres of poetry with their definition.', 'Write the definition of the four genres with one work as an example for each.', 'Read the sheet “Literary registers”.'],
+  7: ['Learn the eleven registers, grouped into three families, with three clues for each.', 'Rewrite the news item in a third register.', 'Read the sheets on humanism, the Pléiade, the Baroque, classicism and the Enlightenment.'],
+  8: ['Learn the timeline of the five movements with an author and a theme for each.', 'Write two introduction hooks with the fill-in-the-blank text.', 'Read the sheets from Romanticism to the New Novel.'],
+  9: ['Redo from memory the table of the 15 devices.', 'Reread the correction of the test and rework your three main mistakes.', 'Read the pages “Presentation of the exam” and “The method” of Course 2.'],
+  10: ['Prepare a ten-row table on the handed-out text, starting with the lexical fields.', 'Learn the eight steps of the commentary and their duration.'],
+  11: ['Finish the table of “Le Père Goriot” up to thirty rows.', 'Write the body of the first part of the commentary.', 'Read steps 6 to 8 of Course 2.'],
+  12: ['Finish the table of “Le Vase brisé” up to thirty rows.', 'Write the two other sub-parts of the body.', 'Write the conclusion with an opening.'],
+  13: ['Finish the body of the commentary on the Harpagon excerpt.', 'Reread your conclusion and prepare the opening.'],
+  14: ['Finish the commentary on letter XXX: body (1 h 30), conclusion and proofreading.', 'Set your schedule: one commentary, at least as a two-hour draft, every two weeks.'],
+  15: ['Write the complete introduction and conclusion of “Manon Lescaut”.', 'Learn the six arguments of the sheet.', 'Start reading “La Peau de chagrin”.'],
+  16: ['Write the complete introduction and conclusion of “La Peau de chagrin”.', 'Learn the three axes: intense life, contemplative life, ambiguity.', 'Read the sheet on “Sido and Les Vrilles de la vigne”.'],
+  17: ['Write the complete introduction and conclusion of “Sido and Les Vrilles de la vigne”.', 'Learn the three main parts and two quotations for each.', 'Read “Pour un oui ou pour un non” in full.'],
+  18: ['Write the complete introduction and conclusion of “Pour un oui ou pour un non”.', 'Learn the four themes of the sheet, with one line for each.', 'Read “On ne badine pas avec l’amour” in full.'],
+  19: ['Write the complete introduction and conclusion of “On ne badine pas avec l’amour”.', 'Learn the three forms of speech (deceitful, revealing, guilty), with one line for each.', 'Read “Le Menteur” in full.'],
+  20: ['Write the complete introduction and conclusion of “Le Menteur”.', 'Learn three of Dorante’s lies and their usefulness.', 'Read a selection of poems from the “Cahiers de Douai”.'],
+  21: ['Write the complete introduction and conclusion of the “Cahiers de Douai”.', 'Learn one poem for each of the three emancipations.', 'Read the first letters of the “Lettres d’une Péruvienne”.'],
+  22: ['Write the complete introduction and conclusion of the “Lettres d’une Péruvienne”.', 'Learn Zilia’s three universes, with one letter for each.', 'Read the first evening of the “Entretiens sur la pluralité des mondes”.'],
+  23: ['Write the complete introduction and conclusion of the “Entretiens sur la pluralité des mondes”.', 'Learn Fontenelle’s two goals: to please and to instruct.', 'Read the “Discours de la servitude volontaire”.'],
+  24: ['Write the complete introduction and conclusion of the “Discours de la servitude volontaire”.', 'Learn the paradox, two causes and two persuasion devices.', 'Read the page “The oral exam” of Course 4.'],
+  25: ['Fill in your organization table with your 16 texts and the chosen months.', 'Print each text in four copies and put the pockets in order.', 'Read the method of the linear analysis.'],
+  26: ['Work on reading the text aloud and record yourself.', 'Redo the analysis of Harpagon’s cry in ten timed minutes.', 'Read the method “Making a linear-analysis sheet”.'],
+  27: ['Finish the sheet of the month’s text from four sources.', 'Say the analysis again aloud, without the sheet.', 'Reread your middle-school grammar lessons.'],
+  28: ['Redo five logical analyses of sentences taken from the works.', 'Do ten minutes of grammar per week, until the exam.', 'Read the method “The chosen work”.'],
+  29: ['Read the chosen work according to your reading schedule.', 'Complete the reading sheet: identity card, biography, context.', 'Write five things you liked in the book.'],
+  30: ['Finalize the reading sheet, with the list of interview questions and their answers.', 'Rewrite the three-minute presentation and say it three times, timed.'],
+  31: ['Reread your draft and note what was missing: devices, outline, time.', 'Bring your paper for the correction.'],
+  32: ['Rewrite the introduction of the commentary with the remarks received.', 'Redo the table on the remediation text.', 'Reread the essay sheets of your works.'],
+  33: ['Make an inventory of your essay mistakes.', 'Reread the “The essay to know” sheets and bring your outline.'],
+  34: ['Rewrite the introduction of your essay, with a central question.', 'Add two precise examples per sub-part to your outline.', 'Reread the sheets of your 16 texts.'],
+  35: ['Learn the texts that are not yet learned.', 'Fix the two weak points of the grid of the first oral mock exam.'],
+  36: ['Apply your review plan up to the exam.', 'Reread the 16 sheets and the reading sheet.', 'Ten minutes of grammar every week.']
+};
+
+/* short titles for the left-hand outline (key = week number) */
+const CUR_SHORT = {
+  1: 'Lexical fields, punctuation', 2: 'Figures of speech', 3: 'Verb and sentence', 4: 'Logic of the text', 5: 'Point of view and tone',
+  6: 'Literary genres', 7: 'Literary registers', 8: 'Movements I', 9: 'Movements II',
+  10: 'Commentary method', 11: 'Topic 1: novel', 12: 'Topic 2: poetry', 13: 'Topic 3: theater', 14: 'Topic 4: literature of ideas',
+  15: 'Manon Lescaut', 16: 'La Peau de chagrin', 17: 'Sido', 18: 'Pour un oui ou pour un non', 19: 'On ne badine pas avec l’amour',
+  20: 'Le Menteur', 21: 'Cahiers de Douai', 22: 'Lettres d’une Péruvienne', 23: 'Plurality of worlds', 24: 'Voluntary servitude',
+  25: 'The oral exam', 26: 'Linear analysis', 27: 'Sheet and memorization', 28: 'Grammar question', 29: 'Chosen work', 30: 'Presentation and interview',
+  31: 'Mock exam: commentary', 32: 'Commentary correction', 33: 'Mock exam: essay', 34: 'Essay correction', 35: 'Oral mock exam 1', 36: 'Oral mock exam 2 and review'
+};

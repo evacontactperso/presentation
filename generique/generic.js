@@ -1,5 +1,5 @@
-/* "Présentation - Générique": same content as the Voices Unveiled presentation, with every mention of the
-   association (name, web address, logo) removed. Enabled by sessionStorage 'gen' = '1' (or ?g=1), which same-origin
+/* "Présentation - Générique" (URL ?p=generique): same content as the Voices Unveiled presentation, with every mention of the
+   association (name, web address, logo) removed. Enabled by the p=generique URL parameter, which same-origin
    preview frames inherit. Nothing here runs in the normal presentation. */
 (function () {
   if (typeof GENERIC === 'undefined' || !GENERIC) return;

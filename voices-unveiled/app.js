@@ -2,7 +2,8 @@
    One shared content model, many layouts. Routes: #/gallery  #/<id>/<mission|speakers|blog> */
 
 /* generic presentation: same content without the association's name or logo (see generic.js) */
-const GENERIC = (() => { try { if (new URLSearchParams(location.search).get('g') === '1') sessionStorage.setItem('gen', '1'); return sessionStorage.getItem('gen') === '1'; } catch (e) { return false; } })();
+const PRES = 'voices-unveiled';
+const GENERIC = false;
 const U = 'https://voicesunveiled.org/wp-content/uploads/';
 const DONATE = 'https://voicesunveiled.org/donate-now/';
 const MONTHLY = 'https://voicesunveiled.org/become-a-monthly-donor/';
@@ -444,9 +445,7 @@ function applyVariants() {
 }
 function route() {
   const h = location.hash.replace(/^#\/?/, '').split('/');
-  document.body.classList.toggle('landing', !h[0]);
-  if (!h[0]) { if (typeof landingPage === 'function') landingPage(); return; }
-  if (h[0] === 'cv') { if (typeof cvPage === 'function') cvPage(); return; }
+  if (!h[0] || h[0] === 'cv') { if (typeof cvPage === 'function') cvPage(); return; }
   if (h[0] === 'curriculum') { if (typeof curriculumPage === 'function') curriculumPage(); return; }
   if (h[0] === 'sites') { if (typeof sitesPage === 'function') sitesPage(); return; }
   if (h[0] === 'gallery') return gallery(h[1] || lastPart);
