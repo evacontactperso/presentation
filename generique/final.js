@@ -1,7 +1,7 @@
 /* Page 20: the user's selection, every page one after another, in the order given.
    Numbers on the cards are the designs' own numbers. */
 const FINAL_SEL = [
-  ['covers', ['6t', 4, '8t', '19b', '16w', '23f']], ['mission', [5, 8, 7]], ['founder', [9, 21, 6]], ['course', [1, 4, 13]],
+  ['covers', ['6t', 4, '8t', '19b', '16w', '23f']], ['mission', [5, 8, 7]], ['course', [1, 4, 13]],
   ['guests', [21, 12, 22]], ['emergency', [3, 21, 12]], ['impact', [4, 5, 6]], ['stories', [1, 3, 22]],
   ['supporters', [5, 11, 21]], ['donate', [3, 5, 13]], ['monthly', [8, 19, 24]], ['volunteer', [14, 4, 13]],
   ['blog', [17, 7, 3]], ['contact', [26, 29, 30]]
