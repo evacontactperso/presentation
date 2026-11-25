@@ -2,7 +2,7 @@
    « Mon CV » (the same CV page as in the Jarva app, A4 sheets) and « Mes sites ». */
 
 const META = [
-  { id: 'cv', t: 'My CV', href: '#/cv', on: h => /^#\/cv\b/.test(h) || h === '' || h === '#' || h === '#/' },
+  { id: 'cv', t: 'My CV', href: '#/cv', on: h => /^#\/cv\b/.test(h) },
   { id: 'sites', t: 'My Sites', href: '#/sites', on: h => /^#\/sites\b/.test(h) },
   { id: 'curriculum', t: 'Curriculum', href: '#/curriculum', on: h => /^#\/curriculum\b/.test(h) },
   { id: 'design', t: 'Design Proposals', href: '#/gallery/covers', on: h => /^#\/(gallery|section|\d+|h|p)\b/.test(h) }
@@ -12,7 +12,7 @@ function metaBar() {
   if (!bar) return;
   if (EMBED) { bar.style.display = 'none'; return; }
   const h = location.hash, ICO = {cv: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>', sites: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2.5"/><path d="M3 9h18M8 21h8"/></svg>', curriculum: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M8 7h8M8 11h6"/></svg>', design: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2 0-1.2-.9-1.6-.9-2.7 0-.9.7-1.6 1.7-1.6H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7" r="1"/></svg>'};
-  bar.innerHTML = `<div class="mb-in"><a class="mb-brand" href="#/cv"><img class="mb-logo" src="${LOGO}" alt="Voices Unveiled"><span class="mb-name"><b>Eva Rousso</b><small>CV, sites &amp; proposals</small></span></a><nav>${META.map(m => `<a href="${m.id === 'design' ? '#/gallery/final' : m.href}" class="${m.on(h) ? 'on' : ''}">${ICO[m.id]}<span>${m.t}</span></a>`).join('')}</nav></div>`;
+  bar.innerHTML = `<div class="mb-in"><a class="mb-brand" href="#/" data-home="1"><img class="mb-logo" src="${LOGO}" alt="Voices Unveiled"><span class="mb-name"><b>Eva Rousso</b><small>CV, sites &amp; proposals</small></span></a><nav>${META.map(m => `<a href="${m.id === 'design' ? '#/gallery/final' : m.href}" class="${m.on(h) ? 'on' : ''}">${ICO[m.id]}<span>${m.t}</span></a>`).join('')}</nav></div>`;
 }
 window.addEventListener('hashchange', metaBar);
 
@@ -114,3 +114,21 @@ metaBar();
 
 /* all scripts are loaded: render the current page now (gallery thumbnails load this page too) */
 route();
+
+/* ---------- first page: two presentations ---------- */
+function landingPage() {
+  if (GENERIC) { try { sessionStorage.removeItem('gen'); } catch (e) {} location.reload(); return; }
+  document.title = 'Eva Rousso';
+  const go = g => { try { g ? sessionStorage.setItem('gen', '1') : sessionStorage.removeItem('gen'); } catch (e) {} location.hash = '#/cv'; location.reload(); };
+  $('#app').innerHTML = `<main class="land"><h1>Eva Rousso</h1><p>Choisissez une présentation</p>
+    <div class="land-btns"><button class="land-btn" data-g="1"><b>Présentation - Générique</b><small>Le même contenu, sans nom ni logo</small></button>
+    <button class="land-btn" data-g="0"><b>Présentation - Voices Unveiled</b><small>Le contenu complet</small></button></div></main>`;
+  document.querySelectorAll('.land-btn').forEach(b => b.onclick = () => go(b.dataset.g === '1'));
+  window.scrollTo(0, 0);
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('[data-home]')) return;
+  e.preventDefault();
+  try { sessionStorage.removeItem('gen'); } catch (x) {}
+  if (location.hash === '#/' || location.hash === '') location.reload(); else { location.hash = '#/'; if (GENERIC) location.reload(); }
+});

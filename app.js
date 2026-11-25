@@ -1,11 +1,13 @@
 /* Voices Unveiled — design proposals (Our mission · Guest speakers · Our blog)
    One shared content model, many layouts. Routes: #/gallery  #/<id>/<mission|speakers|blog> */
 
+/* generic presentation: same content without the association's name or logo (see generic.js) */
+const GENERIC = (() => { try { if (new URLSearchParams(location.search).get('g') === '1') sessionStorage.setItem('gen', '1'); return sessionStorage.getItem('gen') === '1'; } catch (e) { return false; } })();
 const U = 'https://voicesunveiled.org/wp-content/uploads/';
 const DONATE = 'https://voicesunveiled.org/donate-now/';
 const MONTHLY = 'https://voicesunveiled.org/become-a-monthly-donor/';
 const LOGO = U + '2024/01/Voices-Unveiled-Logo.png';
-const COVER = U + '2024/05/Voices-Unveiled-Facebook-Cover-scaled.jpg';
+const COVER = GENERIC ? U + '2026/01/WhatsApp-Image-2026-01-28-at-13.59.11-1024x682.jpeg' : U + '2024/05/Voices-Unveiled-Facebook-Cover-scaled.jpg';
 
 const PAGES = ['mission', 'speakers', 'blog'];
 const NAV = { mission: 'Our mission', speakers: 'Guest speakers', blog: 'Our blog' };
@@ -442,7 +444,9 @@ function applyVariants() {
 }
 function route() {
   const h = location.hash.replace(/^#\/?/, '').split('/');
-  if (!h[0] || h[0] === 'cv') { if (typeof cvPage === 'function') cvPage(); return; }
+  document.body.classList.toggle('landing', !h[0]);
+  if (!h[0]) { if (typeof landingPage === 'function') landingPage(); return; }
+  if (h[0] === 'cv') { if (typeof cvPage === 'function') cvPage(); return; }
   if (h[0] === 'curriculum') { if (typeof curriculumPage === 'function') curriculumPage(); return; }
   if (h[0] === 'sites') { if (typeof sitesPage === 'function') sitesPage(); return; }
   if (h[0] === 'gallery') return gallery(h[1] || lastPart);
