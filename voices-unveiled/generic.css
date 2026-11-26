@@ -1,0 +1,23 @@
+/* first page */
+body.landing #metabar{display:none}
+.land,.land button{font-family:'Plus Jakarta Sans',sans-serif}
+.land{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:40px 16px;text-align:center;background:#f6f1ec}
+.land h1{margin:8px 0 0;font-size:40px;font-weight:800;color:#171716;letter-spacing:-.02em}
+.land p{margin:0 0 22px;color:#6a5d66;font-size:17px}
+.land-logo{border-radius:18px}
+.land-btns{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.land-btn{font-size:inherit;cursor:pointer;display:flex;flex-direction:column;gap:6px;align-items:center;width:340px;max-width:100%;padding:26px 22px;border-radius:20px;border:1px solid #e4d9d2;background:#fff;color:#171716;box-shadow:0 6px 22px rgba(41,30,43,.08);transition:transform .15s,box-shadow .15s}
+.land-btn b{font-size:19px;font-weight:800}
+.land-btn small{font-size:14px;color:#6a5d66}
+.land-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(41,30,43,.14)}
+.land-btn[data-g="0"]{background:#291e2b;border-color:#291e2b;color:#fff}.land-btn[data-g="0"] small{color:rgba(255,255,255,.75)}
+/* generic presentation: no logo anywhere */
+html.gen img[src*="Voices-Unveiled"],html.gen .mb-logo,html.gen .brand>img{display:none!important}
+
+/* course sheet page */
+.fichepage .cv-bar{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto 14px;gap:14px}
+.fiche-t{font-weight:800;font-size:22px;color:#171716}.fiche-t small{font-weight:500;font-size:14px;color:#6a5d66;margin-left:8px}
+.fichepage .cv-print{text-decoration:none;display:inline-block}
+.fiche-pdf{display:block;width:100%;max-width:1100px;height:calc(100vh - 170px);min-height:720px;margin:0 auto;border:1px solid #e4d9d2;border-radius:14px;background:#fff}
+.fiche-fb{padding:30px;text-align:center}
+@media(max-width:700px){.fiche-t small{display:block;margin:2px 0 0}}

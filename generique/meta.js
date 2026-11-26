@@ -5,13 +5,14 @@ const META = [
   { id: 'cv', t: 'My CV', href: '#/cv', on: h => /^#\/cv\b/.test(h) || h === '' || h === '#' || h === '#/' },
   { id: 'sites', t: 'My Sites', href: '#/sites', on: h => /^#\/sites\b/.test(h) },
   { id: 'curriculum', t: 'Curriculum', href: '#/curriculum', on: h => /^#\/curriculum\b/.test(h) },
+  { id: 'fiche', t: 'Course Sheet', href: '#/fiche', on: h => /^#\/fiche\b/.test(h) },
   { id: 'design', t: 'Design Proposals', href: '#/gallery/covers', on: h => /^#\/(gallery|section|\d+|h|p)\b/.test(h) }
 ];
 function metaBar() {
   const bar = document.getElementById('metabar');
   if (!bar) return;
   if (EMBED) { bar.style.display = 'none'; return; }
-  const h = location.hash, ICO = {cv: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>', sites: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2.5"/><path d="M3 9h18M8 21h8"/></svg>', curriculum: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M8 7h8M8 11h6"/></svg>', design: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2 0-1.2-.9-1.6-.9-2.7 0-.9.7-1.6 1.7-1.6H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7" r="1"/></svg>'};
+  const h = location.hash, ICO = {cv: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>', sites: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2.5"/><path d="M3 9h18M8 21h8"/></svg>', curriculum: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M8 7h8M8 11h6"/></svg>', fiche: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14v16H5z"/><path d="M9 4v16M13 9h3M13 13h3"/></svg>', design: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2 0-1.2-.9-1.6-.9-2.7 0-.9.7-1.6 1.7-1.6H17a4 4 0 0 0 4-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7" r="1"/></svg>'};
   bar.innerHTML = `<div class="mb-in"><a class="mb-brand" href="../"><img class="mb-logo" src="${LOGO}" alt="Voices Unveiled"><span class="mb-name"><b>Eva Rousso</b><small>CV, sites &amp; proposals</small></span></a><nav>${META.map(m => `<a href="${m.id === 'design' ? '#/gallery/final' : m.href}" class="${m.on(h) ? 'on' : ''}">${ICO[m.id]}<span>${m.t}</span></a>`).join('')}</nav></div>`;
 }
 window.addEventListener('hashchange', metaBar);
@@ -114,4 +115,13 @@ metaBar();
 
 /* all scripts are loaded: render the current page now (gallery thumbnails load this page too) */
 route();
+
+/* ---------- Course Sheet (Fiche de cours): the French worksheet "Procédés littéraires", embedded as a PDF ---------- */
+function fichePage() {
+  document.title = 'Course Sheet';
+  const f = 'fiche-procedes-litteraires.pdf';
+  $('#app').innerHTML = `<div class="cvpage fichepage"><div class="cv-bar"><span class="fiche-t">Course Sheet <small>“Procédés littéraires” (in French)</small></span><a class="cv-print" href="${f}" target="_blank" rel="noopener">Open / download PDF</a></div>
+    <object class="fiche-pdf" data="${f}#view=FitH" type="application/pdf"><p class="fiche-fb">Your browser cannot display the PDF here. <a href="${f}" target="_blank" rel="noopener">Open the course sheet</a>.</p></object></div>`;
+  window.scrollTo(0, 0);
+}
 

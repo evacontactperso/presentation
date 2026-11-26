@@ -446,6 +446,7 @@ function applyVariants() {
 function route() {
   const h = location.hash.replace(/^#\/?/, '').split('/');
   if (!h[0] || h[0] === 'cv') { if (typeof cvPage === 'function') cvPage(); return; }
+  if (h[0] === 'fiche') { if (typeof fichePage === 'function') fichePage(); return; }
   if (h[0] === 'curriculum') { if (typeof curriculumPage === 'function') curriculumPage(); return; }
   if (h[0] === 'sites') { if (typeof sitesPage === 'function') sitesPage(); return; }
   if (h[0] === 'gallery') return gallery(h[1] || lastPart);
